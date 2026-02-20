@@ -1,0 +1,986 @@
+html {
+  scroll-behavior: smooth;
+}
+
+.header {
+  width: 100%;
+  height: 837px;
+  background: linear-gradient(180deg, rgb(0, 0, 0) 6.494%, rgba(0, 0, 0, 0) 93.59%);
+}
+.header_navigationBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 46px;
+  position: fixed;
+  z-index: 3;
+  margin: 0 auto;
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
+  background: rgba(0, 0, 0, 0.63);
+}
+.header_navigationBar_logo {
+  display: flex;
+  margin-left: 5px;
+}
+.header_navigationBar_logo_img1 {
+  width: 26px;
+  height: 36px;
+}
+.header_navigationBar_logo_img2 {
+  width: 157px;
+  height: 26px;
+  margin-top: 5px;
+  margin-left: 5px;
+}
+.header_navigationBar_navigationElements {
+  width: 650px;
+  height: 17px;
+}
+.header_navigationBar_navigationElements_ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header_navigationBar_navigationElements_ul_li {
+  list-style: none;
+}
+.header_navigationBar_navigationElements_ul_li_a {
+  color: #fff;
+  font-family: "Montserrat";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-decoration: none;
+  transition-duration: 0.6s;
+}
+.header_navigationBar_navigationElements_ul_li_a:hover {
+  transition-duration: 0.6s;
+  font-weight: 900;
+}
+.header_navigationBar_link {
+  text-decoration: none;
+}
+.header_navigationBar_link_btnRegistration {
+  width: 267px;
+  height: 35px;
+  text-align: center;
+  color: #fff;
+  font-family: "Montserrat";
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-decoration: none;
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 5px;
+  background: none;
+  cursor: pointer;
+  transition-duration: 0.6s;
+  margin-right: 5px;
+}
+.header_navigationBar_link_btnRegistration:hover {
+  transition-duration: 0.6s;
+  color: #000;
+  background: rgb(255, 255, 255);
+}
+.header_titleBlock {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 640px;
+  -moz-column-gap: 50px;
+       column-gap: 50px;
+}
+.header_titleBlock_text {
+  margin-top: 300px;
+  width: 530px;
+  height: 229px;
+  color: #fff;
+  font-family: "Montserrat";
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-align: center;
+  text-shadow: 1px 1px 2px #000;
+}
+.header_titleBlock_imgblock {
+  margin-top: 250px;
+  width: 720px;
+  height: 590px;
+}
+.header_titleBlock_imgblock_imgb1 {
+  position: absolute;
+  border: 2px solid rgb(255, 255, 255);
+  border-radius: 5px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  width: 427px;
+  height: 213px;
+  background-image: url("../img/titleBlock/1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 1;
+}
+.header_titleBlock_imgblock_imgb2 {
+  position: absolute;
+  border: 2px solid rgb(255, 255, 255);
+  border-radius: 5px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  width: 427px;
+  height: 213px;
+  background: url(../img/titleBlock/2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: 185px;
+  margin-left: 140px;
+  z-index: 2;
+}
+.header_titleBlock_imgblock_imgb3 {
+  position: absolute;
+  border: 2px solid rgb(255, 255, 255);
+  border-radius: 5px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  width: 427px;
+  height: 213px;
+  background: url(../img/titleBlock/3.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: 375px;
+  margin-left: 290px;
+  z-index: 2;
+}
+
+.main_invitationBlock {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url(../img/invitationBlock.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 750px;
+}
+.main_invitationBlock_blurBlock {
+  filter: blur(5px);
+  background: inherit;
+  width: 100%;
+  height: 750px;
+}
+.main_invitationBlock_titleText {
+  position: absolute;
+  width: 1212px;
+  height: 194px;
+  color: #fff;
+  font-family: "Montserrat";
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-align: center;
+  text-shadow: 1px 1px 2px #000;
+}
+.main_expertsBlock {
+  width: 100%;
+  height: 706px;
+}
+.main_expertsBlock_titleTextBlock {
+  display: flex;
+  justify-content: center;
+}
+.main_expertsBlock_titleTextBlock_titleText {
+  margin-top: 60px;
+  width: 1017px;
+  height: 159px;
+  color: #000;
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.main_expertsBlock_bioFlex {
+  display: flex;
+  justify-content: center;
+}
+.main_expertsBlock_bioFlex_bioBlock {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 853px;
+  height: 434px;
+  margin-top: 25px;
+  -moz-column-gap: 47px;
+       column-gap: 47px;
+}
+.main_expertsBlock_bioFlex_bioBlock_bio1 {
+  width: 400px;
+  height: 434px;
+}
+.main_expertsBlock_bioFlex_bioBlock_bio1_expert {
+  border-radius: 5px;
+  border: 1px solid #D1D1D1;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  opacity: 1;
+  transition: opacity 1s ease-in-out;
+}
+.main_expertsBlock_bioFlex_bioBlock_bio1_titleText {
+  color: #000;
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: bold;
+  line-height: normal;
+  margin-top: 15px;
+  opacity: 1;
+  transition: opacity 1s ease-in-out;
+}
+.main_expertsBlock_bioFlex_bioBlock_bio1_infoText {
+  color: #000;
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 20px;
+  font-style: italic;
+  font-weight: 600;
+  line-height: normal;
+  margin-top: 5px;
+  opacity: 1;
+  transition: opacity 1s ease-in-out;
+}
+.main_expertsBlock_bioFlex_bioBlock_bio2 {
+  width: 400px;
+  height: 434px;
+}
+.main_expertsBlock_bioFlex_bioBlock_bio2_expert {
+  border-radius: 5px;
+  border: 1px solid #D1D1D1;
+  background: url(<path-to-image>) lightgray 50%/cover no-repeat;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  opacity: 1;
+  transition: opacity 1s ease-in-out;
+}
+.main_expertsBlock_bioFlex_bioBlock_bio2_titleText {
+  color: #000;
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: bold;
+  line-height: normal;
+  margin-top: 15px;
+  opacity: 1;
+  transition: opacity 1s ease-in-out;
+}
+.main_expertsBlock_bioFlex_bioBlock_bio2_infoText {
+  color: #000;
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 20px;
+  font-style: italic;
+  font-weight: 600;
+  line-height: normal;
+  margin-top: 5px;
+  opacity: 1;
+  transition: opacity 1s ease-in-out;
+}
+.main_worksBlock {
+  width: 100%;
+  height: 512px;
+  background: #232323;
+}
+.main_worksBlock_titleTextCenter {
+  display: flex;
+  justify-content: Center;
+}
+.main_worksBlock_titleTextCenter_titleText {
+  color: #FFF;
+  font-family: Montserrat;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  margin-top: 40px;
+}
+.main_worksBlock_sliderCenter {
+  display: flex;
+  justify-content: center;
+  -moz-column-gap: 45px;
+       column-gap: 45px;
+  margin-top: 25px;
+}
+.main_worksBlock_sliderCenter_btnReturn {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.main_worksBlock_sliderCenter_img {
+  border-radius: 10px;
+  box-shadow: 0px 5px 4px 0px rgba(0, 0, 0, 0.53);
+  opacity: 1;
+  transition: opacity 1s ease-in-out;
+}
+.main_worksBlock_sliderCenter_btnNext {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.main_servicesBlock {
+  width: 100%;
+  height: 490px;
+  background: linear-gradient(180deg, #232323 0%, #FFF 100%);
+}
+.main_servicesBlock_titleTextCenter {
+  display: flex;
+  justify-content: center;
+}
+.main_servicesBlock_titleTextCenter_titleText {
+  color: #ffffff;
+  font-family: Montserrat;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  margin-top: 25px;
+}
+.main_servicesBlock_scrollBlockCenter {
+  display: flex;
+  justify-content: center;
+}
+.main_servicesBlock_scrollBlockCenter_scrollBlock {
+  width: 425px;
+  height: 387px;
+  margin-top: 20px;
+  overflow-y: hidden;
+  overflow-x: scroll;
+  white-space: nowrap;
+}
+.main_servicesBlock_scrollBlockCenter_scrollBlock::-webkit-scrollbar {
+  height: 8px;
+}
+.main_servicesBlock_scrollBlockCenter_scrollBlock::-webkit-scrollbar-thumb {
+  background-color: #c9c9c9;
+  border-radius: 4px;
+}
+.main_servicesBlock_scrollBlockCenter_scrollBlock_element1 {
+  display: inline-block;
+  vertical-align: top;
+  width: 425px;
+  height: 375px;
+  border-radius: 15px;
+  background: #ffffff;
+}
+.main_servicesBlock_scrollBlockCenter_scrollBlock_element1_titleCenter {
+  display: flex;
+  justify-content: center;
+}
+.main_servicesBlock_scrollBlockCenter_scrollBlock_element1_titleCenter_titleBlock {
+  display: flex;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+  margin-top: 60px;
+}
+.main_servicesBlock_scrollBlockCenter_scrollBlock_element1_titleCenter_titleBlock_titleText {
+  color: #000;
+  font-family: Montserrat;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.main_servicesBlock_scrollBlockCenter_scrollBlock_element1_infoCenter {
+  display: flex;
+  justify-content: center;
+}
+.main_servicesBlock_scrollBlockCenter_scrollBlock_element1_infoCenter_infoText {
+  white-space: normal;
+  text-align: center;
+  color: #000;
+  font-family: Montserrat;
+  font-size: 32px;
+  font-style: italic;
+  font-weight: 500;
+  line-height: normal;
+  margin-top: 20px;
+  text-overflow: ellipsis;
+}
+.main_servicesBlock_scrollBlockCenter_scrollBlock_element1_priceCenter {
+  display: flex;
+  justify-content: center;
+}
+.main_servicesBlock_scrollBlockCenter_scrollBlock_element1_priceCenter_priceText {
+  color: #000;
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  margin-top: 35px;
+}
+.main_servicesBlock_scrollBlockCenter_scrollBlock_element2 {
+  display: inline-block;
+  vertical-align: top;
+  width: 425px;
+  height: 375px;
+  border-radius: 15px;
+  background: #ffffff;
+}
+.main_servicesBlock_scrollBlockCenter_scrollBlock_element2_titleCenter {
+  display: flex;
+  justify-content: center;
+}
+.main_servicesBlock_scrollBlockCenter_scrollBlock_element2_titleCenter_titleBlock {
+  display: flex;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+  margin-top: 60px;
+}
+.main_servicesBlock_scrollBlockCenter_scrollBlock_element2_titleCenter_titleBlock_titleText {
+  color: #000;
+  font-family: Montserrat;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  margin-top: 10px;
+}
+.main_servicesBlock_scrollBlockCenter_scrollBlock_element2_infoCenter {
+  display: flex;
+  justify-content: center;
+}
+.main_servicesBlock_scrollBlockCenter_scrollBlock_element2_infoCenter_infoText {
+  white-space: normal;
+  text-align: center;
+  color: #000;
+  font-family: Montserrat;
+  font-size: 32px;
+  font-style: italic;
+  font-weight: 500;
+  line-height: normal;
+  margin-top: 20px;
+  text-overflow: ellipsis;
+}
+.main_servicesBlock_scrollBlockCenter_scrollBlock_element2_priceCenter {
+  display: flex;
+  justify-content: center;
+}
+.main_servicesBlock_scrollBlockCenter_scrollBlock_element2_priceCenter_priceText {
+  color: #000;
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  margin-top: 35px;
+}
+.main_servicesBlock_scrollBlockCenter_scrollBlock_element3 {
+  display: inline-block;
+  vertical-align: top;
+  width: 425px;
+  height: 375px;
+  border-radius: 15px;
+  background: #ffffff;
+}
+.main_servicesBlock_scrollBlockCenter_scrollBlock_element3_titleCenter {
+  display: flex;
+  justify-content: center;
+}
+.main_servicesBlock_scrollBlockCenter_scrollBlock_element3_titleCenter_titleBlock {
+  display: flex;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+  margin-top: 60px;
+}
+.main_servicesBlock_scrollBlockCenter_scrollBlock_element3_titleCenter_titleBlock_titleText {
+  color: #000;
+  font-family: Montserrat;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  margin-top: 15px;
+}
+.main_servicesBlock_scrollBlockCenter_scrollBlock_element3_infoCenter {
+  display: flex;
+  justify-content: center;
+}
+.main_servicesBlock_scrollBlockCenter_scrollBlock_element3_infoCenter_infoText {
+  white-space: normal;
+  text-align: center;
+  color: #000;
+  font-family: Montserrat;
+  font-size: 30px;
+  font-style: italic;
+  font-weight: 500;
+  line-height: normal;
+  margin-top: 20px;
+  text-overflow: ellipsis;
+}
+.main_servicesBlock_scrollBlockCenter_scrollBlock_element3_priceCenter {
+  display: flex;
+  justify-content: center;
+}
+.main_servicesBlock_scrollBlockCenter_scrollBlock_element3_priceCenter_priceText {
+  color: #000;
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  margin-top: 35px;
+}
+.main_servicesBlock_scrollBlockCenter_scrollBlock_element4 {
+  display: inline-block;
+  vertical-align: top;
+  width: 425px;
+  height: 375px;
+  border-radius: 15px;
+  background: #ffffff;
+}
+.main_servicesBlock_scrollBlockCenter_scrollBlock_element4_titleCenter {
+  display: flex;
+  justify-content: center;
+}
+.main_servicesBlock_scrollBlockCenter_scrollBlock_element4_titleCenter_titleBlock {
+  display: flex;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+  margin-top: 60px;
+}
+.main_servicesBlock_scrollBlockCenter_scrollBlock_element4_titleCenter_titleBlock_titleText {
+  color: #000;
+  font-family: Montserrat;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  margin-top: 8px;
+}
+.main_servicesBlock_scrollBlockCenter_scrollBlock_element4_infoCenter {
+  display: flex;
+  justify-content: center;
+}
+.main_servicesBlock_scrollBlockCenter_scrollBlock_element4_infoCenter_infoText {
+  white-space: normal;
+  text-align: center;
+  color: #000;
+  font-family: Montserrat;
+  font-size: 28px;
+  font-style: italic;
+  font-weight: 500;
+  line-height: normal;
+  margin-top: 20px;
+  text-overflow: ellipsis;
+}
+.main_servicesBlock_scrollBlockCenter_scrollBlock_element4_priceCenter {
+  display: flex;
+  justify-content: center;
+}
+.main_servicesBlock_scrollBlockCenter_scrollBlock_element4_priceCenter_priceText {
+  color: #000;
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  margin-top: 35px;
+}
+.main_servicesBlock_scrollBlockCenter_scrollBlock_element5 {
+  display: inline-block;
+  vertical-align: top;
+  width: 425px;
+  height: 375px;
+  border-radius: 15px;
+  background: #ffffff;
+}
+.main_servicesBlock_scrollBlockCenter_scrollBlock_element5_titleCenter {
+  display: flex;
+  justify-content: center;
+}
+.main_servicesBlock_scrollBlockCenter_scrollBlock_element5_titleCenter_titleBlock {
+  display: flex;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+  margin-top: 60px;
+}
+.main_servicesBlock_scrollBlockCenter_scrollBlock_element5_titleCenter_titleBlock_titleText {
+  color: #000;
+  font-family: Montserrat;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  margin-top: 11px;
+}
+.main_servicesBlock_scrollBlockCenter_scrollBlock_element5_infoCenter {
+  display: flex;
+  justify-content: center;
+}
+.main_servicesBlock_scrollBlockCenter_scrollBlock_element5_infoCenter_infoText {
+  white-space: normal;
+  text-align: center;
+  color: #000;
+  font-family: Montserrat;
+  font-size: 32px;
+  font-style: italic;
+  font-weight: 500;
+  line-height: normal;
+  margin-top: 20px;
+  text-overflow: ellipsis;
+}
+.main_servicesBlock_scrollBlockCenter_scrollBlock_element5_priceCenter {
+  display: flex;
+  justify-content: center;
+}
+.main_servicesBlock_scrollBlockCenter_scrollBlock_element5_priceCenter_priceText {
+  color: #000;
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  margin-top: 35px;
+}
+.main_servicesBlock_scrollBlockCenter_scrollBlock_element6 {
+  display: inline-block;
+  vertical-align: top;
+  width: 425px;
+  height: 375px;
+  border-radius: 15px;
+  background: #ffffff;
+}
+.main_servicesBlock_scrollBlockCenter_scrollBlock_element6_titleCenter {
+  display: flex;
+  justify-content: center;
+}
+.main_servicesBlock_scrollBlockCenter_scrollBlock_element6_titleCenter_titleBlock {
+  display: flex;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+  margin-top: 60px;
+}
+.main_servicesBlock_scrollBlockCenter_scrollBlock_element6_titleCenter_titleBlock_titleText {
+  color: #000;
+  font-family: Montserrat;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  margin-top: 17px;
+}
+.main_servicesBlock_scrollBlockCenter_scrollBlock_element6_infoCenter {
+  display: flex;
+  justify-content: center;
+}
+.main_servicesBlock_scrollBlockCenter_scrollBlock_element6_infoCenter_infoText {
+  white-space: normal;
+  text-align: center;
+  color: #000;
+  font-family: Montserrat;
+  font-size: 32px;
+  font-style: italic;
+  font-weight: 500;
+  line-height: normal;
+  margin-top: 20px;
+  text-overflow: ellipsis;
+}
+.main_servicesBlock_scrollBlockCenter_scrollBlock_element6_priceCenter {
+  display: flex;
+  justify-content: center;
+}
+.main_servicesBlock_scrollBlockCenter_scrollBlock_element6_priceCenter_priceText {
+  color: #000;
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  margin-top: 35px;
+}
+.main_servicesBlock_scrollBlockCenter_scrollBlock_element7 {
+  display: inline-block;
+  vertical-align: top;
+  width: 425px;
+  height: 375px;
+  border-radius: 15px;
+  background: #ffffff;
+}
+.main_servicesBlock_scrollBlockCenter_scrollBlock_element7_titleCenter {
+  display: flex;
+  justify-content: center;
+}
+.main_servicesBlock_scrollBlockCenter_scrollBlock_element7_titleCenter_titleBlock {
+  display: flex;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+  margin-top: 60px;
+}
+.main_servicesBlock_scrollBlockCenter_scrollBlock_element7_titleCenter_titleBlock_titleText {
+  color: #000;
+  font-family: Montserrat;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  margin-top: 5px;
+}
+.main_servicesBlock_scrollBlockCenter_scrollBlock_element7_infoCenter {
+  display: flex;
+  justify-content: center;
+}
+.main_servicesBlock_scrollBlockCenter_scrollBlock_element7_infoCenter_infoText {
+  white-space: normal;
+  text-align: center;
+  color: #000;
+  font-family: Montserrat;
+  font-size: 32px;
+  font-style: italic;
+  font-weight: 500;
+  line-height: normal;
+  margin-top: 20px;
+  text-overflow: ellipsis;
+}
+.main_servicesBlock_scrollBlockCenter_scrollBlock_element7_priceCenter {
+  display: flex;
+  justify-content: center;
+}
+.main_servicesBlock_scrollBlockCenter_scrollBlock_element7_priceCenter_priceText {
+  color: #000;
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  margin-top: 35px;
+}
+.main_servicesBlock_scrollBlockCenter_scrollBlock_element8 {
+  display: inline-block;
+  vertical-align: top;
+  width: 425px;
+  height: 375px;
+  border-radius: 15px;
+  background: #ffffff;
+}
+.main_servicesBlock_scrollBlockCenter_scrollBlock_element8_titleCenter {
+  display: flex;
+  justify-content: center;
+}
+.main_servicesBlock_scrollBlockCenter_scrollBlock_element8_titleCenter_titleBlock {
+  display: flex;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+  margin-top: 60px;
+}
+.main_servicesBlock_scrollBlockCenter_scrollBlock_element8_titleCenter_titleBlock_titleText {
+  color: #000;
+  font-family: Montserrat;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  margin-top: 14px;
+}
+.main_servicesBlock_scrollBlockCenter_scrollBlock_element8_infoCenter {
+  display: flex;
+  justify-content: center;
+}
+.main_servicesBlock_scrollBlockCenter_scrollBlock_element8_infoCenter_infoText {
+  white-space: normal;
+  text-align: center;
+  color: #000;
+  font-family: Montserrat;
+  font-size: 32px;
+  font-style: italic;
+  font-weight: 500;
+  line-height: normal;
+  margin-top: 20px;
+  text-overflow: ellipsis;
+}
+.main_servicesBlock_scrollBlockCenter_scrollBlock_element8_priceCenter {
+  display: flex;
+  justify-content: center;
+}
+.main_servicesBlock_scrollBlockCenter_scrollBlock_element8_priceCenter_priceText {
+  color: #000;
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  margin-top: 35px;
+}
+.main_mapsBlock {
+  width: 100%;
+  height: 1460px;
+}
+.main_mapsBlock_titleTextCenter {
+  display: flex;
+  justify-content: center;
+}
+.main_mapsBlock_titleTextCenter_titleText {
+  color: #000;
+  font-family: Montserrat;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.main_mapsBlock_titleTextCenter2 {
+  display: flex;
+  justify-content: center;
+}
+.main_mapsBlock_titleTextCenter2_titleText {
+  color: #000;
+  font-family: Montserrat;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  margin-top: 15px;
+}
+.main_mapsBlock_titleTextCenter2_titleText_numberPhone {
+  color: #39248B;
+  font-family: Montserrat;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-decoration: none;
+}
+.main_mapsBlock_map1 {
+  width: 100%;
+  height: 661px;
+  margin-top: 10px;
+}
+.main_mapsBlock_titleTextCenter3 {
+  display: flex;
+  justify-content: center;
+}
+.main_mapsBlock_titleTextCenter3_titleText {
+  color: #000;
+  font-family: Montserrat;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  margin-top: 15px;
+}
+.main_mapsBlock_titleTextCenter3_titleText_numberPhone {
+  color: #39248B;
+  font-family: Montserrat;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-decoration: none;
+}
+.main_mapsBlock_map2 {
+  width: 100%;
+  height: 661px;
+  margin-top: 10px;
+}
+
+.footer {
+  -moz-column-gap: 35px;
+       column-gap: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 377px;
+  background: #232323;
+}
+.footer_blockLogo {
+  width: 220px;
+  height: 180px;
+}
+.footer_blockLogo_logo {
+  display: flex;
+  -moz-column-gap: 5px;
+       column-gap: 5px;
+}
+.footer_blockLogo_logo_img1 {
+  width: 26px;
+  height: 36px;
+}
+.footer_blockLogo_logo_img2 {
+  width: 157px;
+  height: 25px;
+  margin-top: 5px;
+}
+.footer_blockLogo_textContact {
+  font-family: "Montserrat";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  color: #fff;
+  margin-top: 16px;
+}
+.footer_blockLogo_addressCenter_address {
+  font-family: "Montserrat";
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  color: #fff;
+  margin-top: 10px;
+}
+.footer_blockLogo_addressCenter_addressLink {
+  font-family: "Montserrat";
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-align: center;
+  color: #6a51cd;
+  text-decoration: none;
+}
+.footer_blockLogo_addressCenter2_address {
+  font-family: "Montserrat";
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  color: #fff;
+  margin-top: 10px;
+}
+.footer_blockLogo_addressCenter2_addressLink {
+  font-family: "Montserrat";
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-align: center;
+  color: #6a51cd;
+  text-decoration: none;
+}
+.footer_blockText {
+  width: 812px;
+  height: 126px;
+}
+.footer_blockText_text {
+  font-family: "Montserrat";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  color: #fff;
+  text-align: center;
+}
+
+.hidden {
+  opacity: 0;
+}/*# sourceMappingURL=style.css.map */

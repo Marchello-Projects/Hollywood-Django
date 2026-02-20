@@ -1,0 +1,53 @@
+.tabletHeader_navigationBar {
+  display: none;
+}
+.tabletHeader_headerBlock {
+  display: none;
+}
+
+.tabletMain_invitationBlock {
+  display: none;
+}
+.tabletMain_expertsBlock {
+  display: none;
+}
+.tabletMain_worksBlock {
+  display: none;
+}
+.tabletMain_sevicesBlock {
+  display: none;
+}
+.tabletMain_mapsBlock {
+  display: none;
+}
+
+.tabletFooter_forblock {
+  display: none;
+}
+
+.phoneHeader_navigationBlock {
+  display: none;
+}
+.phoneHeader_headerBlock {
+  display: none;
+}
+
+.phoneMain_invitationBlock {
+  display: none;
+}
+.phoneMain_expertsBlock {
+  display: none;
+}
+.phoneMain_worksBlock {
+  display: none;
+}
+.phoneMain_block4 {
+  display: none;
+}
+.phoneMain_mapsBlock {
+  display: none;
+}
+
+.phoneFooter_forblock {
+  display: none;
+}/*# sourceMappingURL=displayNone.css.map */

@@ -1,0 +1,623 @@
+@media screen and (max-width: 431px) and (min-width: 320px) {
+  .header {
+    display: none;
+  }
+  .main {
+    display: none;
+  }
+  .footer {
+    display: none;
+  }
+  .phoneHeader {
+    display: block;
+    width: 100%;
+    height: 715px;
+    background: linear-gradient(180deg, rgb(0, 0, 0) 6.494%, rgba(0, 0, 0, 0) 93.59%);
+  }
+  .phoneHeader_navigationBlock {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    position: fixed;
+    z-index: 3;
+    margin: 0 auto;
+    -webkit-backdrop-filter: blur(4px);
+            backdrop-filter: blur(4px);
+    background: rgba(0, 0, 0, 0.63);
+  }
+  .phoneHeader_navigationBlock_logo {
+    display: flex;
+    margin-left: 5px;
+  }
+  .phoneHeader_navigationBlock_logo_img1 {
+    width: 25px;
+    height: 36px;
+  }
+  .phoneHeader_navigationBlock_logo_img2 {
+    width: 156px;
+    height: 25px;
+    margin-top: 6px;
+    margin-left: 5px;
+  }
+  .phoneHeader_navigationBlock_link {
+    text-decoration: none;
+  }
+  .phoneHeader_navigationBlock_link_btn {
+    width: 95px;
+    height: 35px;
+    text-align: center;
+    color: #fff;
+    font-family: "Montserrat";
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-decoration: none;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 5px;
+    background: none;
+    cursor: pointer;
+    transition-duration: 0.6s;
+    margin-right: 5px;
+  }
+  .phoneHeader_navigationBlock_link_btn:hover {
+    transition-duration: 0.6s;
+    color: #000;
+    background: rgb(255, 255, 255);
+  }
+  .phoneHeader_headerBlock {
+    display: block;
+  }
+  .phoneHeader_headerBlock_fortext {
+    display: flex;
+    justify-content: center;
+  }
+  .phoneHeader_headerBlock_fortext_text {
+    text-align: center;
+    color: #fff;
+    font-family: "Montserrat";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-shadow: 1px 1px 2px #000;
+    width: 329px;
+    height: 144px;
+    margin-top: 70px;
+  }
+  .phoneHeader_headerBlock_forimgblock {
+    display: flex;
+    justify-content: center;
+  }
+  .phoneHeader_headerBlock_forimgblock_imgblock {
+    margin-top: 30px;
+    width: 315px;
+    height: 412px;
+  }
+  .phoneHeader_headerBlock_forimgblock_imgblock_imgb1 {
+    position: absolute;
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 5px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    width: 315px;
+    height: 157px;
+    background: url(../img/titleBlock/1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 1;
+  }
+  .phoneHeader_headerBlock_forimgblock_imgblock_imgb2 {
+    position: absolute;
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 5px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    width: 315px;
+    height: 157px;
+    background: url(../img/titleBlock/2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 140px;
+    z-index: 2;
+  }
+  .phoneHeader_headerBlock_forimgblock_imgblock_imgb3 {
+    position: absolute;
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 5px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    width: 315px;
+    height: 157px;
+    background: url(../img/titleBlock/3.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 280px;
+    z-index: 2;
+  }
+  .phoneMain_invitationBlock {
+    display: block;
+  }
+  .phoneMain_invitationBlock_fortext {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 428px;
+    background: url(../img/invitationBlock.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .phoneMain_invitationBlock_fortext_blur {
+    filter: blur(5px);
+    background: inherit;
+    width: 100%;
+    height: 428px;
+  }
+  .phoneMain_invitationBlock_fortext_text {
+    position: absolute;
+    color: #fff;
+    font-family: "Montserrat";
+    width: 320px;
+    height: 166px;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-align: center;
+    text-shadow: 1px 1px 2px #000;
+  }
+  .phoneMain_expertsBlock {
+    display: block;
+    height: 600px;
+  }
+  .phoneMain_expertsBlock_fortext {
+    display: flex;
+    justify-content: center;
+  }
+  .phoneMain_expertsBlock_fortext_text {
+    margin-top: 29px;
+    color: #000000;
+    font-family: "Montserrat";
+    width: 317px;
+    height: 219px;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-align: center;
+  }
+  .phoneMain_expertsBlock_forimg {
+    display: flex;
+    justify-content: center;
+  }
+  .phoneMain_expertsBlock_forimg_img {
+    margin-top: 10px;
+    box-sizing: border-box;
+    border: 1px solid rgb(209, 209, 209);
+    border-radius: 5px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
+  }
+  .phoneMain_expertsBlock_forp1 {
+    display: flex;
+    justify-content: center;
+  }
+  .phoneMain_expertsBlock_forp1_p {
+    color: #000;
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: bold;
+    line-height: normal;
+    margin-top: 20px;
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
+  }
+  .phoneMain_expertsBlock_forp2 {
+    display: flex;
+    justify-content: center;
+  }
+  .phoneMain_expertsBlock_forp2_p {
+    font-family: "Montserrat";
+    font-size: 16px;
+    font-style: italic;
+    font-weight: 600;
+    line-height: normal;
+    text-align: center;
+    margin-top: 5px;
+    color: #000000;
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
+  }
+  .phoneMain_worksBlock {
+    display: block;
+  }
+  .phoneMain_worksBlock_bl {
+    margin-top: 15px;
+    width: 100%;
+    height: 470px;
+    background: rgb(35, 35, 35);
+  }
+  .phoneMain_worksBlock_bl_fortext {
+    display: flex;
+    justify-content: center;
+  }
+  .phoneMain_worksBlock_bl_fortext_text {
+    margin-top: 33px;
+    color: #ffffff;
+    font-family: "Montserrat";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+  .phoneMain_worksBlock_bl_forimg {
+    display: flex;
+    justify-content: center;
+  }
+  .phoneMain_worksBlock_bl_forimg_img {
+    width: 100%;
+    height: 370px;
+    margin-top: 20px;
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
+  }
+  .phoneMain_block4 {
+    display: block;
+  }
+  .phoneMain_block4_bl {
+    width: 100%;
+    height: 460px;
+  }
+  .phoneMain_block4_bl_fortext {
+    display: flex;
+    justify-content: center;
+  }
+  .phoneMain_block4_bl_fortext_text {
+    margin-top: 50px;
+    color: #000000;
+    font-family: "Montserrat";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+  .phoneMain_block4_bl_forslider3 {
+    display: flex;
+    justify-content: center;
+  }
+  .phoneMain_block4_bl_forslider3_block {
+    width: 100%;
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
+  }
+  .phoneMain_block4_bl_forslider3_block_fortxt1 {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    -moz-column-gap: 5px;
+         column-gap: 5px;
+  }
+  .phoneMain_block4_bl_forslider3_block_fortxt1_text {
+    font-family: "Montserrat";
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-align: center;
+    color: #000000;
+    margin-top: 4px;
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
+  }
+  .phoneMain_block4_bl_forslider3_block_fortxt {
+    display: flex;
+    justify-content: center;
+    margin-top: 45px;
+    -moz-column-gap: 5px;
+         column-gap: 5px;
+  }
+  .phoneMain_block4_bl_forslider3_block_fortxt_text {
+    font-family: "Montserrat";
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-align: center;
+    color: #000000;
+    margin-top: 5px;
+  }
+  .phoneMain_block4_bl_forslider3_block_fortxt5 {
+    display: flex;
+    justify-content: center;
+    margin-top: 75px;
+    -moz-column-gap: 5px;
+         column-gap: 5px;
+  }
+  .phoneMain_block4_bl_forslider3_block_fortxt5_text5 {
+    font-family: "Montserrat";
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-align: center;
+    color: #000000;
+    margin-top: 15px;
+  }
+  .phoneMain_block4_bl_forslider3_block_fortxt6 {
+    display: flex;
+    justify-content: center;
+    margin-top: 45px;
+    -moz-column-gap: 5px;
+         column-gap: 5px;
+  }
+  .phoneMain_block4_bl_forslider3_block_fortxt6_text6 {
+    font-family: "Montserrat";
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-align: center;
+    color: #000000;
+    margin-top: 15px;
+  }
+  .phoneMain_block4_bl_forslider3_block_fortxt7 {
+    display: flex;
+    justify-content: center;
+    margin-top: 65px;
+    -moz-column-gap: 5px;
+         column-gap: 5px;
+  }
+  .phoneMain_block4_bl_forslider3_block_fortxt7_text7 {
+    font-family: "Montserrat";
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-align: center;
+    color: #000000;
+    margin-top: 15px;
+  }
+  .phoneMain_block4_bl_forslider3_block_fortxt8 {
+    display: flex;
+    justify-content: center;
+    margin-top: 65px;
+    -moz-column-gap: 5px;
+         column-gap: 5px;
+  }
+  .phoneMain_block4_bl_forslider3_block_fortxt8_text8 {
+    font-family: "Montserrat";
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-align: center;
+    color: #000000;
+    margin-top: 15px;
+  }
+  .phoneMain_block4_bl_forslider3_block_fortxt2 {
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+    -moz-column-gap: 5px;
+         column-gap: 5px;
+  }
+  .phoneMain_block4_bl_forslider3_block_fortxt2_text {
+    font-family: "Montserrat";
+    font-size: 32px;
+    font-style: italic;
+    font-weight: 500;
+    line-height: normal;
+    text-align: center;
+    color: #000000;
+    margin-top: 4px;
+  }
+  .phoneMain_block4_bl_forslider3_block_fortxt2_text2 {
+    font-family: "Montserrat";
+    font-size: 32px;
+    font-style: italic;
+    font-weight: 500;
+    line-height: normal;
+    text-align: center;
+    color: #000000;
+  }
+  .phoneMain_block4_bl_forslider3_block_fortxt3 {
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+    -moz-column-gap: 5px;
+         column-gap: 5px;
+  }
+  .phoneMain_block4_bl_forslider3_block_fortxt3_text {
+    font-family: "Montserrat";
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    text-align: center;
+    color: #000000;
+    margin-top: 4px;
+  }
+  .phoneMain_block4_bl_forslider3_block_fortxt3_text2 {
+    font-family: "Montserrat";
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    text-align: center;
+    color: #000000;
+  }
+  .phoneMain_mapsBlock {
+    display: block;
+  }
+  .phoneMain_mapsBlock_bl {
+    margin-top: 10px;
+    width: 100%;
+    height: 866px;
+  }
+  .phoneMain_mapsBlock_bl_forp1 {
+    display: flex;
+    justify-content: center;
+  }
+  .phoneMain_mapsBlock_bl_forp1_p {
+    color: #000000;
+    font-family: "Montserrat";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+  .phoneMain_mapsBlock_bl_forp2 {
+    display: flex;
+    justify-content: center;
+    -moz-column-gap: 2px;
+         column-gap: 2px;
+    margin-top: 15px;
+  }
+  .phoneMain_mapsBlock_bl_forp2_p {
+    color: #000;
+    font-family: Montserrat;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-align: center;
+  }
+  .phoneMain_mapsBlock_bl_forp2_p2 {
+    font-family: "Montserrat";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-align: center;
+    color: #39248B;
+    text-decoration: none;
+  }
+  .phoneMain_mapsBlock_bl_iframe1 {
+    width: 100%;
+    height: 350px;
+    margin-top: 15px;
+  }
+  .phoneMain_mapsBlock_bl_forp3 {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+  }
+  .phoneMain_mapsBlock_bl_forp3_p {
+    color: #000;
+    font-family: Montserrat;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+  .phoneMain_mapsBlock_bl_forp3_p2 {
+    font-family: "Montserrat";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-align: center;
+    color: #39248B;
+    text-decoration: none;
+  }
+  .phoneMain_mapsBlock_bl_iframe2 {
+    width: 100%;
+    height: 350px;
+    margin-top: 15px;
+  }
+  .phoneFooter_forblock {
+    display: block;
+  }
+  .phoneFooter_forblock_block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 248px;
+    background: rgb(35, 35, 35);
+  }
+  .phoneFooter_forblock_block_bl1 {
+    width: 220px;
+    height: 180px;
+  }
+  .phoneFooter_forblock_block_bl1_logo {
+    display: flex;
+    -moz-column-gap: 5px;
+         column-gap: 5px;
+  }
+  .phoneFooter_forblock_block_bl1_logo_img1 {
+    width: 26px;
+    height: 36px;
+  }
+  .phoneFooter_forblock_block_bl1_logo_img2 {
+    width: 157px;
+    height: 25px;
+    margin-top: 5px;
+  }
+  .phoneFooter_forblock_block_bl1_text1 {
+    font-family: "Montserrat";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    color: #fff;
+    margin-top: 16px;
+  }
+  .phoneFooter_forblock_block_bl1_foraddress1_address1 {
+    font-family: "Montserrat";
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    color: #fff;
+    margin-top: 10px;
+  }
+  .phoneFooter_forblock_block_bl1_foraddress1_address1_a {
+    font-family: "Montserrat";
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-align: center;
+    color: #6a51cd;
+    text-decoration: none;
+  }
+  .phoneFooter_forblock_block_bl1_foraddress2_address2 {
+    font-family: "Montserrat";
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    color: #fff;
+    margin-top: 10px;
+  }
+  .phoneFooter_forblock_block_bl1_foraddress2_address2_a {
+    font-family: "Montserrat";
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-align: center;
+    color: #6a51cd;
+    text-decoration: none;
+  }
+  .phoneFooter_forblock_block_bl2 {
+    width: 424px;
+    height: 173px;
+  }
+  .phoneFooter_forblock_block_bl2_text {
+    font-family: "Montserrat";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    color: #fff;
+    text-align: center;
+  }
+}
+.hidden {
+  opacity: 0;
+}/*# sourceMappingURL=phone.css.map */

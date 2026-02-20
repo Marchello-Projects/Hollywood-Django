@@ -1,0 +1,766 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Стоматологічна клініка HOLLYWOOD</title>
+
+    <link rel="icon" type="image/png" href="{% static 'HollywoodFavicon/favicon-96x96.png' %}" sizes="96x96"/>
+    <link rel="icon" type="image/svg+xml" href="{% static 'HollywoodFavicon/favicon.svg' %}"/>
+    <link rel="shortcut icon" href="{% static 'HollywoodFavicon/favicon.ico' %}"/>
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'HollywoodFavicon/apple-touch-icon.png' %}"/>
+    <meta name="apple-mobile-web-app-title" content="Hollywood dentistry" />
+    <link rel="manifest" href="{% static 'HollywoodFavicon/site.webmanifest' %}"/>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="{% static 'css/reset.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/DisplayNoneStyle/displayNone.css' %}">
+    <link rel="stylesheet" href="{% static 'tablet/tablet.css' %}">
+    <link rel="stylesheet" href="{% static 'phone/phone.css' %}">
+  </head>
+  <body>
+    <header class="header">
+      <div class="header_navigationBar">
+          <div class="header_navigationBar_logo">
+              <img class="header_navigationBar_logo_img1" src="{% static 'img/logoimg1.png' %}" alt="Logo1">
+              <img class="header_navigationBar_logo_img2" src="{% static 'img/logoimg2.png' %}" alt="Logo2">
+          </div>
+          <nav class="header_navigationBar_navigationElements">
+              <ul class="header_navigationBar_navigationElements_ul">
+                  <li class="header_navigationBar_navigationElements_ul_li">
+                      <a href="#aboutUs" class="header_navigationBar_navigationElements_ul_li_a">Про нас</a>
+                  </li>
+                  <li class="header_navigationBar_navigationElements_ul_li">
+                      <a href="#experts" class="header_navigationBar_navigationElements_ul_li_a">Фахівці</a>
+                  </li>
+                  <li class="header_navigationBar_navigationElements_ul_li">
+                    <a href="#worksBlock" class="header_navigationBar_navigationElements_ul_li_a">Роботи та результати</a>
+                  </li>
+                  <li class="header_navigationBar_navigationElements_ul_li">
+                      <a href="#services" class="header_navigationBar_navigationElements_ul_li_a">Наші послуги</a>
+                  </li>
+              </ul>
+          </nav>
+          <a class="header_navigationBar_link" href="#Registration">
+            <button class="header_navigationBar_link_btnRegistration">Записатися на консультацію</button>
+          </a>
+      </div>
+      <div class="header_titleBlock">
+          <p class="header_titleBlock_text">Стоматологічна клініка «HOLLYWOOD» Усі види стоматологічних послуг, від консультації до лікування зубів</p>
+          <div class="header_titleBlock_imgblock">
+              <div class="header_titleBlock_imgblock_imgb1"></div>
+              <div class="header_titleBlock_imgblock_imgb2"></div>
+              <div class="header_titleBlock_imgblock_imgb3"></div>
+          </div>
+      </div>
+    </header>
+    <main  class="main">
+      <div id="aboutUs" class="main_invitationBlock">
+        <div class="main_invitationBlock_blurBlock"></div>
+        <p class="main_invitationBlock_titleText">Запрошуємо відвідати стоматологію "Hollywood" до Овідіополя та Чорноморська! Забудьте про біль у зубах та неприємні враження від відвідування стоматолога - у нас ви знайдете ідеальну комбінацію уважного відношення, професійних знань та високотехнологічного обладнання.</p>
+      </div>
+      <div id="experts" class="main_expertsBlock">
+        <div class="main_expertsBlock_titleTextBlock">
+          <p class="main_expertsBlock_titleTextBlock_titleText">Наша команда медичних фахівців  - справжні професіонали своєї справи, з багаторічним досвідом та помітними успіхами в галузі стоматології. Ми пропонуємо широкий спектр послуг, що дозволить Вам отримати комплексну допомогу в різних галузях стоматології: від чистки зубів та профілактики карієсу до протезування та імплантології.</p>
+        </div>
+        <div class="main_expertsBlock_bioFlex">
+          <div class="main_expertsBlock_bioFlex_bioBlock">
+            <div class="main_expertsBlock_bioFlex_bioBlock_bio1">
+              <img id="imgExpert1" class="main_expertsBlock_bioFlex_bioBlock_bio1_expert" src="{% static 'img/experts/1.png' %}" alt="expert1">
+              <p id="titleTextExpert1" class="main_expertsBlock_bioFlex_bioBlock_bio1_titleText">Твердохліб Андрій Валерійович</p>
+              <p id="infoTextExpert1" class="main_expertsBlock_bioFlex_bioBlock_bio1_infoText">Власник клінік, Терапевтичний прийом, Хірургічний прийом, Ортопедичний прийом</p>
+            </div>
+            <div class="main_expertsBlock_bioFlex_bioBlock_bio2">
+              <img id="imgExpert2" class="main_expertsBlock_bioFlex_bioBlock_bio2_expert" src="{% static 'img/experts/2.png' %}" alt="expert1">
+              <p id="titleTextExpert2" class="main_expertsBlock_bioFlex_bioBlock_bio2_titleText">Киселиця Владислав Юрійович</p>
+              <p id="infoTextExpert2" class="main_expertsBlock_bioFlex_bioBlock_bio2_infoText">Терапевтичний прийом, Хірургічний прийом, Ортопедичний прийом</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="worksBlock" class="main_worksBlock">
+        <div class="main_worksBlock_titleTextCenter">
+          <p class="main_worksBlock_titleTextCenter_titleText">Наші роботи та результати:</p>
+        </div>
+        <div class="main_worksBlock_sliderCenter">
+          <button id="btnReturn" class="main_worksBlock_sliderCenter_btnReturn">
+            <svg width="64.000000" height="65.931641" viewBox="0 0 64 65.9316" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <defs>
+                  <clipPath id="clip22_9">
+                    <rect id="arrow-sm-left_svgrepo.com" width="60.000000" height="61.810863" transform="translate(2.000000 2.060425)" fill="white" fill-opacity="0"/>
+                  </clipPath>
+                </defs>
+                <ellipse id="Ellipse 2" cx="32.000000" cy="32.965820" rx="32.000000" ry="32.965794" fill="#FFFFFF" fill-opacity="1.000000"/>
+                <rect id="arrow-sm-left_svgrepo.com" width="60.000000" height="61.810863" transform="translate(2.000000 2.060425)" fill="#FFFFFF" fill-opacity="0"/>
+                <g clip-path="url(#clip22_9)">
+                  <path id="Vector" d="M17 32.9659L47 32.9659M29.5 45.8431L17 32.9659L29.5 20.0886" stroke="#000000" stroke-opacity="1.000000" stroke-width="5.000000" stroke-linejoin="round"/>
+                </g>
+            </svg>
+          </button>
+          <img id="img" class="main_worksBlock_sliderCenter_img" src="{% static 'img/works/1.png' %}" alt="">
+          <button id="btnNext" class="main_worksBlock_sliderCenter_btnNext">
+            <svg width="64.000000" height="65.931641" viewBox="0 0 64 65.9316" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <defs>
+                  <clipPath id="clip22_7">
+                    <rect id="arrow-sm-right_svgrepo.com" width="60.000000" height="61.810863" transform="translate(2.000000 2.060425)" fill="white" fill-opacity="0"/>
+                  </clipPath>
+                </defs>
+                <ellipse id="Ellipse 1" cx="32.000000" cy="32.965820" rx="32.000000" ry="32.965794" fill="#FFFFFF" fill-opacity="1.000000"/>
+                <rect id="arrow-sm-right_svgrepo.com" width="60.000000" height="61.810863" transform="translate(2.000000 2.060425)" fill="#FFFFFF" fill-opacity="0"/>
+                <g clip-path="url(#clip22_7)">
+                  <path id="Vector" d="M17 32.9659L47 32.9659M34.5 45.8431L47 32.9659L34.5 20.0886" stroke="#000000" stroke-opacity="1.000000" stroke-width="5.000000" stroke-linejoin="round"/>
+                </g>
+              </svg>                    
+            </button>
+          </div>
+      </div>
+      <div id="services" class="main_servicesBlock">
+        <div class="main_servicesBlock_titleTextCenter">
+          <p class="main_servicesBlock_titleTextCenter_titleText">Наші послуги:</p>
+        </div>
+        <div class="main_servicesBlock_scrollBlockCenter">
+          <div class="main_servicesBlock_scrollBlockCenter_scrollBlock">
+            <div class="main_servicesBlock_scrollBlockCenter_scrollBlock_element1">
+              <div class="main_servicesBlock_scrollBlockCenter_scrollBlock_element1_titleCenter">
+                <div class="main_servicesBlock_scrollBlockCenter_scrollBlock_element1_titleCenter_titleBlock">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="56" height="55" viewBox="0 0 56 55" fill="none">
+                    <path d="M18.8937 3.37475C16.8011 2.66873 14.8189 2 11.75 2C5.25 2 2 8 2 15.5C2 20.2955 3.32876 23.2514 4.71183 26.3279C5.4918 28.0631 6.28906 29.8364 6.875 32C7.35925 33.788 7.5549 36.3752 7.76293 39.1265C8.25303 45.608 8.812 53 13.375 53C16.2967 53 17.5768 48.7571 18.9862 44.0858C20.7124 38.3642 22.6326 32 28 32C33.3674 32 35.2875 38.3642 37.0139 44.0858C38.4231 48.7571 39.7033 53 42.625 53C47.188 53 47.747 45.608 48.2371 39.1265C48.4451 36.3752 48.6407 33.788 49.125 32C49.711 29.8364 50.5082 28.0631 51.2882 26.3279C52.6714 23.2514 54 20.2955 54 15.5C54 8 50.75 2 44.25 2C41.181 2 39.1988 2.66873 37.1062 3.37475C34.7665 4.16408 32.289 5 28 5C23.711 5 21.2334 4.16408 18.8937 3.37475Z" stroke="black" stroke-width="3.75" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  <p class="main_servicesBlock_scrollBlockCenter_scrollBlock_element1_titleCenter_titleBlock_titleText">Діагностика</p>
+                </div>      
+              </div>
+              <div class="main_servicesBlock_scrollBlockCenter_scrollBlock_element1_infoCenter">
+                <p class="main_servicesBlock_scrollBlockCenter_scrollBlock_element1_infoCenter_infoText">Від консультації до фотопротоколу</p>
+              </div> 
+              <div class="main_servicesBlock_scrollBlockCenter_scrollBlock_element1_priceCenter">
+                <p class="main_servicesBlock_scrollBlockCenter_scrollBlock_element1_priceCenter_priceText">Безкоштовно - ... грн</p>
+              </div> 
+            </div>
+            <div class="main_servicesBlock_scrollBlockCenter_scrollBlock_element2">
+              <div class="main_servicesBlock_scrollBlockCenter_scrollBlock_element2_titleCenter">
+                <div class="main_servicesBlock_scrollBlockCenter_scrollBlock_element2_titleCenter_titleBlock">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="60" height="47" viewBox="0 0 60 47" fill="none">
+                        <path d="M58.936 38.1562L43.5537 26.192C42.0874 25.0519 40.2571 24.4241 38.3999 24.4241H26.2986C25.662 24.4241 25.0349 24.209 24.5326 23.8185L9.15134 11.855C8.56954 11.4019 7.84601 11.2029 7.11402 11.2946C6.83163 11.3299 6.56157 11.4079 6.30983 11.5226L5.41558 9.61738C5.63726 9.44091 5.83358 9.23049 5.99527 8.98791C6.404 8.37464 6.54948 7.6389 6.40482 6.91631L5.46548 2.21972C5.3207 1.49537 4.90293 0.871173 4.28907 0.462442C3.67638 0.054415 2.94065 -0.0902438 2.21923 0.0550019C1.49629 0.199308 0.872919 0.616611 0.46407 1.23C0.0553392 1.84327 -0.0901414 2.57901 0.0545173 3.3016L0.993859 7.9982C1.25077 9.28392 2.38784 10.2172 3.69752 10.2172C3.71525 10.2172 3.73298 10.2162 3.75083 10.2159L4.97573 12.8252C4.41717 13.9725 4.71612 15.3965 5.76255 16.2107L21.1449 28.1751C22.6112 29.315 24.4415 29.9429 26.2987 29.9429H26.3023V41.3324H11.2141C9.69264 41.3324 8.45482 42.5702 8.45482 44.0917V45.9704C8.45482 46.4567 8.84911 46.851 9.33545 46.851H39.3944C39.8807 46.851 40.275 46.4567 40.275 45.9704V44.0917C40.275 42.5702 39.0372 41.3324 37.5157 41.3324H37.457V29.9429H38.4C39.0365 29.9429 39.6636 30.158 40.1659 30.5485L55.5476 42.5122C56.0364 42.8925 56.6218 43.0937 57.2405 43.0937C58.0992 43.0937 58.8936 42.7054 59.4199 42.0286C60.3537 40.8276 60.1367 39.0906 58.936 38.1562ZM2.72084 7.65287L1.7815 2.95604C1.72925 2.69467 1.78173 2.4286 1.92956 2.20692C2.07727 1.98523 2.30271 1.83435 2.5655 1.78186C2.63184 1.76848 2.69865 1.7619 2.76475 1.7619C2.95873 1.7619 3.14824 1.81862 3.31286 1.92828C3.53478 2.07611 3.6859 2.30214 3.7385 2.56492L4.67784 7.26175C4.73009 7.52312 4.67761 7.78919 4.52978 8.01088C4.41706 8.18008 4.25889 8.30759 4.07302 8.38215C4.02782 8.39237 3.98308 8.40681 3.93881 8.42466C3.92331 8.42853 3.90817 8.43311 3.89243 8.43628C3.82856 8.4492 3.7628 8.45589 3.6974 8.45589C3.22456 8.45577 2.81383 8.1182 2.72084 7.65287ZM35.6956 41.3323H34.6977C34.2113 41.3323 33.817 41.7266 33.817 42.2129C33.817 42.6992 34.2113 43.0935 34.6977 43.0935H37.5156C38.0659 43.0935 38.5136 43.5412 38.5136 44.0916V45.0896H10.216V44.0916C10.216 43.5412 10.6637 43.0935 11.214 43.0935H30.9402C31.4265 43.0935 31.8208 42.6992 31.8208 42.2129C31.8208 41.7266 31.4265 41.3323 30.9402 41.3323H28.0635V29.9427H35.6956V41.3323ZM58.0294 40.9473C57.8392 41.192 57.5516 41.3323 57.2404 41.3323C57.0172 41.3323 56.8057 41.2596 56.6289 41.122L41.2471 29.1582C40.4373 28.5283 39.4261 28.1815 38.3999 28.1815H26.2986C24.831 28.1815 23.3846 27.6854 22.2259 26.7847L6.84396 14.8205C6.40964 14.4826 6.33108 13.8542 6.66889 13.4198C6.83257 13.2094 7.06847 13.0752 7.33313 13.0421C7.37528 13.0368 7.41731 13.0342 7.45912 13.0342C7.67963 13.0342 7.8925 13.107 8.06957 13.2449L23.4513 25.2087C24.2611 25.8385 25.2723 26.1854 26.2986 26.1854H38.4C39.8676 26.1854 41.3139 26.6816 42.4726 27.5822L57.8546 39.5463C58.2889 39.8844 58.3673 40.5127 58.0294 40.9473Z" fill="black"/>
+                    </svg>
+                  <p class="main_servicesBlock_scrollBlockCenter_scrollBlock_element2_titleCenter_titleBlock_titleText">Реставрація</p>
+                </div>      
+              </div>
+              <div class="main_servicesBlock_scrollBlockCenter_scrollBlock_element2_infoCenter">
+                <p class="main_servicesBlock_scrollBlockCenter_scrollBlock_element2_infoCenter_infoText">Від пломби до реставрації</p>
+              </div> 
+              <div class="main_servicesBlock_scrollBlockCenter_scrollBlock_element2_priceCenter">
+                <p class="main_servicesBlock_scrollBlockCenter_scrollBlock_element2_priceCenter_priceText">1000 - ... грн</p>
+              </div> 
+            </div>
+            <div class="main_servicesBlock_scrollBlockCenter_scrollBlock_element3">
+              <div class="main_servicesBlock_scrollBlockCenter_scrollBlock_element3_titleCenter">
+                <div class="main_servicesBlock_scrollBlockCenter_scrollBlock_element3_titleCenter_titleBlock">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="58" height="60" viewBox="0 0 58 60" fill="none">
+                        <path d="M56.3616 0.62384C55.4871 -0.150503 54.1493 -0.0694929 53.3727 0.803638C53.3208 0.862022 48.1101 6.6396 41.8592 6.6396C32.5343 6.6396 29.9747 5.3596 26.4317 3.58808C24.5533 2.64889 21.0566 0.900608 17.5333 0.256366C11.3392 -0.875957 8.50384 1.95839 7.21495 4.53556C4.31737 10.3311 7.80768 16.3663 9.91657 19.216C3.8701 24.1354 0 31.6319 0 40.0164C0 47.4158 2.9495 54.3046 8.30485 59.4143C8.69899 59.7903 9.22263 60 9.76727 60H43.8481C44.3927 60 44.9164 59.7903 45.3105 59.4143C50.6655 54.3049 53.6147 47.416 53.6147 40.0164C53.6147 25.2347 41.5889 13.2091 26.8075 13.2091C21.9321 13.2091 17.357 14.518 13.4137 16.8018C11.8562 14.7099 9.11677 10.2065 11.0048 6.43051C13.0681 2.30445 19.3204 4.7697 24.5372 7.37778C28.4465 9.33253 31.5343 10.8766 41.8594 10.8766C50.0444 10.8766 56.2861 3.90626 56.5477 3.60929C57.32 2.73313 57.2364 1.39839 56.3616 0.62384ZM49.3778 40.0164C49.3778 45.9683 47.1117 51.5275 42.978 55.7632H10.6372C6.50323 51.5273 4.23677 45.9681 4.23677 40.0164C4.23677 27.5711 14.362 17.4459 26.8073 17.4459C39.2525 17.4459 49.3778 27.5709 49.3778 40.0164Z" fill="black"/>
+                        <path d="M22.7167 50.0944C23.1585 50.411 23.6793 50.5783 24.2228 50.5783C24.6323 50.5783 25.0412 50.4793 25.4032 50.2928C26.1515 49.9086 26.6547 49.1987 26.7779 48.3843L26.8072 48.2771L26.8365 48.3848C26.9595 49.1987 27.4628 49.9084 28.2082 50.291C28.5727 50.4789 28.9822 50.5781 29.3921 50.5781C29.9351 50.5781 30.4555 50.411 30.8977 50.0944C32.7418 48.7722 34.2985 46.5575 35.6567 43.3229C37.0791 39.9359 38.0347 35.8856 38.0347 33.2439C38.0347 28.5448 34.7717 27.291 32.8436 27.291C31.4826 27.291 30.3377 27.7801 29.2299 28.2534C28.4032 28.6066 27.4662 29.0072 26.807 29.0072C26.1478 29.0072 25.2111 28.6066 24.3836 28.253C23.2763 27.7801 22.1315 27.291 20.7707 27.291C18.8426 27.291 15.5793 28.5448 15.5793 33.2439C15.5793 35.8848 16.5349 39.9353 17.9573 43.3229C19.3157 46.5571 20.8725 48.7718 22.7167 50.0944ZM20.7711 31.5278C21.2648 31.5278 21.9068 31.8021 22.7197 32.1492C23.861 32.6369 25.281 33.2437 26.8074 33.2437C28.3339 33.2437 29.7539 32.6367 30.8953 32.1492C31.7078 31.8021 32.3499 31.5278 32.8438 31.5278C33.1048 31.5278 33.7981 31.5278 33.7981 33.2437C33.7981 35.3082 32.9371 38.8571 31.7507 41.6823C31.2195 42.9472 30.6977 43.9167 30.2115 44.6593L28.8509 39.6767C28.5993 38.7553 27.7626 38.1163 26.8074 38.1163C25.8523 38.1163 25.0155 38.7553 24.764 39.6767L23.4034 44.6593C22.9169 43.9165 22.3953 42.947 21.8644 41.6825C20.6779 38.8567 19.8167 35.3076 19.8167 33.2437C19.8165 31.5278 20.5099 31.5278 20.7711 31.5278Z" fill="black"/>
+                    </svg>
+                  <p class="main_servicesBlock_scrollBlockCenter_scrollBlock_element3_titleCenter_titleBlock_titleText">Гігієна</p>
+                </div>      
+              </div>
+              <div class="main_servicesBlock_scrollBlockCenter_scrollBlock_element3_infoCenter">
+                <p class="main_servicesBlock_scrollBlockCenter_scrollBlock_element3_infoCenter_infoText">Від проф. чищення до глибокого фторування</p>
+              </div> 
+              <div class="main_servicesBlock_scrollBlockCenter_scrollBlock_element3_priceCenter">
+                <p class="main_servicesBlock_scrollBlockCenter_scrollBlock_element3_priceCenter_priceText">1200 - ... грн</p>
+              </div> 
+            </div>
+            <div class="main_servicesBlock_scrollBlockCenter_scrollBlock_element4">
+              <div class="main_servicesBlock_scrollBlockCenter_scrollBlock_element4_titleCenter">
+                <div class="main_servicesBlock_scrollBlockCenter_scrollBlock_element4_titleCenter_titleBlock">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="56" height="59" viewBox="0 0 56 59" fill="none">
+                        <path d="M55.7064 12.6486L43.9959 0.30939C43.6044 -0.102919 42.9697 -0.103264 42.5783 0.30916L40.0828 2.93696C39.8948 3.13494 39.789 3.40366 39.789 3.68391C39.789 3.96416 39.8946 4.23266 40.0826 4.43086L45.2302 9.85414L40.4626 14.8771L33.4223 7.46003C33.0307 7.04761 32.3961 7.04761 32.0045 7.46003C31.613 7.87257 31.613 8.54116 32.0045 8.95358L33.7999 10.8452L12.5322 33.2516C12.1407 33.664 12.1407 34.3327 12.5322 34.7451L14.6358 36.9613L11.6981 40.0563C11.3067 40.4687 11.3067 41.1374 11.6981 41.5498L13.4217 43.3657L0.293675 57.197C-0.0978918 57.6095 -0.0978918 58.2782 0.293675 58.6906C0.489459 58.8969 0.746056 59 1.00265 59C1.25914 59 1.51585 58.8969 1.71163 58.6906L14.8395 44.8595L16.5635 46.676C16.7593 46.8823 17.0159 46.9854 17.2725 46.9854C17.529 46.9854 17.7857 46.8823 17.9815 46.676L20.9191 43.5812L23.0213 45.7959C23.2171 46.002 23.4738 46.1053 23.7303 46.1053C23.9868 46.1053 24.2435 46.0021 24.4393 45.7959L45.7064 23.3897L47.5025 25.282C47.6982 25.4882 47.9549 25.5914 48.2114 25.5914C48.4679 25.5914 48.7246 25.4882 48.9204 25.282C49.3119 24.8695 49.3119 24.2008 48.9204 23.7884L41.8803 16.3709L46.6479 11.3479L51.7946 16.7703C51.9904 16.9765 52.2471 17.0797 52.5036 17.0797C52.7601 17.0797 53.0168 16.9765 53.2126 16.7703L55.7068 14.1425C56.0978 13.7297 56.0978 13.0611 55.7064 12.6486ZM17.2725 44.4354L13.8248 40.8031L16.0536 38.4551L19.5012 42.0874L17.2725 44.4354ZM44.2883 21.896L23.73 43.5552L14.6588 33.9982L35.217 12.3389L44.2883 21.896ZM52.5033 14.5294L42.2093 3.68414L43.2867 2.54966L53.5798 13.3953L52.5033 14.5294Z" fill="black"/>
+                    </svg>
+                  <p class="main_servicesBlock_scrollBlockCenter_scrollBlock_element4_titleCenter_titleBlock_titleText">Терапія</p>
+                </div>      
+              </div>
+              <div class="main_servicesBlock_scrollBlockCenter_scrollBlock_element4_infoCenter">
+                <p class="main_servicesBlock_scrollBlockCenter_scrollBlock_element4_infoCenter_infoText">Від анестезії до надання допомоги при гострому болю</p>
+              </div> 
+              <div class="main_servicesBlock_scrollBlockCenter_scrollBlock_element4_priceCenter">
+                <p class="main_servicesBlock_scrollBlockCenter_scrollBlock_element4_priceCenter_priceText">300 - ... грн</p>
+              </div> 
+            </div>
+            <div class="main_servicesBlock_scrollBlockCenter_scrollBlock_element5">
+              <div class="main_servicesBlock_scrollBlockCenter_scrollBlock_element5_titleCenter">
+                <div class="main_servicesBlock_scrollBlockCenter_scrollBlock_element5_titleCenter_titleBlock">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="55" height="65" viewBox="0 0 55 65" fill="none">
+                        <path d="M51.7038 47.2775L34.9175 31.0519C34.3878 30.5399 33.5296 30.5399 32.9997 31.0519L30.123 33.8326L26.2874 30.125L26.7636 29.6646C28.9402 27.5613 30.1394 24.7631 30.1404 21.7867C30.1418 18.8078 28.9439 16.0082 26.7666 13.9049C26.6052 13.7489 26.4324 13.609 26.2632 13.4634L38.2734 1.85381L36.3563 0L24.0108 11.9333C22.3702 11.0921 20.5309 10.644 18.6188 10.644C18.6175 10.644 18.6168 10.644 18.6162 10.644C15.5344 10.644 12.6389 11.8026 10.4623 13.9072L0.397388 23.636C0.142979 23.8819 0 24.2148 0 24.5629C0 24.911 0.142979 25.2439 0.397388 25.4898L14.7812 39.3944C15.0356 39.6403 15.3803 39.7785 15.7401 39.7785C16.0996 39.7785 16.4446 39.6403 16.699 39.3944L19.5757 36.613L23.411 40.3206L20.5343 43.1013C20.2799 43.3473 20.1369 43.6798 20.1369 44.0283C20.1369 44.3764 20.2799 44.7092 20.5343 44.9552L37.3206 61.1807C39.236 63.0333 41.7875 64.052 44.5045 64.0533C44.5051 64.0533 44.5058 64.0533 44.5065 64.0533C47.2254 64.0533 49.7799 63.0316 51.6987 61.1756C55.6639 57.343 55.6666 51.1077 51.7038 47.2775ZM18.6162 33.8326C18.6155 33.8333 18.6152 33.8345 18.6145 33.8352L15.7398 36.614L3.27375 24.5629L12.3805 15.7607C14.0452 14.1515 16.2594 13.2658 18.6165 13.2658C18.6172 13.2658 18.6178 13.2658 18.6185 13.2658C20.9743 13.2658 23.1875 14.1518 24.8492 15.7581C26.5132 17.3673 27.4295 19.5063 27.4282 21.7851C27.4268 24.0623 26.5099 26.2016 24.8458 27.8108L21.8117 30.7443L18.6162 33.8326ZM21.4932 34.7595L23.4103 32.9063L24.3702 31.9788L28.2062 35.6861L25.3288 38.4675L21.4932 34.7595ZM44.5058 61.4319C44.5051 61.4319 44.5045 61.4319 44.5045 61.4319C42.5115 61.4319 40.6413 60.6844 39.2377 59.3273L23.4103 44.0286L26.2853 41.2495C26.2853 41.2495 26.2867 41.2488 26.2874 41.2482L31.0819 36.613L33.9582 33.8326L49.7856 49.1313C52.6905 51.9399 52.6885 56.5112 49.7803 59.3224C48.3736 60.6827 46.5005 61.4319 44.5058 61.4319Z" fill="black"/>
+                    </svg>
+                  <p class="main_servicesBlock_scrollBlockCenter_scrollBlock_element5_titleCenter_titleBlock_titleText">Ендодонтія</p>
+                </div>      
+              </div>
+              <div  class="main_servicesBlock_scrollBlockCenter_scrollBlock_element5_infoCenter">
+                <p class="main_servicesBlock_scrollBlockCenter_scrollBlock_element5_infoCenter_infoText">Від лікування до пломбування</p>
+              </div> 
+              <div class="main_servicesBlock_scrollBlockCenter_scrollBlock_element5_priceCenter">
+                <p class="main_servicesBlock_scrollBlockCenter_scrollBlock_element5_priceCenter_priceText">500 - ... грн</p>
+              </div> 
+            </div>
+            <div class="main_servicesBlock_scrollBlockCenter_scrollBlock_element6">
+              <div class="main_servicesBlock_scrollBlockCenter_scrollBlock_element6_titleCenter">
+                <div class="main_servicesBlock_scrollBlockCenter_scrollBlock_element6_titleCenter_titleBlock">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="76" height="76" viewBox="0 0 76 76" fill="none">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M51.2083 46.2195C50.8001 46.026 50.3416 45.9167 49.8527 45.9167H43.8056L23.8265 53.1092L24.4587 55.8493L51.2083 46.2195ZM25.8082 61.6969L52.401 52.1234L52.9383 49.7954C53.0054 49.5044 53.0302 49.2153 53.0174 48.9338L25.1758 58.9568L25.8082 61.6969ZM51.5539 55.7941L26.9374 64.656C27.7075 65.6511 28.8577 66.3193 30.1462 66.4684L50.8069 59.0305L51.5539 55.7941ZM45.3045 66.5001H39.4074L49.96 62.7012L49.9329 62.8182C49.4356 64.9734 47.5164 66.5001 45.3045 66.5001ZM26.1473 45.9167H34.4566L23.1094 50.0017L23.0617 49.7954C22.6038 47.8112 24.1108 45.9167 26.1473 45.9167Z" fill="black"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M39.0043 17.0698C37.867 17.853 36.3532 17.8089 35.2634 16.9607C30.8012 13.4875 27.0144 12.4095 23.8387 12.7169C20.6476 13.0258 17.4719 14.7915 14.3632 18.2208C12.1626 20.6486 12.2552 23.9131 13.7663 29.1876C14.1218 30.4287 14.5296 31.7002 14.9603 33.0432L14.9818 33.1102C15.4148 34.4605 15.869 35.8788 16.2765 37.3098C16.9019 39.5053 17.4534 41.8466 17.6729 44.236C18.7573 44.4581 20.2969 44.67 22.2088 44.8554C26.227 45.2449 31.5519 45.4862 36.9374 45.5351C42.3263 45.5842 47.6848 45.4396 51.7779 45.0756C53.8384 44.8924 55.4797 44.6617 56.6127 44.4009C56.6604 44.39 56.7063 44.3793 56.7506 44.3685C57.0567 41.9539 57.8604 39.6217 58.7148 37.496C59.1658 36.3738 59.6622 35.2374 60.1391 34.1454C60.2438 33.906 60.3473 33.6688 60.4493 33.4345C61.0283 32.1037 61.569 30.8308 62.029 29.5743C62.9571 27.0378 63.4594 24.8119 63.3061 22.7599C63.1611 20.8153 62.4104 18.7939 60.3678 16.6418C56.4511 12.5152 51.4948 12.3681 46.9558 13.5474C44.6983 14.1339 42.6868 15.0242 41.2265 15.781C40.502 16.1565 39.9272 16.4918 39.5419 16.7276C39.3495 16.8452 39.2052 16.9377 39.114 16.9971C39.0686 17.0269 39.0363 17.0482 39.0181 17.0604L39.0043 17.0698ZM37.2083 14.4617C27.4241 6.84624 18.9235 8.47506 12.017 16.0941C7.71946 20.8351 9.77304 27.2382 11.9377 33.9878C13.2519 38.0853 14.607 42.3105 14.607 46.369C15.8333 49.0833 57.7917 49.875 59.7868 46.369C59.7868 42.864 61.3931 39.1862 63.0342 35.4288C66.0529 28.5173 69.1893 21.3359 62.6645 14.4617C52.5926 3.85049 37.2083 14.4617 37.2083 14.4617ZM57.7556 44.0428C57.7573 44.0434 57.7393 44.0545 57.6962 44.0746C57.7323 44.0523 57.7538 44.0423 57.7556 44.0428Z" fill="black"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M35.1377 14.9005C35.653 14.1941 36.6436 14.0392 37.3499 14.5546L47.6275 22.0532C48.334 22.5686 48.4888 23.5589 47.9734 24.2654C47.4579 24.9719 46.4675 25.1267 45.761 24.6112L35.4835 17.1127C34.7771 16.5973 34.6223 15.6069 35.1377 14.9005Z" fill="black"/>
+                    </svg>
+                  <p class="main_servicesBlock_scrollBlockCenter_scrollBlock_element6_titleCenter_titleBlock_titleText">Ортопедія</p>
+                </div>      
+              </div>
+              <div class="main_servicesBlock_scrollBlockCenter_scrollBlock_element6_infoCenter">
+                <p class="main_servicesBlock_scrollBlockCenter_scrollBlock_element6_infoCenter_infoText">Від захисних кап до коронки</p>
+              </div> 
+              <div class="main_servicesBlock_scrollBlockCenter_scrollBlock_element6_priceCenter">
+                <p class="main_servicesBlock_scrollBlockCenter_scrollBlock_element6_priceCenter_priceText">400 - ... грн</p>
+              </div> 
+            </div>
+            <div class="main_servicesBlock_scrollBlockCenter_scrollBlock_element7">
+              <div class="main_servicesBlock_scrollBlockCenter_scrollBlock_element7_titleCenter">
+                <div class="main_servicesBlock_scrollBlockCenter_scrollBlock_element7_titleCenter_titleBlock">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="60" height="55" viewBox="0 0 60 55" fill="none">
+                        <path d="M59.3948 43.6694L41.6666 25.9413C41.2766 25.5516 40.7574 25.3369 40.2049 25.3369C39.6523 25.3369 39.1332 25.5516 38.7427 25.9418L37.6498 27.035L33.7618 23.1471C33.6618 23.047 33.4611 22.8531 33.6293 22.4391C36.5088 15.9808 35.5057 10.0442 34.1171 8.65578C26.5529 1.09139 -1.527 -1.10394 0.0650718 0.488139C0.483229 0.906131 27.22 7.79746 30.3195 10.8971C33.0436 13.6212 28.8639 22.0147 27.5388 25.5291C27.4164 25.8538 26.8854 26.8479 28.4727 28.4352L32.3613 32.3237L31.2686 33.4162C30.8784 33.8064 30.6632 34.3258 30.6632 34.879C30.6632 35.4316 30.8782 35.9507 31.2681 36.341L48.9963 54.0691C49.3863 54.4586 49.9054 54.6731 50.4579 54.6731C51.0103 54.6731 51.5296 54.4586 51.9199 54.0686L59.3945 46.594C59.7849 46.2041 59.9999 45.6844 59.9999 45.1314C59.9997 44.5788 59.785 44.0597 59.3948 43.6694ZM50.089 50.717C50.089 50.717 38.5442 39.1725 34.573 35.2012C34.2885 34.9168 34.4468 34.6962 34.5495 34.5796C34.7351 34.3692 35.3438 33.7854 35.3438 33.7854C35.7337 33.3954 35.9486 32.876 35.9486 32.3234C35.9486 31.7707 35.7337 31.2517 35.3438 30.8613C35.3438 30.8613 32.4496 27.9671 31.485 27.0024C31.2373 26.7548 31.3928 26.5669 31.3928 26.5669L31.7094 25.9865C31.7094 25.9865 31.8674 25.6974 32.1292 25.9592C33.3147 27.1447 36.1874 30.0172 36.1874 30.0172C36.5776 30.4073 37.0968 30.6221 37.6495 30.6221C38.2021 30.6221 38.7212 30.4073 39.1115 30.0172C39.1115 30.0172 39.7014 29.4011 39.9148 29.2141C40.0203 29.1215 40.2426 28.9626 40.4753 29.195C44.2755 32.9949 54.352 43.0714 56.1389 44.8585C56.3159 45.0355 56.1824 45.3607 56.0736 45.4692C54.8622 46.6807 51.8521 49.691 50.815 50.7279C50.4641 51.0798 50.089 50.717 50.089 50.717Z" fill="black"/>
+                    </svg>
+                  <p class="main_servicesBlock_scrollBlockCenter_scrollBlock_element7_titleCenter_titleBlock_titleText">Хірургія</p>
+                </div>      
+              </div>
+              <div class="main_servicesBlock_scrollBlockCenter_scrollBlock_element7_infoCenter">
+                <p class="main_servicesBlock_scrollBlockCenter_scrollBlock_element7_infoCenter_infoText">Від видалення зуба до розтину абсцесу</p>
+              </div> 
+              <div class="main_servicesBlock_scrollBlockCenter_scrollBlock_element7_priceCenter">
+                <p class="main_servicesBlock_scrollBlockCenter_scrollBlock_element7_priceCenter_priceText">500 - ... грн</p>
+              </div> 
+            </div>
+            <div class="main_servicesBlock_scrollBlockCenter_scrollBlock_element8">
+              <div class="main_servicesBlock_scrollBlockCenter_scrollBlock_element8_titleCenter">
+                <div class="main_servicesBlock_scrollBlockCenter_scrollBlock_element8_titleCenter_titleBlock">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="68" height="66" viewBox="0 0 68 66" fill="none">
+                        <path d="M25.5 27.5H25.5283M42.5 27.5H42.5283M24.1829 38.5C26.1425 41.7879 29.8052 44 34 44C38.195 44 41.8576 41.7879 43.8172 38.5M34 55C44.5618 55 53.4363 47.9889 55.9526 38.5H56.6666C59.7963 38.5 62.3333 36.0376 62.3333 33C62.3333 29.9624 59.7963 27.5 56.6666 27.5H55.9526C53.4363 18.0113 44.5618 11 34 11C23.4382 11 14.5636 18.0113 12.0474 27.5H11.3333C8.20368 27.5 5.66663 29.9624 5.66663 33C5.66663 36.0376 8.20368 38.5 11.3333 38.5H12.0474C14.5636 47.9889 23.4382 55 34 55Z" stroke="black" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  <p class="main_servicesBlock_scrollBlockCenter_scrollBlock_element8_titleCenter_titleBlock_titleText">Дитяча стоматологія</p>
+                </div>      
+              </div>
+              <div class="main_servicesBlock_scrollBlockCenter_scrollBlock_element8_infoCenter">
+                <p class="main_servicesBlock_scrollBlockCenter_scrollBlock_element8_infoCenter_infoText">Від дитячої пломби до видалення молочного зуба</p>
+              </div> 
+              <div class="main_servicesBlock_scrollBlockCenter_scrollBlock_element8_priceCenter">
+                <p class="main_servicesBlock_scrollBlockCenter_scrollBlock_element8_priceCenter_priceText">500 - ... грн</p>
+              </div> 
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="Registration" class="main_mapsBlock">
+        <div class="main_mapsBlock_titleTextCenter">
+          <p class="main_mapsBlock_titleTextCenter_titleText">Наші адреси:</p>
+        </div>
+        <div class="main_mapsBlock_titleTextCenter2">
+          <p class="main_mapsBlock_titleTextCenter2_titleText">Овідіополь, Портова 13 Тел: <a class="main_mapsBlock_titleTextCenter2_titleText_numberPhone" href="tel: +380686607767">0686607767</a></p>
+        </div>
+        <iframe class="main_mapsBlock_map1" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d398.4997428418637!2d30.438984055957295!3d46.24369182337046!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40c7c4e84b239b0f%3A0xf1c00777a73e6ffa!2z0KHRgtC-0LzQsNGC0L7Qu9C-0LPQuNGPIEhvbGx5d29vZA!5e0!3m2!1suk!2sua!4v1709475409240!5m2!1suk!2sua" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <div class="main_mapsBlock_titleTextCenter3">
+          <p class="main_mapsBlock_titleTextCenter3_titleText">Чорноморськ, проспект Миру 41 Тел: <a class="main_mapsBlock_titleTextCenter2_titleText_numberPhone" href="tel: +380988181018">0988181018</a></p>
+        </div>
+        <iframe class="main_mapsBlock_map2" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2756.7272387207536!2d30.650502175848622!3d46.29539277759867!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40c7c932619ef57b%3A0x9931b05a9b4a6571!2z0KHRgtC-0LzQsNGC0L7Qu9C-0LPQuNGPIEhvbGx5d29vZA!5e0!3m2!1suk!2sua!4v1709476311700!5m2!1suk!2sua" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="footer_blockLogo">
+        <div class="footer_blockLogo_logo">
+            <img class="footer_blockLogo_logo_img1" src="{% static 'img/logoimg1.png' %}" alt="">
+            <img class="footer_blockLogo_logo_img2" src="{% static 'img/logoimg2.png' %}" alt="">
+        </div>
+        <p class="footer_blockLogo_textContact">Контакти:</p>
+        <div class="footer_blockLogo_addressCenter">
+            <p class="footer_blockLogo_addressCenter_address">м.Овідіополь, Портова 13 Тел: <a class="footer_blockLogo_addressCenter_addressLink" href="tel:+380686607767">0686607767</a></p>
+        </div>
+        <div class="footer_blockLogo_addressCenter2">
+            <p class="footer_blockLogo_addressCenter2_address">Чорноморськ, проспект Миру 41 Тел: <a class="footer_blockLogo_addressCenter2_addressLink" href="tel:+380988181018">0988181018</a></p>
+        </div>
+      </div>
+      <div class="footer_blockText">
+        <p class="footer_blockText_text">Не зволікайте та переконайтеся в якості послуг, які ми пропонуємо! Завітайте до нашої стоматології "Hollywood" за адресою: м. Овідіополь, вул. Портова, 13 та м.Чорноморськ, проспект Миру 41. Ми гарантуємо якість та ефективність наших послуг.</p>
+      </div>
+    </footer>
+    <div class="tabletHeader">
+        <div class="tabletHeader_navigationBar">
+            <div class="tabletHeader_navigationBar_logo">
+                <img class="tabletHeader_navigationBar_logo_img1" src="{% static 'img/logoimg1.png' %}" alt="Logo1">
+                <img class="tabletHeader_navigationBar_logo_img2" src="{% static 'img/logoimg2.png' %}" alt="Logo2">
+            </div>
+            <nav class="tabletHeader_navigationBar_navigationElements">
+                <ul class="tabletHeader_navigationBar_navigationElements_ul">
+                    <li class="tabletHeader_navigationBar_navigationElements_ul_li">
+                      <a href="#aboutUsTablet" class="tabletHeader_navigationBar_navigationElements_ul_li_a">Про нас</a>
+                    </li>
+                    <li class="tabletHeader_navigationBar_navigationElements_ul_li">
+                      <a href="#expertsTablet" class="tabletHeader_navigationBar_navigationElements_ul_li_a">Фахівці</a>
+                    </li>
+                    <li class="tabletHeader_navigationBar_navigationElements_ul_li">
+                      <a href="#worksBlockTablet" class="tabletHeader_navigationBar_navigationElements_ul_li_a">Роботи та результати</a>
+                    </li>
+                    <li class="tabletHeader_navigationBar_navigationElements_ul_li">
+                      <a href="#servicesTablet" class="tabletHeader_navigationBar_navigationElements_ul_li_a">Наші послуги</a>
+                    </li>
+                </ul>
+            </nav>
+            <a class="tabletHeader_navigationBar_link" href="#RegistrationTablet">
+                <button class="tabletHeader_navigationBar_link_btn">Записатися на консультацію</button>
+            </a>
+        </div>
+        <div class="tabletHeader_headerBlock">
+            <div class="tabletHeader_headerBlock_titleBlock">
+              <p class="tabletHeader_headerBlock_titleBlock_titleText">Стоматологічна клініка «HOLLYWOOD» Усі види стоматологічних послуг, від консультації до лікування зубів</p>
+            </div>
+            <div class="tabletHeader_headerBlock_forImgBlock">
+                <div class="tabletHeader_headerBlock_forImgBlock_imgBlock">
+                    <div class="tabletHeader_headerBlock_forImgBlock_imgBlock_imginvitationBlock"></div>
+                    <div class="tabletHeader_headerBlock_forImgBlock_imgBlock_imgexpertsBlock"></div>
+                    <div class="tabletHeader_headerBlock_forImgBlock_imgBlock_imgworksBlock"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="tabletMain">
+        <div id="aboutUsTablet" class="tabletMain_invitationBlock">
+            <div class="tabletMain_invitationBlock_fortext">
+                <div class="tabletMain_invitationBlock_fortext_blur"></div>
+                <p class="tabletMain_invitationBlock_fortext_text">Запрошуємо відвідати стоматологію "Hollywood" до Овідіополя та Чорноморська! Забудьте про біль у зубах та неприємні враження від відвідування стоматолога - у нас ви знайдете ідеальну комбінацію уважного відношення, професійних знань та високотехнологічного обладнання.</p>
+            </div>
+        </div>
+        <div id="expertsTablet" class="tabletMain_expertsBlock">
+            <div class="tabletMain_expertsBlock_bl">
+                <div class="tabletMain_expertsBlock_bl_fortext">
+                    <p class="tabletMain_expertsBlock_bl_fortext_text">Наша команда медичних фахівців  - справжні професіонали своєї справи, з багаторічним досвідом та помітними успіхами в галузі стоматології. Ми пропонуємо широкий спектр послуг, що дозволить Вам отримати комплексну допомогу в різних галузях стоматології: від чистки зубів та профілактики карієсу до протезування та імплантології.</p>
+                </div>  
+                <div class="tabletMain_expertsBlock_bl_forimg">
+                    <img id="tabletImgExpert" class="tabletMain_expertsBlock_bl_forimg_img" src="{% static 'tablet/img/experts/tablet1.png' %}" alt="">
+                </div>
+                <div class="tabletMain_expertsBlock_bl_forp1">
+                    <p id="tabletTitleTextExpert" class="tabletMain_expertsBlock_bl_forp1_p">Твердохліб Андрій Валерійович</p>
+                </div>
+                <div class="tabletMain_expertsBlock_bl_forp2">
+                    <p id="tabletInfoTextExpert" class="tabletMain_expertsBlock_bl_forp2_p">Власник клінік, Терапевтичний прийом, Хірургічний прийом, Ортопедичний прийом</p>
+                </div>
+            </div>
+        </div>
+        <div id="worksBlockTablet" class="tabletMain_worksBlock">
+            <div class="tabletMain_worksBlock_bl">
+                <div class="tabletMain_worksBlock_bl_fortext">
+                    <p class="tabletMain_worksBlock_bl_fortext_text">Наші роботи та результати:</p>
+                </div>
+                <div class="tabletMain_worksBlock_bl_forimg">
+                    <img id="tabletImg" class="tabletMain_worksBlock_bl_forimg_img" src="{% static 'img/works/1.png' %}" alt="">
+                </div>
+            </div>
+        </div>
+        <div id="servicesTablet" class="tabletMain_sevicesBlock">
+            <div class="tabletMain_sevicesBlock_bl">
+                <div id="poslugi2" class="tabletMain_sevicesBlock_bl_fortext">
+                    <p class="tabletMain_sevicesBlock_bl_fortext_text">Наші послуги:</p>
+                </div>
+                <div class="main_servicesBlock_scrollBlockCenter">
+                  <div class="main_servicesBlock_scrollBlockCenter_scrollBlock">
+                    <div class="main_servicesBlock_scrollBlockCenter_scrollBlock_element1">
+                      <div class="main_servicesBlock_scrollBlockCenter_scrollBlock_element1_titleCenter">
+                        <div class="main_servicesBlock_scrollBlockCenter_scrollBlock_element1_titleCenter_titleBlock">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="56" height="55" viewBox="0 0 56 55" fill="none">
+                            <path d="M18.8937 3.37475C16.8011 2.66873 14.8189 2 11.75 2C5.25 2 2 8 2 15.5C2 20.2955 3.32876 23.2514 4.71183 26.3279C5.4918 28.0631 6.28906 29.8364 6.875 32C7.35925 33.788 7.5549 36.3752 7.76293 39.1265C8.25303 45.608 8.812 53 13.375 53C16.2967 53 17.5768 48.7571 18.9862 44.0858C20.7124 38.3642 22.6326 32 28 32C33.3674 32 35.2875 38.3642 37.0139 44.0858C38.4231 48.7571 39.7033 53 42.625 53C47.188 53 47.747 45.608 48.2371 39.1265C48.4451 36.3752 48.6407 33.788 49.125 32C49.711 29.8364 50.5082 28.0631 51.2882 26.3279C52.6714 23.2514 54 20.2955 54 15.5C54 8 50.75 2 44.25 2C41.181 2 39.1988 2.66873 37.1062 3.37475C34.7665 4.16408 32.289 5 28 5C23.711 5 21.2334 4.16408 18.8937 3.37475Z" stroke="black" stroke-width="3.75" stroke-linecap="round" stroke-linejoin="round"/>
+                          </svg>
+                          <p class="main_servicesBlock_scrollBlockCenter_scrollBlock_element1_titleCenter_titleBlock_titleText">Діагностика</p>
+                        </div>      
+                      </div>
+                      <div class="main_servicesBlock_scrollBlockCenter_scrollBlock_element1_infoCenter">
+                        <p class="main_servicesBlock_scrollBlockCenter_scrollBlock_element1_infoCenter_infoText">Від консультації до фотопротоколу</p>
+                      </div> 
+                      <div class="main_servicesBlock_scrollBlockCenter_scrollBlock_element1_priceCenter">
+                        <p class="main_servicesBlock_scrollBlockCenter_scrollBlock_element1_priceCenter_priceText">Безкоштовно - ... грн</p>
+                      </div> 
+                    </div>
+                    <div class="main_servicesBlock_scrollBlockCenter_scrollBlock_element2">
+                      <div class="main_servicesBlock_scrollBlockCenter_scrollBlock_element2_titleCenter">
+                        <div class="main_servicesBlock_scrollBlockCenter_scrollBlock_element2_titleCenter_titleBlock">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="60" height="47" viewBox="0 0 60 47" fill="none">
+                                <path d="M58.936 38.1562L43.5537 26.192C42.0874 25.0519 40.2571 24.4241 38.3999 24.4241H26.2986C25.662 24.4241 25.0349 24.209 24.5326 23.8185L9.15134 11.855C8.56954 11.4019 7.84601 11.2029 7.11402 11.2946C6.83163 11.3299 6.56157 11.4079 6.30983 11.5226L5.41558 9.61738C5.63726 9.44091 5.83358 9.23049 5.99527 8.98791C6.404 8.37464 6.54948 7.6389 6.40482 6.91631L5.46548 2.21972C5.3207 1.49537 4.90293 0.871173 4.28907 0.462442C3.67638 0.054415 2.94065 -0.0902438 2.21923 0.0550019C1.49629 0.199308 0.872919 0.616611 0.46407 1.23C0.0553392 1.84327 -0.0901414 2.57901 0.0545173 3.3016L0.993859 7.9982C1.25077 9.28392 2.38784 10.2172 3.69752 10.2172C3.71525 10.2172 3.73298 10.2162 3.75083 10.2159L4.97573 12.8252C4.41717 13.9725 4.71612 15.3965 5.76255 16.2107L21.1449 28.1751C22.6112 29.315 24.4415 29.9429 26.2987 29.9429H26.3023V41.3324H11.2141C9.69264 41.3324 8.45482 42.5702 8.45482 44.0917V45.9704C8.45482 46.4567 8.84911 46.851 9.33545 46.851H39.3944C39.8807 46.851 40.275 46.4567 40.275 45.9704V44.0917C40.275 42.5702 39.0372 41.3324 37.5157 41.3324H37.457V29.9429H38.4C39.0365 29.9429 39.6636 30.158 40.1659 30.5485L55.5476 42.5122C56.0364 42.8925 56.6218 43.0937 57.2405 43.0937C58.0992 43.0937 58.8936 42.7054 59.4199 42.0286C60.3537 40.8276 60.1367 39.0906 58.936 38.1562ZM2.72084 7.65287L1.7815 2.95604C1.72925 2.69467 1.78173 2.4286 1.92956 2.20692C2.07727 1.98523 2.30271 1.83435 2.5655 1.78186C2.63184 1.76848 2.69865 1.7619 2.76475 1.7619C2.95873 1.7619 3.14824 1.81862 3.31286 1.92828C3.53478 2.07611 3.6859 2.30214 3.7385 2.56492L4.67784 7.26175C4.73009 7.52312 4.67761 7.78919 4.52978 8.01088C4.41706 8.18008 4.25889 8.30759 4.07302 8.38215C4.02782 8.39237 3.98308 8.40681 3.93881 8.42466C3.92331 8.42853 3.90817 8.43311 3.89243 8.43628C3.82856 8.4492 3.7628 8.45589 3.6974 8.45589C3.22456 8.45577 2.81383 8.1182 2.72084 7.65287ZM35.6956 41.3323H34.6977C34.2113 41.3323 33.817 41.7266 33.817 42.2129C33.817 42.6992 34.2113 43.0935 34.6977 43.0935H37.5156C38.0659 43.0935 38.5136 43.5412 38.5136 44.0916V45.0896H10.216V44.0916C10.216 43.5412 10.6637 43.0935 11.214 43.0935H30.9402C31.4265 43.0935 31.8208 42.6992 31.8208 42.2129C31.8208 41.7266 31.4265 41.3323 30.9402 41.3323H28.0635V29.9427H35.6956V41.3323ZM58.0294 40.9473C57.8392 41.192 57.5516 41.3323 57.2404 41.3323C57.0172 41.3323 56.8057 41.2596 56.6289 41.122L41.2471 29.1582C40.4373 28.5283 39.4261 28.1815 38.3999 28.1815H26.2986C24.831 28.1815 23.3846 27.6854 22.2259 26.7847L6.84396 14.8205C6.40964 14.4826 6.33108 13.8542 6.66889 13.4198C6.83257 13.2094 7.06847 13.0752 7.33313 13.0421C7.37528 13.0368 7.41731 13.0342 7.45912 13.0342C7.67963 13.0342 7.8925 13.107 8.06957 13.2449L23.4513 25.2087C24.2611 25.8385 25.2723 26.1854 26.2986 26.1854H38.4C39.8676 26.1854 41.3139 26.6816 42.4726 27.5822L57.8546 39.5463C58.2889 39.8844 58.3673 40.5127 58.0294 40.9473Z" fill="black"/>
+                            </svg>
+                          <p class="main_servicesBlock_scrollBlockCenter_scrollBlock_element2_titleCenter_titleBlock_titleText">Реставрація</p>
+                        </div>      
+                      </div>
+                      <div class="main_servicesBlock_scrollBlockCenter_scrollBlock_element2_infoCenter">
+                        <p class="main_servicesBlock_scrollBlockCenter_scrollBlock_element2_infoCenter_infoText">Від пломби до реставрації</p>
+                      </div> 
+                      <div class="main_servicesBlock_scrollBlockCenter_scrollBlock_element2_priceCenter">
+                        <p class="main_servicesBlock_scrollBlockCenter_scrollBlock_element2_priceCenter_priceText">1000 - ... грн</p>
+                      </div> 
+                    </div>
+                    <div class="main_servicesBlock_scrollBlockCenter_scrollBlock_element3">
+                      <div class="main_servicesBlock_scrollBlockCenter_scrollBlock_element3_titleCenter">
+                        <div class="main_servicesBlock_scrollBlockCenter_scrollBlock_element3_titleCenter_titleBlock">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="58" height="60" viewBox="0 0 58 60" fill="none">
+                                <path d="M56.3616 0.62384C55.4871 -0.150503 54.1493 -0.0694929 53.3727 0.803638C53.3208 0.862022 48.1101 6.6396 41.8592 6.6396C32.5343 6.6396 29.9747 5.3596 26.4317 3.58808C24.5533 2.64889 21.0566 0.900608 17.5333 0.256366C11.3392 -0.875957 8.50384 1.95839 7.21495 4.53556C4.31737 10.3311 7.80768 16.3663 9.91657 19.216C3.8701 24.1354 0 31.6319 0 40.0164C0 47.4158 2.9495 54.3046 8.30485 59.4143C8.69899 59.7903 9.22263 60 9.76727 60H43.8481C44.3927 60 44.9164 59.7903 45.3105 59.4143C50.6655 54.3049 53.6147 47.416 53.6147 40.0164C53.6147 25.2347 41.5889 13.2091 26.8075 13.2091C21.9321 13.2091 17.357 14.518 13.4137 16.8018C11.8562 14.7099 9.11677 10.2065 11.0048 6.43051C13.0681 2.30445 19.3204 4.7697 24.5372 7.37778C28.4465 9.33253 31.5343 10.8766 41.8594 10.8766C50.0444 10.8766 56.2861 3.90626 56.5477 3.60929C57.32 2.73313 57.2364 1.39839 56.3616 0.62384ZM49.3778 40.0164C49.3778 45.9683 47.1117 51.5275 42.978 55.7632H10.6372C6.50323 51.5273 4.23677 45.9681 4.23677 40.0164C4.23677 27.5711 14.362 17.4459 26.8073 17.4459C39.2525 17.4459 49.3778 27.5709 49.3778 40.0164Z" fill="black"/>
+                                <path d="M22.7167 50.0944C23.1585 50.411 23.6793 50.5783 24.2228 50.5783C24.6323 50.5783 25.0412 50.4793 25.4032 50.2928C26.1515 49.9086 26.6547 49.1987 26.7779 48.3843L26.8072 48.2771L26.8365 48.3848C26.9595 49.1987 27.4628 49.9084 28.2082 50.291C28.5727 50.4789 28.9822 50.5781 29.3921 50.5781C29.9351 50.5781 30.4555 50.411 30.8977 50.0944C32.7418 48.7722 34.2985 46.5575 35.6567 43.3229C37.0791 39.9359 38.0347 35.8856 38.0347 33.2439C38.0347 28.5448 34.7717 27.291 32.8436 27.291C31.4826 27.291 30.3377 27.7801 29.2299 28.2534C28.4032 28.6066 27.4662 29.0072 26.807 29.0072C26.1478 29.0072 25.2111 28.6066 24.3836 28.253C23.2763 27.7801 22.1315 27.291 20.7707 27.291C18.8426 27.291 15.5793 28.5448 15.5793 33.2439C15.5793 35.8848 16.5349 39.9353 17.9573 43.3229C19.3157 46.5571 20.8725 48.7718 22.7167 50.0944ZM20.7711 31.5278C21.2648 31.5278 21.9068 31.8021 22.7197 32.1492C23.861 32.6369 25.281 33.2437 26.8074 33.2437C28.3339 33.2437 29.7539 32.6367 30.8953 32.1492C31.7078 31.8021 32.3499 31.5278 32.8438 31.5278C33.1048 31.5278 33.7981 31.5278 33.7981 33.2437C33.7981 35.3082 32.9371 38.8571 31.7507 41.6823C31.2195 42.9472 30.6977 43.9167 30.2115 44.6593L28.8509 39.6767C28.5993 38.7553 27.7626 38.1163 26.8074 38.1163C25.8523 38.1163 25.0155 38.7553 24.764 39.6767L23.4034 44.6593C22.9169 43.9165 22.3953 42.947 21.8644 41.6825C20.6779 38.8567 19.8167 35.3076 19.8167 33.2437C19.8165 31.5278 20.5099 31.5278 20.7711 31.5278Z" fill="black"/>
+                            </svg>
+                          <p class="main_servicesBlock_scrollBlockCenter_scrollBlock_element3_titleCenter_titleBlock_titleText">Гігієна</p>
+                        </div>      
+                      </div>
+                      <div class="main_servicesBlock_scrollBlockCenter_scrollBlock_element3_infoCenter">
+                        <p class="main_servicesBlock_scrollBlockCenter_scrollBlock_element3_infoCenter_infoText">Від проф. чищення до глибокого фторування</p>
+                      </div> 
+                      <div class="main_servicesBlock_scrollBlockCenter_scrollBlock_element3_priceCenter">
+                        <p class="main_servicesBlock_scrollBlockCenter_scrollBlock_element3_priceCenter_priceText">1000 - ... грн</p>
+                      </div> 
+                    </div>
+                    <div class="main_servicesBlock_scrollBlockCenter_scrollBlock_element4">
+                      <div class="main_servicesBlock_scrollBlockCenter_scrollBlock_element4_titleCenter">
+                        <div class="main_servicesBlock_scrollBlockCenter_scrollBlock_element4_titleCenter_titleBlock">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="56" height="59" viewBox="0 0 56 59" fill="none">
+                                <path d="M55.7064 12.6486L43.9959 0.30939C43.6044 -0.102919 42.9697 -0.103264 42.5783 0.30916L40.0828 2.93696C39.8948 3.13494 39.789 3.40366 39.789 3.68391C39.789 3.96416 39.8946 4.23266 40.0826 4.43086L45.2302 9.85414L40.4626 14.8771L33.4223 7.46003C33.0307 7.04761 32.3961 7.04761 32.0045 7.46003C31.613 7.87257 31.613 8.54116 32.0045 8.95358L33.7999 10.8452L12.5322 33.2516C12.1407 33.664 12.1407 34.3327 12.5322 34.7451L14.6358 36.9613L11.6981 40.0563C11.3067 40.4687 11.3067 41.1374 11.6981 41.5498L13.4217 43.3657L0.293675 57.197C-0.0978918 57.6095 -0.0978918 58.2782 0.293675 58.6906C0.489459 58.8969 0.746056 59 1.00265 59C1.25914 59 1.51585 58.8969 1.71163 58.6906L14.8395 44.8595L16.5635 46.676C16.7593 46.8823 17.0159 46.9854 17.2725 46.9854C17.529 46.9854 17.7857 46.8823 17.9815 46.676L20.9191 43.5812L23.0213 45.7959C23.2171 46.002 23.4738 46.1053 23.7303 46.1053C23.9868 46.1053 24.2435 46.0021 24.4393 45.7959L45.7064 23.3897L47.5025 25.282C47.6982 25.4882 47.9549 25.5914 48.2114 25.5914C48.4679 25.5914 48.7246 25.4882 48.9204 25.282C49.3119 24.8695 49.3119 24.2008 48.9204 23.7884L41.8803 16.3709L46.6479 11.3479L51.7946 16.7703C51.9904 16.9765 52.2471 17.0797 52.5036 17.0797C52.7601 17.0797 53.0168 16.9765 53.2126 16.7703L55.7068 14.1425C56.0978 13.7297 56.0978 13.0611 55.7064 12.6486ZM17.2725 44.4354L13.8248 40.8031L16.0536 38.4551L19.5012 42.0874L17.2725 44.4354ZM44.2883 21.896L23.73 43.5552L14.6588 33.9982L35.217 12.3389L44.2883 21.896ZM52.5033 14.5294L42.2093 3.68414L43.2867 2.54966L53.5798 13.3953L52.5033 14.5294Z" fill="black"/>
+                            </svg>
+                          <p class="main_servicesBlock_scrollBlockCenter_scrollBlock_element4_titleCenter_titleBlock_titleText">Терапія</p>
+                        </div>      
+                      </div>
+                      <div class="main_servicesBlock_scrollBlockCenter_scrollBlock_element4_infoCenter">
+                        <p class="main_servicesBlock_scrollBlockCenter_scrollBlock_element4_infoCenter_infoText">Від анестезії до надання допомоги при гострому болю</p>
+                      </div> 
+                      <div class="main_servicesBlock_scrollBlockCenter_scrollBlock_element4_priceCenter">
+                        <p class="main_servicesBlock_scrollBlockCenter_scrollBlock_element4_priceCenter_priceText">300 - ... грн</p>
+                      </div> 
+                    </div>
+                    <div class="main_servicesBlock_scrollBlockCenter_scrollBlock_element5">
+                      <div class="main_servicesBlock_scrollBlockCenter_scrollBlock_element5_titleCenter">
+                        <div class="main_servicesBlock_scrollBlockCenter_scrollBlock_element5_titleCenter_titleBlock">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="55" height="65" viewBox="0 0 55 65" fill="none">
+                                <path d="M51.7038 47.2775L34.9175 31.0519C34.3878 30.5399 33.5296 30.5399 32.9997 31.0519L30.123 33.8326L26.2874 30.125L26.7636 29.6646C28.9402 27.5613 30.1394 24.7631 30.1404 21.7867C30.1418 18.8078 28.9439 16.0082 26.7666 13.9049C26.6052 13.7489 26.4324 13.609 26.2632 13.4634L38.2734 1.85381L36.3563 0L24.0108 11.9333C22.3702 11.0921 20.5309 10.644 18.6188 10.644C18.6175 10.644 18.6168 10.644 18.6162 10.644C15.5344 10.644 12.6389 11.8026 10.4623 13.9072L0.397388 23.636C0.142979 23.8819 0 24.2148 0 24.5629C0 24.911 0.142979 25.2439 0.397388 25.4898L14.7812 39.3944C15.0356 39.6403 15.3803 39.7785 15.7401 39.7785C16.0996 39.7785 16.4446 39.6403 16.699 39.3944L19.5757 36.613L23.411 40.3206L20.5343 43.1013C20.2799 43.3473 20.1369 43.6798 20.1369 44.0283C20.1369 44.3764 20.2799 44.7092 20.5343 44.9552L37.3206 61.1807C39.236 63.0333 41.7875 64.052 44.5045 64.0533C44.5051 64.0533 44.5058 64.0533 44.5065 64.0533C47.2254 64.0533 49.7799 63.0316 51.6987 61.1756C55.6639 57.343 55.6666 51.1077 51.7038 47.2775ZM18.6162 33.8326C18.6155 33.8333 18.6152 33.8345 18.6145 33.8352L15.7398 36.614L3.27375 24.5629L12.3805 15.7607C14.0452 14.1515 16.2594 13.2658 18.6165 13.2658C18.6172 13.2658 18.6178 13.2658 18.6185 13.2658C20.9743 13.2658 23.1875 14.1518 24.8492 15.7581C26.5132 17.3673 27.4295 19.5063 27.4282 21.7851C27.4268 24.0623 26.5099 26.2016 24.8458 27.8108L21.8117 30.7443L18.6162 33.8326ZM21.4932 34.7595L23.4103 32.9063L24.3702 31.9788L28.2062 35.6861L25.3288 38.4675L21.4932 34.7595ZM44.5058 61.4319C44.5051 61.4319 44.5045 61.4319 44.5045 61.4319C42.5115 61.4319 40.6413 60.6844 39.2377 59.3273L23.4103 44.0286L26.2853 41.2495C26.2853 41.2495 26.2867 41.2488 26.2874 41.2482L31.0819 36.613L33.9582 33.8326L49.7856 49.1313C52.6905 51.9399 52.6885 56.5112 49.7803 59.3224C48.3736 60.6827 46.5005 61.4319 44.5058 61.4319Z" fill="black"/>
+                            </svg>
+                          <p class="main_servicesBlock_scrollBlockCenter_scrollBlock_element5_titleCenter_titleBlock_titleText">Ендодонтія</p>
+                        </div>      
+                      </div>
+                      <div  class="main_servicesBlock_scrollBlockCenter_scrollBlock_element5_infoCenter">
+                        <p class="main_servicesBlock_scrollBlockCenter_scrollBlock_element5_infoCenter_infoText">Від лікування до пломбування</p>
+                      </div> 
+                      <div class="main_servicesBlock_scrollBlockCenter_scrollBlock_element5_priceCenter">
+                        <p class="main_servicesBlock_scrollBlockCenter_scrollBlock_element5_priceCenter_priceText">500 - ... грн</p>
+                      </div> 
+                    </div>
+                    <div class="main_servicesBlock_scrollBlockCenter_scrollBlock_element6">
+                      <div class="main_servicesBlock_scrollBlockCenter_scrollBlock_element6_titleCenter">
+                        <div class="main_servicesBlock_scrollBlockCenter_scrollBlock_element6_titleCenter_titleBlock">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="76" height="76" viewBox="0 0 76 76" fill="none">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M51.2083 46.2195C50.8001 46.026 50.3416 45.9167 49.8527 45.9167H43.8056L23.8265 53.1092L24.4587 55.8493L51.2083 46.2195ZM25.8082 61.6969L52.401 52.1234L52.9383 49.7954C53.0054 49.5044 53.0302 49.2153 53.0174 48.9338L25.1758 58.9568L25.8082 61.6969ZM51.5539 55.7941L26.9374 64.656C27.7075 65.6511 28.8577 66.3193 30.1462 66.4684L50.8069 59.0305L51.5539 55.7941ZM45.3045 66.5001H39.4074L49.96 62.7012L49.9329 62.8182C49.4356 64.9734 47.5164 66.5001 45.3045 66.5001ZM26.1473 45.9167H34.4566L23.1094 50.0017L23.0617 49.7954C22.6038 47.8112 24.1108 45.9167 26.1473 45.9167Z" fill="black"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M39.0043 17.0698C37.867 17.853 36.3532 17.8089 35.2634 16.9607C30.8012 13.4875 27.0144 12.4095 23.8387 12.7169C20.6476 13.0258 17.4719 14.7915 14.3632 18.2208C12.1626 20.6486 12.2552 23.9131 13.7663 29.1876C14.1218 30.4287 14.5296 31.7002 14.9603 33.0432L14.9818 33.1102C15.4148 34.4605 15.869 35.8788 16.2765 37.3098C16.9019 39.5053 17.4534 41.8466 17.6729 44.236C18.7573 44.4581 20.2969 44.67 22.2088 44.8554C26.227 45.2449 31.5519 45.4862 36.9374 45.5351C42.3263 45.5842 47.6848 45.4396 51.7779 45.0756C53.8384 44.8924 55.4797 44.6617 56.6127 44.4009C56.6604 44.39 56.7063 44.3793 56.7506 44.3685C57.0567 41.9539 57.8604 39.6217 58.7148 37.496C59.1658 36.3738 59.6622 35.2374 60.1391 34.1454C60.2438 33.906 60.3473 33.6688 60.4493 33.4345C61.0283 32.1037 61.569 30.8308 62.029 29.5743C62.9571 27.0378 63.4594 24.8119 63.3061 22.7599C63.1611 20.8153 62.4104 18.7939 60.3678 16.6418C56.4511 12.5152 51.4948 12.3681 46.9558 13.5474C44.6983 14.1339 42.6868 15.0242 41.2265 15.781C40.502 16.1565 39.9272 16.4918 39.5419 16.7276C39.3495 16.8452 39.2052 16.9377 39.114 16.9971C39.0686 17.0269 39.0363 17.0482 39.0181 17.0604L39.0043 17.0698ZM37.2083 14.4617C27.4241 6.84624 18.9235 8.47506 12.017 16.0941C7.71946 20.8351 9.77304 27.2382 11.9377 33.9878C13.2519 38.0853 14.607 42.3105 14.607 46.369C15.8333 49.0833 57.7917 49.875 59.7868 46.369C59.7868 42.864 61.3931 39.1862 63.0342 35.4288C66.0529 28.5173 69.1893 21.3359 62.6645 14.4617C52.5926 3.85049 37.2083 14.4617 37.2083 14.4617ZM57.7556 44.0428C57.7573 44.0434 57.7393 44.0545 57.6962 44.0746C57.7323 44.0523 57.7538 44.0423 57.7556 44.0428Z" fill="black"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M35.1377 14.9005C35.653 14.1941 36.6436 14.0392 37.3499 14.5546L47.6275 22.0532C48.334 22.5686 48.4888 23.5589 47.9734 24.2654C47.4579 24.9719 46.4675 25.1267 45.761 24.6112L35.4835 17.1127C34.7771 16.5973 34.6223 15.6069 35.1377 14.9005Z" fill="black"/>
+                            </svg>
+                          <p class="main_servicesBlock_scrollBlockCenter_scrollBlock_element6_titleCenter_titleBlock_titleText">Ортопедія</p>
+                        </div>      
+                      </div>
+                      <div class="main_servicesBlock_scrollBlockCenter_scrollBlock_element6_infoCenter">
+                        <p class="main_servicesBlock_scrollBlockCenter_scrollBlock_element6_infoCenter_infoText">Від захисних кап до коронки</p>
+                      </div> 
+                      <div class="main_servicesBlock_scrollBlockCenter_scrollBlock_element6_priceCenter">
+                        <p class="main_servicesBlock_scrollBlockCenter_scrollBlock_element6_priceCenter_priceText">400 - ... грн</p>
+                      </div> 
+                    </div>
+                    <div class="main_servicesBlock_scrollBlockCenter_scrollBlock_element7">
+                      <div class="main_servicesBlock_scrollBlockCenter_scrollBlock_element7_titleCenter">
+                        <div class="main_servicesBlock_scrollBlockCenter_scrollBlock_element7_titleCenter_titleBlock">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="60" height="55" viewBox="0 0 60 55" fill="none">
+                                <path d="M59.3948 43.6694L41.6666 25.9413C41.2766 25.5516 40.7574 25.3369 40.2049 25.3369C39.6523 25.3369 39.1332 25.5516 38.7427 25.9418L37.6498 27.035L33.7618 23.1471C33.6618 23.047 33.4611 22.8531 33.6293 22.4391C36.5088 15.9808 35.5057 10.0442 34.1171 8.65578C26.5529 1.09139 -1.527 -1.10394 0.0650718 0.488139C0.483229 0.906131 27.22 7.79746 30.3195 10.8971C33.0436 13.6212 28.8639 22.0147 27.5388 25.5291C27.4164 25.8538 26.8854 26.8479 28.4727 28.4352L32.3613 32.3237L31.2686 33.4162C30.8784 33.8064 30.6632 34.3258 30.6632 34.879C30.6632 35.4316 30.8782 35.9507 31.2681 36.341L48.9963 54.0691C49.3863 54.4586 49.9054 54.6731 50.4579 54.6731C51.0103 54.6731 51.5296 54.4586 51.9199 54.0686L59.3945 46.594C59.7849 46.2041 59.9999 45.6844 59.9999 45.1314C59.9997 44.5788 59.785 44.0597 59.3948 43.6694ZM50.089 50.717C50.089 50.717 38.5442 39.1725 34.573 35.2012C34.2885 34.9168 34.4468 34.6962 34.5495 34.5796C34.7351 34.3692 35.3438 33.7854 35.3438 33.7854C35.7337 33.3954 35.9486 32.876 35.9486 32.3234C35.9486 31.7707 35.7337 31.2517 35.3438 30.8613C35.3438 30.8613 32.4496 27.9671 31.485 27.0024C31.2373 26.7548 31.3928 26.5669 31.3928 26.5669L31.7094 25.9865C31.7094 25.9865 31.8674 25.6974 32.1292 25.9592C33.3147 27.1447 36.1874 30.0172 36.1874 30.0172C36.5776 30.4073 37.0968 30.6221 37.6495 30.6221C38.2021 30.6221 38.7212 30.4073 39.1115 30.0172C39.1115 30.0172 39.7014 29.4011 39.9148 29.2141C40.0203 29.1215 40.2426 28.9626 40.4753 29.195C44.2755 32.9949 54.352 43.0714 56.1389 44.8585C56.3159 45.0355 56.1824 45.3607 56.0736 45.4692C54.8622 46.6807 51.8521 49.691 50.815 50.7279C50.4641 51.0798 50.089 50.717 50.089 50.717Z" fill="black"/>
+                            </svg>
+                          <p class="main_servicesBlock_scrollBlockCenter_scrollBlock_element7_titleCenter_titleBlock_titleText">Хірургія</p>
+                        </div>      
+                      </div>
+                      <div class="main_servicesBlock_scrollBlockCenter_scrollBlock_element7_infoCenter">
+                        <p class="main_servicesBlock_scrollBlockCenter_scrollBlock_element7_infoCenter_infoText">Від видалення зуба до розтину абсцесу</p>
+                      </div> 
+                      <div class="main_servicesBlock_scrollBlockCenter_scrollBlock_element7_priceCenter">
+                        <p class="main_servicesBlock_scrollBlockCenter_scrollBlock_element7_priceCenter_priceText">500 - ... грн</p>
+                      </div> 
+                    </div>
+                    <div class="main_servicesBlock_scrollBlockCenter_scrollBlock_element8">
+                      <div class="main_servicesBlock_scrollBlockCenter_scrollBlock_element8_titleCenter">
+                        <div class="main_servicesBlock_scrollBlockCenter_scrollBlock_element8_titleCenter_titleBlock">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="68" height="66" viewBox="0 0 68 66" fill="none">
+                                <path d="M25.5 27.5H25.5283M42.5 27.5H42.5283M24.1829 38.5C26.1425 41.7879 29.8052 44 34 44C38.195 44 41.8576 41.7879 43.8172 38.5M34 55C44.5618 55 53.4363 47.9889 55.9526 38.5H56.6666C59.7963 38.5 62.3333 36.0376 62.3333 33C62.3333 29.9624 59.7963 27.5 56.6666 27.5H55.9526C53.4363 18.0113 44.5618 11 34 11C23.4382 11 14.5636 18.0113 12.0474 27.5H11.3333C8.20368 27.5 5.66663 29.9624 5.66663 33C5.66663 36.0376 8.20368 38.5 11.3333 38.5H12.0474C14.5636 47.9889 23.4382 55 34 55Z" stroke="black" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                          <p class="main_servicesBlock_scrollBlockCenter_scrollBlock_element8_titleCenter_titleBlock_titleText">Дитяча стоматологія</p>
+                        </div>      
+                      </div>
+                      <div class="main_servicesBlock_scrollBlockCenter_scrollBlock_element8_infoCenter">
+                        <p class="main_servicesBlock_scrollBlockCenter_scrollBlock_element8_infoCenter_infoText">ВІд дитячої пломби до видалення молочного зуба</p>
+                      </div> 
+                      <div class="main_servicesBlock_scrollBlockCenter_scrollBlock_element8_priceCenter">
+                        <p class="main_servicesBlock_scrollBlockCenter_scrollBlock_element8_priceCenter_priceText">500 - ... грн</p>
+                      </div> 
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+        <div id="RegistrationTablet" class="tabletMain_mapsBlock">
+            <div class="tabletMain_mapsBlock_bl">
+                <div id="adress2" class="tabletMain_mapsBlock_bl_forp1">
+                    <p class="tabletMain_mapsBlock_bl_forp1_p">Наші адреси:</p>
+                </div>
+                <div class="tabletMain_mapsBlock_bl_forp2">
+                    <p class="tabletMain_mapsBlock_bl_forp2_p">Овідіополь, Портова 13 Тел:</p>
+                    <a class="tabletMain_mapsBlock_bl_forp2_p2" href="tel:+380686607767">0686607767</a>
+                </div>
+                <iframe class="tabletMain_mapsBlock_bl_iframe1" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d398.4997428418637!2d30.438984055957295!3d46.24369182337046!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40c7c4e84b239b0f%3A0xf1c00777a73e6ffa!2z0KHRgtC-0LzQsNGC0L7Qu9C-0LPQuNGPIEhvbGx5d29vZA!5e0!3m2!1suk!2sua!4v1709475409240!5m2!1suk!2sua" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <div class="tabletMain_mapsBlock_bl_forp3">
+                    <p class="tabletMain_mapsBlock_bl_forp3_p">Чорноморськ, проспект Миру 41 Тел:</p>
+                    <a class="tabletMain_mapsBlock_bl_forp3_p2" href="tel:+380988181018">0988181018</a>
+                </div>
+                <iframe class="tabletMain_mapsBlock_bl_iframe2" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2756.7272387207536!2d30.650502175848622!3d46.29539277759867!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40c7c932619ef57b%3A0x9931b05a9b4a6571!2z0KHRgtC-0LzQsNGC0L7Qu9C-0LPQuNGPIEhvbGx5d29vZA!5e0!3m2!1suk!2sua!4v1709476311700!5m2!1suk!2sua" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </div>
+    <div id="cont2" class="tabletFooter">
+        <div class="tabletFooter_forblock">
+            <div class="tabletFooter_forblock_block">
+                <div class="tabletFooter_forblock_block_bl1">
+                    <div class="tabletFooter_forblock_block_bl1_logo">
+                        <img class="tabletFooter_forblock_block_bl1_logo_img1" src="{% static 'img/logoimg1.png' %}" alt="">
+                        <img class="tabletFooter_forblock_block_bl1_logo_img2" src="{% static 'img/logoimg2.png' %}" alt="">
+                    </div>
+                    <p class="tabletFooter_forblock_block_bl1_text1">Контакти:</p>
+                    <div class="tabletFooter_forblock_block_bl1_foraddress">
+                        <p class="tabletFooter_forblock_block_bl1_foraddress1_address1">м.Овідіополь, Портова 13 Тел: <a class="tabletFooter_forblock_block_bl1_foraddress1_address1_a" href="tel:+380686607767">0686607767</a></p>
+                    </div>
+                    <div class="tabletFooter_forblock_block_bl1_foraddress2">
+                        <p class="tabletFooter_forblock_block_bl1_foraddress2_address2">Чорноморськ, проспект Миру 41 Тел: <a class="tabletFooter_forblock_block_bl1_foraddress2_address2_a" href="tel:+380988181018">0988181018</a></p>
+                    </div>
+                </div>  
+                <div class="tabletFooter_forblock_block_bl2">
+                    <p class="tabletFooter_forblock_block_bl2_text">Не зволікайте та переконайтеся в якості послуг, які ми пропонуємо! Завітайте до нашої стоматології "Hollywood" за адресою: м. Овідіополь, вул. Портова, 13 та м.Чорноморськ, проспект Миру 41. Ми гарантуємо якість та ефективність наших послуг.</p>
+                </div>     
+            </div>
+        </div>
+    </div>
+    <div id="phoneHeader" class="phoneHeader">
+        <div class="phoneHeader_navigationBlock">
+            <div class="phoneHeader_navigationBlock_logo">
+                <img class="phoneHeader_navigationBlock_logo_img1" src="{% static 'img/logoimg1.png' %}" alt="">
+                <img class="phoneHeader_navigationBlock_logo_img2" src="{% static 'img/logoimg2.png' %}" alt="">
+            </div>
+            <a class="phoneHeader_navigationBlock_link" href="#RegistrationPhone">
+                <button class="phoneHeader_navigationBlock_link_btn">Записатися на консультацію</button>
+            </a>
+        </div>
+        <div class="phoneHeader_headerBlock">
+            <div class="phoneHeader_headerBlock_fortext">
+                <p class="phoneHeader_headerBlock_fortext_text">Стоматологічна клініка «HOLLYWOOD» Усі види стоматологічних послуг, від консультації до лікування зубів</p>
+            </div>
+            <div class="phoneHeader_headerBlock_forimgblock">
+                <div class="phoneHeader_headerBlock_forimgblock_imgblock">
+                    <div class="phoneHeader_headerBlock_forimgblock_imgblock_imgb1"></div>
+                    <div class="phoneHeader_headerBlock_forimgblock_imgblock_imgb2"></div>
+                    <div class="phoneHeader_headerBlock_forimgblock_imgblock_imgb3"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="phoneMain">
+        <div class="phoneMain_invitationBlock">
+            <div class="phoneMain_invitationBlock_fortext">
+                <div class="phoneMain_invitationBlock_fortext_blur"></div>
+                <p class="phoneMain_invitationBlock_fortext_text">Запрошуємо відвідати стоматологію "Hollywood" до Овідіополя та Чорноморська! Забудьте про біль у зубах та неприємні враження від відвідування стоматолога - у нас ви знайдете ідеальну комбінацію уважного відношення, професійних знань та високотехнологічного обладнання.</p>
+            </div>
+        </div>
+        <div class="phoneMain_expertsBlock">
+            <div class="phoneMain_expertsBlock_fortext">
+                <p class="phoneMain_expertsBlock_fortext_text">Наша команда медичних фахівців  - справжні професіонали своєї справи, з багаторічним досвідом та помітними успіхами в галузі стоматології. Ми пропонуємо широкий спектр послуг, що дозволить Вам отримати комплексну допомогу в різних галузях стоматології: від чистки зубів та профілактики карієсу до протезування та імплантології.</p>
+            </div>
+            <div class="phoneMain_expertsBlock_forimg">
+                <img id="imgPhone" class="phoneMain_expertsBlock_forimg_img" src="{% static 'phone/img/experts/phone1.png' %}" alt="">
+            </div>
+            <div class="phoneMain_expertsBlock_forp1">
+                <p id="phoneText1" class="phoneMain_expertsBlock_forp1_p">Твердохліб Андрій Валерійович</p>
+            </div>
+            <div class="phoneMain_expertsBlock_forp2">
+                <p id="phoneText2" class="phoneMain_expertsBlock_forp2_p">Власник клінік, Терапевтичний прийом, Хірургічний прийом, Ортопедичний прийом</p>
+            </div>
+        </div>
+        <div class="phoneMain_worksBlock">
+            <div class="phoneMain_worksBlock_bl">
+                <div class="phoneMain_worksBlock_bl_fortext">
+                    <p class="phoneMain_worksBlock_bl_fortext_text">Наші роботи та результати:</p>
+                </div>
+                <div class="phoneMain_worksBlock_bl_forimg">
+                    <img id="phoneImg" class="phoneMain_worksBlock_bl_forimg_img" src="{% static 'phone/img/works/1.png' %}" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="phoneMain_block4">
+          <div class="phoneMain_block4_bl">
+              <div class="phoneMain_block4_bl_fortext">
+                  <p class="phoneMain_block4_bl_fortext_text">Наші послуги:</p>
+              </div>
+              <div class="phoneMain_block4_bl_forslider3">
+                  <div id="slideMob1" class="phoneMain_block4_bl_forslider3_block">
+                      <div class="phoneMain_block4_bl_forslider3_block_fortxt1">
+                          <svg width="56" height="55" viewBox="0 0 56 55" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M18.8937 3.37475C16.8011 2.66873 14.8189 2 11.75 2C5.25 2 2 8 2 15.5C2 20.2955 3.32876 23.2514 4.71183 26.3279C5.4918 28.0631 6.28906 29.8364 6.875 32C7.35925 33.788 7.5549 36.3752 7.76293 39.1265C8.25303 45.608 8.812 53 13.375 53C16.2967 53 17.5768 48.7571 18.9862 44.0858C20.7124 38.3642 22.6326 32 28 32C33.3674 32 35.2875 38.3642 37.0139 44.0858C38.4231 48.7571 39.7033 53 42.625 53C47.188 53 47.747 45.608 48.2371 39.1265C48.4451 36.3752 48.6407 33.788 49.125 32C49.711 29.8364 50.5082 28.0631 51.2882 26.3279C52.6714 23.2514 54 20.2955 54 15.5C54 8 50.75 2 44.25 2C41.181 2 39.1988 2.66873 37.1062 3.37475C34.7665 4.16408 32.289 5 28 5C23.711 5 21.2334 4.16408 18.8937 3.37475Z" stroke="black" stroke-width="3.75" stroke-linecap="round" stroke-linejoin="round"/>
+                          </svg>      
+                          <p class="phoneMain_block4_bl_forslider3_block_fortxt1_text">Діагностика</p>                                        
+                      </div>
+                      <div class="phoneMain_block4_bl_forslider3_block_fortxt2">     
+                          <p class="phoneMain_block4_bl_forslider3_block_fortxt2_text">Від консультації до фотопротоколу</p>                                        
+                      </div>
+                      <div class="phoneMain_block4_bl_forslider3_block_fortxt3">     
+                          <p class="phoneMain_block4_bl_forslider3_block_fortxt3_text">Безкоштовно - ... грн</p>                                        
+                      </div>
+                  </div>
+                  <div id="slide2" class="phoneMain_block4_bl_forslider3_block">
+                      <div class="phoneMain_block4_bl_forslider3_block_fortxt">
+                          <svg width="59.999878" height="46.851074" viewBox="0 0 59.9999 46.8511" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                              <defs/>
+                              <path id="Vector" d="M58.936 38.1562L43.5537 26.1919C42.0873 25.052 40.2571 24.4241 38.3998 24.4241L26.2986 24.4241C25.662 24.4241 25.0349 24.209 24.5326 23.8184L9.15137 11.855C8.56952 11.4019 7.84601 11.2029 7.11401 11.2947C6.83167 11.3298 6.56158 11.408 6.30981 11.5227L5.41559 9.61743C5.63727 9.44092 5.83356 9.23047 5.99524 8.98779C6.40399 8.37476 6.5495 7.63892 6.40485 6.91626L5.46545 2.21973C5.32068 1.49536 4.90295 0.871094 4.28906 0.462402C3.67639 0.0544434 2.94067 -0.090332 2.21924 0.0549316C1.49628 0.199219 0.872925 0.616699 0.46405 1.22998C0.0553589 1.84326 -0.0901489 2.5791 0.0545044 3.30151L0.993835 7.99829C1.25079 9.28394 2.38782 10.217 3.69751 10.217C3.71527 10.217 3.73297 10.2163 3.75085 10.2158L4.97571 12.8252C4.41718 13.9724 4.71613 15.3965 5.76257 16.2107L21.1448 28.175C22.6111 29.3149 24.4415 29.9429 26.2987 29.9429L26.3023 29.9429L26.3023 41.3323L11.2141 41.3323C9.69263 41.3323 8.45483 42.5703 8.45483 44.0918L8.45483 45.9705C8.45483 46.4568 8.84912 46.8511 9.33545 46.8511L39.3944 46.8511C39.8807 46.8511 40.275 46.4568 40.275 45.9705L40.275 44.0918C40.275 42.5703 39.0372 41.3323 37.5157 41.3323L37.457 41.3323L37.457 29.9429L38.4 29.9429C39.0365 29.9429 39.6636 30.158 40.166 30.5486L55.5475 42.5122C56.0364 42.8926 56.6218 43.0938 57.2405 43.0938C58.0992 43.0938 58.8936 42.7053 59.4199 42.0286C60.3537 40.8276 60.1367 39.0906 58.936 38.1562ZM2.72083 7.65283L1.78149 2.95605C1.72925 2.69458 1.78174 2.42871 1.92957 2.20703C2.07727 1.98535 2.30273 1.83423 2.56549 1.78198C2.63184 1.76855 2.69867 1.76196 2.76477 1.76196C2.95874 1.76196 3.14825 1.8186 3.31287 1.92822C3.53479 2.07617 3.68591 2.30225 3.73853 2.56494L4.67786 7.26172C4.7301 7.52319 4.67761 7.78931 4.52979 8.01099C4.41705 8.18018 4.25891 8.30762 4.073 8.38208C4.02783 8.39233 3.98309 8.40674 3.93884 8.42456C3.92334 8.42847 3.90814 8.43311 3.89246 8.43628C3.82855 8.44922 3.76282 8.45581 3.69739 8.45581C3.22455 8.45581 2.81384 8.11816 2.72083 7.65283ZM35.6956 41.3323L34.6977 41.3323C34.2114 41.3323 33.817 41.7266 33.817 42.2129C33.817 42.6992 34.2114 43.0935 34.6977 43.0935L37.5156 43.0935C38.0659 43.0935 38.5137 43.5413 38.5137 44.0916L38.5137 45.0896L10.2159 45.0896L10.2159 44.0916C10.2159 43.5413 10.6637 43.0935 11.214 43.0935L30.9402 43.0935C31.4265 43.0935 31.8209 42.6992 31.8209 42.2129C31.8209 41.7266 31.4265 41.3323 30.9402 41.3323L28.0635 41.3323L28.0635 29.9426L35.6956 29.9426L35.6956 41.3323ZM58.0294 40.9473C57.8392 41.1919 57.5516 41.3323 57.2404 41.3323C57.0172 41.3323 56.8057 41.2595 56.6288 41.1221L41.2471 29.1582C40.4373 28.5283 39.4261 28.1814 38.3998 28.1814L26.2986 28.1814C24.8309 28.1814 23.3846 27.6853 22.226 26.7847L6.84393 14.8206C6.40961 14.4827 6.33105 13.8542 6.66888 13.4199C6.83258 13.2095 7.06848 13.0752 7.33313 13.042C7.37531 13.0369 7.4173 13.0342 7.45911 13.0342C7.67963 13.0342 7.89252 13.1069 8.06958 13.2449L23.4513 25.2087C24.2611 25.8386 25.2723 26.1853 26.2986 26.1853L38.4 26.1853C39.8676 26.1853 41.314 26.6816 42.4726 27.5823L57.8546 39.5464C58.2889 39.8843 58.3673 40.5127 58.0294 40.9473Z" fill="#000000" fill-opacity="1.000000" fill-rule="nonzero"/>
+                          </svg>                             
+                          <p class="phoneMain_block4_bl_forslider3_block_fortxt_text">Реставрація</p>                                        
+                      </div>
+                      <div class="phoneMain_block4_bl_forslider3_block_fortxt2">     
+                          <p class="phoneMain_block4_bl_forslider3_block_fortxt2_text2">Від пломби до реставраціїі</p>                                        
+                      </div>
+                      <div class="phoneMain_block4_bl_forslider3_block_fortxt3">     
+                          <p class="phoneMain_block4_bl_forslider3_block_fortxt3_text2">1000 - ... грн</p>                                        
+                      </div>
+                  </div>
+                  <div id="slideMob2" class="phoneMain_block4_bl_forslider3_block">
+                      <div class="phoneMain_block4_bl_forslider3_block_fortxt5">
+                          <svg width="58" height="60" viewBox="0 0 58 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M56.3616 0.62384C55.4871 -0.150503 54.1493 -0.0694929 53.3727 0.803638C53.3208 0.862022 48.1101 6.6396 41.8592 6.6396C32.5343 6.6396 29.9747 5.3596 26.4317 3.58808C24.5533 2.64889 21.0566 0.900608 17.5333 0.256366C11.3392 -0.875957 8.50384 1.95839 7.21495 4.53556C4.31737 10.3311 7.80768 16.3663 9.91657 19.216C3.8701 24.1354 0 31.6319 0 40.0164C0 47.4158 2.9495 54.3046 8.30485 59.4143C8.69899 59.7903 9.22263 60 9.76727 60H43.8481C44.3927 60 44.9164 59.7903 45.3105 59.4143C50.6655 54.3049 53.6147 47.416 53.6147 40.0164C53.6147 25.2347 41.5889 13.2091 26.8075 13.2091C21.9321 13.2091 17.357 14.518 13.4137 16.8018C11.8562 14.7099 9.11677 10.2065 11.0048 6.43051C13.0681 2.30445 19.3204 4.7697 24.5372 7.37778C28.4465 9.33253 31.5343 10.8766 41.8594 10.8766C50.0444 10.8766 56.2861 3.90626 56.5477 3.60929C57.32 2.73313 57.2364 1.39839 56.3616 0.62384ZM49.3778 40.0164C49.3778 45.9683 47.1117 51.5275 42.978 55.7632H10.6372C6.50323 51.5273 4.23677 45.9681 4.23677 40.0164C4.23677 27.5711 14.362 17.4459 26.8073 17.4459C39.2525 17.4459 49.3778 27.5709 49.3778 40.0164Z" fill="black"/>
+                              <path d="M22.7167 50.0944C23.1585 50.411 23.6793 50.5783 24.2228 50.5783C24.6323 50.5783 25.0412 50.4793 25.4032 50.2928C26.1515 49.9086 26.6547 49.1987 26.7779 48.3843L26.8072 48.2771L26.8365 48.3848C26.9595 49.1987 27.4628 49.9084 28.2082 50.291C28.5727 50.4789 28.9822 50.5781 29.3921 50.5781C29.9351 50.5781 30.4555 50.411 30.8977 50.0944C32.7418 48.7722 34.2985 46.5575 35.6567 43.3229C37.0791 39.9359 38.0347 35.8856 38.0347 33.2439C38.0347 28.5448 34.7717 27.291 32.8436 27.291C31.4826 27.291 30.3377 27.7801 29.2299 28.2534C28.4032 28.6066 27.4662 29.0072 26.807 29.0072C26.1478 29.0072 25.2111 28.6066 24.3836 28.253C23.2763 27.7801 22.1315 27.291 20.7707 27.291C18.8426 27.291 15.5793 28.5448 15.5793 33.2439C15.5793 35.8848 16.5349 39.9353 17.9573 43.3229C19.3157 46.5571 20.8725 48.7718 22.7167 50.0944ZM20.7711 31.5278C21.2648 31.5278 21.9068 31.8021 22.7197 32.1492C23.861 32.6369 25.281 33.2437 26.8074 33.2437C28.3339 33.2437 29.7539 32.6367 30.8953 32.1492C31.7078 31.8021 32.3499 31.5278 32.8438 31.5278C33.1048 31.5278 33.7981 31.5278 33.7981 33.2437C33.7981 35.3082 32.9371 38.8571 31.7507 41.6823C31.2195 42.9472 30.6977 43.9167 30.2115 44.6593L28.8509 39.6767C28.5993 38.7553 27.7626 38.1163 26.8074 38.1163C25.8523 38.1163 25.0155 38.7553 24.764 39.6767L23.4034 44.6593C22.9169 43.9165 22.3953 42.947 21.8644 41.6825C20.6779 38.8567 19.8167 35.3076 19.8167 33.2437C19.8165 31.5278 20.5099 31.5278 20.7711 31.5278Z" fill="black"/>
+                          </svg>                            
+                          <p class="phoneMain_block4_bl_forslider3_block_fortxt5_text5">Гігієна</p>                                        
+                      </div>
+                      <div class="phoneMain_block4_bl_forslider3_block_fortxt2">     
+                          <p class="phoneMain_block4_bl_forslider3_block_fortxt2_text2">Від проф. чищення до глибокого фторування</p>                                        
+                      </div>
+                      <div class="phoneMain_block4_bl_forslider3_block_fortxt3">     
+                          <p class="phoneMain_block4_bl_forslider3_block_fortxt3_text2">1000 - ... грн</p>                                        
+                      </div>
+                  </div>
+                  <div id="slideMob2" class="phoneMain_block4_bl_forslider3_block">
+                      <div class="phoneMain_block4_bl_forslider3_block_fortxt6">
+                          <svg width="56" height="59" viewBox="0 0 56 59" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M55.7064 12.6486L43.9959 0.30939C43.6044 -0.102919 42.9697 -0.103264 42.5783 0.30916L40.0828 2.93696C39.8948 3.13494 39.789 3.40366 39.789 3.68391C39.789 3.96416 39.8946 4.23266 40.0826 4.43086L45.2302 9.85414L40.4626 14.8771L33.4223 7.46003C33.0307 7.04761 32.3961 7.04761 32.0045 7.46003C31.613 7.87257 31.613 8.54116 32.0045 8.95358L33.7999 10.8452L12.5322 33.2516C12.1407 33.664 12.1407 34.3327 12.5322 34.7451L14.6358 36.9613L11.6981 40.0563C11.3067 40.4687 11.3067 41.1374 11.6981 41.5498L13.4217 43.3657L0.293675 57.197C-0.0978918 57.6095 -0.0978918 58.2782 0.293675 58.6906C0.489459 58.8969 0.746056 59 1.00265 59C1.25914 59 1.51585 58.8969 1.71163 58.6906L14.8395 44.8595L16.5635 46.676C16.7593 46.8823 17.0159 46.9854 17.2725 46.9854C17.529 46.9854 17.7857 46.8823 17.9815 46.676L20.9191 43.5812L23.0213 45.7959C23.2171 46.002 23.4738 46.1053 23.7303 46.1053C23.9868 46.1053 24.2435 46.0021 24.4393 45.7959L45.7064 23.3897L47.5025 25.282C47.6982 25.4882 47.9549 25.5914 48.2114 25.5914C48.4679 25.5914 48.7246 25.4882 48.9204 25.282C49.3119 24.8695 49.3119 24.2008 48.9204 23.7884L41.8803 16.3709L46.6479 11.3479L51.7946 16.7703C51.9904 16.9765 52.2471 17.0797 52.5036 17.0797C52.7601 17.0797 53.0168 16.9765 53.2126 16.7703L55.7068 14.1425C56.0978 13.7297 56.0978 13.0611 55.7064 12.6486ZM17.2725 44.4354L13.8248 40.8031L16.0536 38.4551L19.5012 42.0874L17.2725 44.4354ZM44.2883 21.896L23.73 43.5552L14.6588 33.9982L35.217 12.3389L44.2883 21.896ZM52.5033 14.5294L42.2093 3.68414L43.2867 2.54966L53.5798 13.3953L52.5033 14.5294Z" fill="black"/>
+                          </svg>                           
+                          <p class="phoneMain_block4_bl_forslider3_block_fortxt6_text6">Терапія</p>                                        
+                      </div>
+                      <div class="phoneMain_block4_bl_forslider3_block_fortxt2">     
+                          <p class="phoneMain_block4_bl_forslider3_block_fortxt2_text2">Від анестезії до надання допомоги при гострому болю</p>                                        
+                      </div>
+                      <div class="phoneMain_block4_bl_forslider3_block_fortxt3">     
+                          <p class="phoneMain_block4_bl_forslider3_block_fortxt3_text2">300 - ... грн</p>                                        
+                      </div>
+                  </div>
+                  <div id="slideMob2" class="phoneMain_block4_bl_forslider3_block">
+                      <div class="phoneMain_block4_bl_forslider3_block_fortxt7">
+                          <svg width="66" height="75" viewBox="0 0 66 75" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M51.7038 47.2775L34.9175 31.0519C34.3878 30.5399 33.5296 30.5399 32.9997 31.0519L30.123 33.8326L26.2874 30.125L26.7636 29.6646C28.9402 27.5613 30.1394 24.7631 30.1404 21.7867C30.1418 18.8078 28.9439 16.0082 26.7666 13.9049C26.6052 13.7489 26.4324 13.609 26.2632 13.4634L38.2734 1.85381L36.3563 0L24.0108 11.9333C22.3702 11.0921 20.5309 10.644 18.6188 10.644C18.6175 10.644 18.6168 10.644 18.6162 10.644C15.5344 10.644 12.6389 11.8026 10.4623 13.9072L0.397388 23.636C0.142979 23.8819 0 24.2148 0 24.5629C0 24.911 0.142979 25.2439 0.397388 25.4898L14.7812 39.3944C15.0356 39.6403 15.3803 39.7785 15.7401 39.7785C16.0996 39.7785 16.4446 39.6403 16.699 39.3944L19.5757 36.613L23.411 40.3206L20.5343 43.1013C20.2799 43.3473 20.1369 43.6798 20.1369 44.0283C20.1369 44.3764 20.2799 44.7092 20.5343 44.9552L37.3206 61.1807C39.236 63.0333 41.7875 64.052 44.5045 64.0533C44.5051 64.0533 44.5058 64.0533 44.5065 64.0533C47.2254 64.0533 49.7799 63.0316 51.6987 61.1756C55.6639 57.343 55.6666 51.1077 51.7038 47.2775ZM18.6162 33.8326C18.6155 33.8333 18.6152 33.8345 18.6145 33.8352L15.7398 36.614L3.27375 24.5629L12.3805 15.7607C14.0452 14.1515 16.2594 13.2658 18.6165 13.2658C18.6172 13.2658 18.6178 13.2658 18.6185 13.2658C20.9743 13.2658 23.1875 14.1518 24.8492 15.7581C26.5132 17.3673 27.4295 19.5063 27.4282 21.7851C27.4268 24.0623 26.5099 26.2016 24.8458 27.8108L21.8117 30.7443L18.6162 33.8326ZM21.4932 34.7595L23.4103 32.9063L24.3702 31.9788L28.2062 35.6861L25.3288 38.4675L21.4932 34.7595ZM44.5058 61.4319C44.5051 61.4319 44.5045 61.4319 44.5045 61.4319C42.5115 61.4319 40.6413 60.6844 39.2377 59.3273L23.4103 44.0286L26.2853 41.2495C26.2853 41.2495 26.2867 41.2488 26.2874 41.2482L31.0819 36.613L33.9582 33.8326L49.7856 49.1313C52.6905 51.9399 52.6885 56.5112 49.7803 59.3224C48.3736 60.6827 46.5005 61.4319 44.5058 61.4319Z" fill="black"/>
+                              <path d="M65.6026 68.1284L56.9721 59.7859C56.4636 59.2944 55.5631 59.2944 55.0543 59.7859L50.2598 64.4211C50.0054 64.667 49.8624 64.9995 49.8624 65.348C49.8624 65.6961 50.0054 66.029 50.2598 66.2749L58.8903 74.6161C59.1551 74.872 59.5021 75.0002 59.8492 75.0002C60.1962 75.0002 60.5429 74.872 60.8081 74.6161L65.6026 69.9819C65.857 69.7359 65.9999 69.4034 65.9999 69.0549C66.0003 68.7068 65.857 68.374 65.6026 68.1284ZM59.8495 71.8353L53.1365 65.3476L56.0136 62.5659L62.7265 69.0549L59.8495 71.8353Z" fill="black"/>
+                          </svg>                                                       
+                          <p class="phoneMain_block4_bl_forslider3_block_fortxt7_text7">Ендодонтія</p>                                        
+                      </div>
+                      <div class="phoneMain_block4_bl_forslider3_block_fortxt2">     
+                          <p class="phoneMain_block4_bl_forslider3_block_fortxt2_text2">Від лікування до пломбування</p>                                        
+                      </div>
+                      <div class="phoneMain_block4_bl_forslider3_block_fortxt3">     
+                          <p class="phoneMain_block4_bl_forslider3_block_fortxt3_text2">500 - ... грн</p>                                        
+                      </div>
+                  </div>
+                  <div id="slideMob2" class="phoneMain_block4_bl_forslider3_block">
+                      <div class="phoneMain_block4_bl_forslider3_block_fortxt7">
+                          <svg width="76" height="76" viewBox="0 0 76 76" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path fill-rule="evenodd" clip-rule="evenodd" d="M51.2083 46.2195C50.8001 46.026 50.3416 45.9167 49.8527 45.9167H43.8056L23.8265 53.1092L24.4587 55.8493L51.2083 46.2195ZM25.8082 61.6969L52.401 52.1234L52.9383 49.7954C53.0054 49.5044 53.0302 49.2153 53.0174 48.9338L25.1758 58.9568L25.8082 61.6969ZM51.5539 55.7941L26.9374 64.656C27.7075 65.6511 28.8577 66.3193 30.1462 66.4684L50.8069 59.0305L51.5539 55.7941ZM45.3045 66.5001H39.4074L49.96 62.7012L49.9329 62.8182C49.4356 64.9734 47.5164 66.5001 45.3045 66.5001ZM26.1473 45.9167H34.4566L23.1094 50.0017L23.0617 49.7954C22.6038 47.8112 24.1108 45.9167 26.1473 45.9167Z" fill="black"/>
+                              <path fill-rule="evenodd" clip-rule="evenodd" d="M39.0043 17.0698C37.867 17.853 36.3532 17.8089 35.2634 16.9607C30.8012 13.4875 27.0144 12.4095 23.8387 12.7169C20.6476 13.0258 17.4719 14.7915 14.3632 18.2208C12.1626 20.6486 12.2552 23.9131 13.7663 29.1876C14.1218 30.4287 14.5296 31.7002 14.9603 33.0432L14.9818 33.1102C15.4148 34.4605 15.869 35.8788 16.2765 37.3098C16.9019 39.5053 17.4534 41.8466 17.6729 44.236C18.7573 44.4581 20.2969 44.67 22.2088 44.8554C26.227 45.2449 31.5519 45.4862 36.9374 45.5351C42.3263 45.5842 47.6848 45.4396 51.7779 45.0756C53.8384 44.8924 55.4797 44.6617 56.6127 44.4009C56.6604 44.39 56.7063 44.3793 56.7506 44.3685C57.0567 41.9539 57.8604 39.6217 58.7148 37.496C59.1658 36.3738 59.6622 35.2374 60.1391 34.1454C60.2438 33.906 60.3473 33.6688 60.4493 33.4345C61.0283 32.1037 61.569 30.8308 62.029 29.5743C62.9571 27.0378 63.4594 24.8119 63.3061 22.7599C63.1611 20.8153 62.4104 18.7939 60.3678 16.6418C56.4511 12.5152 51.4948 12.3681 46.9558 13.5474C44.6983 14.1339 42.6868 15.0242 41.2265 15.781C40.502 16.1565 39.9272 16.4918 39.5419 16.7276C39.3495 16.8452 39.2052 16.9377 39.114 16.9971C39.0686 17.0269 39.0363 17.0482 39.0181 17.0604L39.0043 17.0698ZM37.2083 14.4617C27.4241 6.84624 18.9235 8.47506 12.017 16.0941C7.71946 20.8351 9.77304 27.2382 11.9377 33.9878C13.2519 38.0853 14.607 42.3105 14.607 46.369C15.8333 49.0833 57.7917 49.875 59.7868 46.369C59.7868 42.864 61.3931 39.1862 63.0342 35.4288C66.0529 28.5173 69.1893 21.3359 62.6645 14.4617C52.5926 3.85049 37.2083 14.4617 37.2083 14.4617ZM57.7556 44.0428C57.7573 44.0434 57.7393 44.0545 57.6962 44.0746C57.7323 44.0523 57.7538 44.0423 57.7556 44.0428Z" fill="black"/>
+                              <path fill-rule="evenodd" clip-rule="evenodd" d="M35.1377 14.9005C35.653 14.1941 36.6436 14.0392 37.3499 14.5546L47.6275 22.0532C48.334 22.5686 48.4888 23.5589 47.9734 24.2654C47.4579 24.9719 46.4675 25.1267 45.761 24.6112L35.4835 17.1127C34.7771 16.5973 34.6223 15.6069 35.1377 14.9005Z" fill="black"/>
+                          </svg>                                                       
+                          <p class="phoneMain_block4_bl_forslider3_block_fortxt7_text7">Ортопедія</p>                                        
+                      </div>
+                      <div class="phoneMain_block4_bl_forslider3_block_fortxt2">     
+                          <p class="phoneMain_block4_bl_forslider3_block_fortxt2_text2">Від захисних кап до коронки</p>                                        
+                      </div>
+                      <div class="phoneMain_block4_bl_forslider3_block_fortxt3">     
+                          <p class="phoneMain_block4_bl_forslider3_block_fortxt3_text2">400- ... грн</p>                                        
+                      </div>
+                  </div>
+                  <div id="slideMob2" class="phoneMain_block4_bl_forslider3_block">
+                      <div class="phoneMain_block4_bl_forslider3_block_fortxt7">
+                          <svg width="60" height="55" viewBox="0 0 60 55" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M59.3948 43.6694L41.6666 25.9413C41.2766 25.5516 40.7574 25.3369 40.2049 25.3369C39.6523 25.3369 39.1332 25.5516 38.7427 25.9418L37.6498 27.035L33.7618 23.1471C33.6618 23.047 33.4611 22.8531 33.6293 22.4391C36.5088 15.9808 35.5057 10.0442 34.1171 8.65578C26.5529 1.09139 -1.527 -1.10394 0.0650718 0.488139C0.483229 0.906131 27.22 7.79746 30.3195 10.8971C33.0436 13.6212 28.8639 22.0147 27.5388 25.5291C27.4164 25.8538 26.8854 26.8479 28.4727 28.4352L32.3613 32.3237L31.2686 33.4162C30.8784 33.8064 30.6632 34.3258 30.6632 34.879C30.6632 35.4316 30.8782 35.9507 31.2681 36.341L48.9963 54.0691C49.3863 54.4586 49.9054 54.6731 50.4579 54.6731C51.0103 54.6731 51.5296 54.4586 51.9199 54.0686L59.3945 46.594C59.7849 46.2041 59.9999 45.6844 59.9999 45.1314C59.9997 44.5788 59.785 44.0597 59.3948 43.6694ZM50.089 50.717C50.089 50.717 38.5442 39.1725 34.573 35.2012C34.2885 34.9168 34.4468 34.6962 34.5495 34.5796C34.7351 34.3692 35.3438 33.7854 35.3438 33.7854C35.7337 33.3954 35.9486 32.876 35.9486 32.3234C35.9486 31.7707 35.7337 31.2517 35.3438 30.8613C35.3438 30.8613 32.4496 27.9671 31.485 27.0024C31.2373 26.7548 31.3928 26.5669 31.3928 26.5669L31.7094 25.9865C31.7094 25.9865 31.8674 25.6974 32.1292 25.9592C33.3147 27.1447 36.1874 30.0172 36.1874 30.0172C36.5776 30.4073 37.0968 30.6221 37.6495 30.6221C38.2021 30.6221 38.7212 30.4073 39.1115 30.0172C39.1115 30.0172 39.7014 29.4011 39.9148 29.2141C40.0203 29.1215 40.2426 28.9626 40.4753 29.195C44.2755 32.9949 54.352 43.0714 56.1389 44.8585C56.3159 45.0355 56.1824 45.3607 56.0736 45.4692C54.8622 46.6807 51.8521 49.691 50.815 50.7279C50.4641 51.0798 50.089 50.717 50.089 50.717Z" fill="black"/>
+                          </svg>                                                       
+                          <p class="phoneMain_block4_bl_forslider3_block_fortxt7_text7">Хірургія</p>                                        
+                      </div>
+                      <div class="phoneMain_block4_bl_forslider3_block_fortxt2">     
+                          <p class="phoneMain_block4_bl_forslider3_block_fortxt2_text2">Від видалення зуба до розтину абсцесу</p>                                        
+                      </div>
+                      <div class="phoneMain_block4_bl_forslider3_block_fortxt3">     
+                          <p class="phoneMain_block4_bl_forslider3_block_fortxt3_text2">500- ... грн</p>                                        
+                      </div>
+                  </div>
+                  <div id="slideMob2" class="phoneMain_block4_bl_forslider3_block">
+                    <div class="phoneMain_block4_bl_forslider3_block_fortxt8">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="68" height="66" viewBox="0 0 68 66" fill="none">
+                          <path d="M25.5 27.5H25.5283M42.5 27.5H42.5283M24.1829 38.5C26.1425 41.7879 29.8052 44 34 44C38.195 44 41.8576 41.7879 43.8172 38.5M34 55C44.5618 55 53.4363 47.9889 55.9526 38.5H56.6666C59.7963 38.5 62.3333 36.0376 62.3333 33C62.3333 29.9624 59.7963 27.5 56.6666 27.5H55.9526C53.4363 18.0113 44.5618 11 34 11C23.4382 11 14.5636 18.0113 12.0474 27.5H11.3333C8.20368 27.5 5.66663 29.9624 5.66663 33C5.66663 36.0376 8.20368 38.5 11.3333 38.5H12.0474C14.5636 47.9889 23.4382 55 34 55Z" stroke="black" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>                                                      
+                        <p class="phoneMain_block4_bl_forslider3_block_fortxt8_text8">Дитяча стоматологія</p>                                        
+                    </div>
+                    <div class="phoneMain_block4_bl_forslider3_block_fortxt2">     
+                        <p class="phoneMain_block4_bl_forslider3_block_fortxt2_text2">ВІд дитячої пломби до видалення молочного зуба</p>                                        
+                    </div>
+                    <div class="phoneMain_block4_bl_forslider3_block_fortxt3">     
+                        <p class="phoneMain_block4_bl_forslider3_block_fortxt3_text2">500- ... грн</p>                                        
+                    </div>
+                </div>
+              </div>     
+          </div>
+        </div>
+        <div id="RegistrationPhone" class="phoneMain_mapsBlock">
+            <div class="phoneMain_mapsBlock_bl">
+                <div class="phoneMain_mapsBlock_bl_forp1">
+                    <p class="phoneMain_mapsBlock_bl_forp1_p">Наші адреси:</p>
+                </div>
+                <div class="phoneMain_mapsBlock_bl_forp2">
+                    <p class="phoneMain_mapsBlock_bl_forp2_p">Овідіополь, Портова 13 Тел: <a class="phoneMain_mapsBlock_bl_forp2_p2" href="tel:+380686607767">0686607767</a></p>      
+                </div>
+                <iframe class="phoneMain_mapsBlock_bl_iframe1" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d398.4997428418637!2d30.438984055957295!3d46.24369182337046!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40c7c4e84b239b0f%3A0xf1c00777a73e6ffa!2z0KHRgtC-0LzQsNGC0L7Qu9C-0LPQuNGPIEhvbGx5d29vZA!5e0!3m2!1suk!2sua!4v1709475409240!5m2!1suk!2sua" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <div class="phoneMain_mapsBlock_bl_forp2">
+                    <p class="phoneMain_mapsBlock_bl_forp2_p">Чорноморськ, проспект Миру 41 Тел: <a class="phoneMain_mapsBlock_bl_forp2_p2" href="tel:+380988181018">0988181018</a></p>      
+                </div>
+                <iframe class="phoneMain_mapsBlock_bl_iframe1" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2756.727238720755!2d30.650502175848608!3d46.29539277759865!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40c7c932619ef57b%3A0x9931b05a9b4a6571!2z0KHRgtC-0LzQsNGC0L7Qu9C-0LPQuNGPIEhvbGx5d29vZA!5e0!3m2!1suk!2sua!4v1710089403817!5m2!1suk!2sua" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </div>
+    <div class="phoneFooter">
+        <div class="phoneFooter_forblock">
+            <div class="phoneFooter_forblock_block">
+                <div class="phoneFooter_forblock_block_bl1">
+                    <div class="phoneFooter_forblock_block_bl1_logo">
+                        <img class="phoneFooter_forblock_block_bl1_logo_img1" src="{% static 'img/logoimg1.png' %}" alt="">
+                        <img class="phoneFooter_forblock_block_bl1_logo_img2" src="{% static 'img/logoimg2.png' %}" alt="">
+                    </div>
+                    <p class="phoneFooter_forblock_block_bl1_text1">Контакти:</p>
+                    <div class="phoneFooter_forblock_block_bl1_foraddress">
+                        <p class="phoneFooter_forblock_block_bl1_foraddress1_address1">м.Овідіополь, Портова 13 Тел: <a class="phoneFooter_forblock_block_bl1_foraddress1_address1_a" href="tel:+380686607767">0686607767</a></p>
+                    </div>
+                    <div class="phoneFooter_forblock_block_bl1_foraddress2">
+                        <p class="phoneFooter_forblock_block_bl1_foraddress2_address2">Чорноморськ, проспект Миру 41 Тел: <a class="phoneFooter_forblock_block_bl1_foraddress2_address2_a" href="tel:+380988181018">0988181018</a></p>
+                    </div>
+                </div>      
+            </div>
+        </div>  
+    </div>
+    <script type="module" src="{% static 'main.js' %}"></script>
+  </body>
+</html>
