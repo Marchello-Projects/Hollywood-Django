@@ -1,0 +1,49 @@
+{% extends 'base_login_reg.html' %}
+{% load static %}
+
+{% block title %}Вхід{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'Hollywood/css/login.css' %}">
+{% endblock %}
+
+{% block main_content %}
+<div class="blockCenter">
+    <div class="blockCenter_logoBlock">
+        <img class="blockCenter_logoBlock_img1" src="{% static 'img/logoimg1.png' %}" alt="Logo1">
+        <img class="blockCenter_logoBlock_img2" src="{% static 'img/logoimg2.png' %}" alt="Logo2">
+    </div>
+
+    <div class="formBlock">
+        <h2 class="auth-title">З поверненням!<br>Увійдіть у свій акаунт:</h2>
+
+        {% if form.non_field_errors %}
+            <div class="error-message">
+                {{ form.non_field_errors }}
+            </div>
+        {% endif %}
+
+        <form method="post" action="{% url 'login' %}">
+            {% csrf_token %}
+            
+            <div class="form-group">
+                <label for="{{ form.email.id_for_label }}">Електронна пошта</label>
+                {{ form.email }} 
+                <span class="field-error">{{ form.email.errors }}</span>
+            </div>
+
+            <div class="form-group">
+                <label for="{{ form.password.id_for_label }}">Пароль</label>
+                {{ form.password }}
+                <span class="field-error">{{ form.password.errors }}</span>
+            </div>
+
+            <button type="submit" class="btn-primary">Увійти</button>
+        </form>
+
+        <div class="auth-footer">
+            <p>Не маєте облікового запису? <a href="{% url 'register' %}">Зареєструйтеся</a></p>
+        </div>
+    </div>
+</div>
+{% endblock %}

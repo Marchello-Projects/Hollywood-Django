@@ -126,4 +126,4 @@ STATICFILES_DIRS = [
     BASE_DIR / "static",
 ]
 
-AUTH_USER_MODEL = 'Hollywood.Patient'
+AUTH_USER_MODEL = 'Hollywood.User'
