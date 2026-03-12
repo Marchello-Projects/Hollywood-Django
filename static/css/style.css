@@ -63,28 +63,32 @@ html {
 .header_navigationBar_link {
   text-decoration: none;
 }
-.header_navigationBar_link_btnRegistration {
-  width: 267px;
-  height: 35px;
-  text-align: center;
-  color: #fff;
-  font-family: "Montserrat";
-  font-size: 15px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: normal;
-  text-decoration: none;
-  border: 1px solid rgb(255, 255, 255);
-  border-radius: 5px;
-  background: none;
-  cursor: pointer;
-  transition-duration: 0.6s;
-  margin-right: 5px;
+.header_authBlock {
+    display: flex;
+    gap: 15px;
+    align-items: center;
 }
-.header_navigationBar_link_btnRegistration:hover {
-  transition-duration: 0.6s;
-  color: #000;
-  background: rgb(255, 255, 255);
+.header_navigationBar_link {
+    text-decoration: none;
+}
+.header_navigationBar_link_btn {
+    padding: 0 20px;
+    height: 35px;
+    text-align: center;
+    color: #fff;
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.6s ease;
+    white-space: nowrap;
+}
+.header_navigationBar_link_btn:hover {
+    color: #000;
+    background: #fff;
 }
 .header_titleBlock {
   display: flex;
