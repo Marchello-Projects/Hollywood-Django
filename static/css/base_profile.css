@@ -1,0 +1,85 @@
+body {
+    font-family: "Montserrat", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    width: 100%;
+    height: 68px;
+    background: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.header_logoBlock {
+    display: flex;
+    align-items: center;
+}
+
+.header_logoBlock_img1 {
+    width: 26px;
+    height: 36px;
+}
+
+.header_logoBlock_img2 {
+    width: 157px;
+    height: 26px;
+    margin-left: 5px;
+}
+
+.header_navigationBar {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.header_navigationBar_navigationElements_ul {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.header_navigationBar_navigationElements_ul_li_a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.6s ease;
+}
+
+.header_navigationBar_navigationElements_ul_li_a.active {
+    font-weight: 900;
+}
+
+.header_navigationBar_navigationElements_ul_li_a:hover {
+    transition-duration: 0.6s;
+    font-weight: 900;
+}
+
+.header_logoutBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.header_logoutBtn svg {
+    transition: transform 0.3s ease;
+}
+
+.header_logoutBtn:hover svg {
+    transform: translateX(3px); 
+}
+
+.main_container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}

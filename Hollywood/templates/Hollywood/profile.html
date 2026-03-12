@@ -1,92 +1,89 @@
-<!DOCTYPE html>
-<html lang="uk">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Головна - HOLLYWOOD</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Montserrat', sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            background: linear-gradient(135deg, #2b2b2b, #1a1a1a);
-            color: white;
-        }
-        .greeting-card {
-            text-align: center;
-            background: rgba(0, 0, 0, 0.6);
-            padding: 50px;
-            border-radius: 10px;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-            width: 400px;
-        }
-        .greeting-card h1 {
-            font-size: 28px;
-            margin-bottom: 10px;
-        }
-        .greeting-card p {
-            font-size: 16px;
-            margin-bottom: 30px;
-            color: #cccccc;
-        }
-        .btn {
-            display: inline-block;
-            padding: 12px 24px;
-            margin: 5px;
-            text-decoration: none;
-            border-radius: 4px;
-            font-weight: 600;
-            font-size: 14px;
-            transition: all 0.3s ease;
-        }
-        .btn-login {
-            background-color: white;
-            color: black;
-            border: 1px solid white;
-        }
-        .btn-login:hover {
-            background-color: black;
-            color: white;
-        }
-        .btn-register {
-            background-color: transparent;
-            color: white;
-            border: 1px solid white;
-        }
-        .btn-register:hover {
-            background-color: white;
-            color: black;
-        }
-        .btn-profile {
-            background-color: #8C80ED;
-            color: white;
-            border: 1px solid #8C80ED;
-            width: 100%;
-            box-sizing: border-box;
-        }
-        .btn-profile:hover {
-            background-color: transparent;
-        }
-    </style>
-</head>
-<body>
+{% extends 'base_profile.html' %}
+{% load static %}
 
-    <div class="greeting-card">
-        <h1>HOLLYWOOD 🦷</h1>
-        <p>Ваша ідеальна посмішка починається тут.</p>
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'Hollywood/css/profile.css' %}">
+{% endblock %}
 
-        {% if user.is_authenticated %}
-            <p style="color: white; font-weight: 600;">Привіт, {{ user.full_name }}!</p>
-            <a href="{% url 'patient_profile' %}" class="btn btn-profile">Особистий кабінет</a>
+{% block main_content %}
+<div class="profile-layout">
+    
+    <div class="profile-sidebar">
+        <h2 class="section-title">Про мене:</h2>
+        <div class="info-card user-card">
+            <div class="user-info-top">
+                <div class="user-avatar">
+                    <svg width="99" height="114" viewBox="0 0 99 114" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M49.5 48.75C63.169 48.75 74.25 37.8369 74.25 24.375C74.25 10.9131 63.169 0 49.5 0C35.831 0 24.75 10.9131 24.75 24.375C24.75 37.8369 35.831 48.75 49.5 48.75Z" fill="black"/>
+                      <path d="M99 89.375C99 75.9127 87.9194 65 74.25 65H24.75C11.081 65 0 75.9127 0 89.375V113.75H99V89.375Z" fill="black"/>
+                    </svg>
+                </div>
+                <div class="user-details">
+                    <p><strong>ПІБ:</strong><br>{{ user_info.full_name|default:"Не вказано" }}</p>
+                    <p><strong>Номер телефону:</strong><br>{{ user_info.phone|default:"Не вказано" }}</p>
+                </div>
+            </div>
+            <div class="user-actions">
+                <button class="btn-outline">Змінити дані</button>
+                <button class="btn-outline-danger">Видалити обліковий запис</button>
+            </div>
+        </div>
+
+        <h2 class="section-title">Моя поліклініка:</h2>
+        {% if favorite_clinic == 'Овідіополь, Портова 13' %}
+            <h3 class="clinic-address">{{ favorite_clinic }}</h3>
+            <div class="info-card map-card">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d217.28328772872504!2d30.43904733537675!3d46.24375752777424!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40c7c4e84b239b0f%3A0xf1c00777a73e6ffa!2z0KHRgtC-0LzQsNGC0L7Qu9C-0LPQuNGPIEhvbGx5d29vZA!5e0!3m2!1suk!2sua!4v1772731949724!5m2!1suk!2sua" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        {% elif favorite_clinic == 'Чорноморськ, проспект Миру 41' %}
+            <h3 class="clinic-address">{{ favorite_clinic }}</h3>
+            <div class="info-card map-card">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2756.727423852115!2d30.653077099999997!3d46.29538910000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40c7c932619ef57b%3A0x9931b05a9b4a6571!2z0KHRgtC-0LzQsNGC0L7Qu9C-0LPRltGPIEhvbGx5d29vZA!5e0!3m2!1suk!2sua!4v1772733139127!5m2!1suk!2sua" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
         {% else %}
-            <a href="{% url 'login' %}" class="btn btn-login">Увійти</a>
-            <a href="{% url 'register' %}" class="btn btn-register">Зареєструватися</a>
+            <h3 class="clinic-address">У вас ще немає записів</h3>
+            <div class="info-card map-card" style="display: flex; justify-content: center; align-items: center; background: #f9f9f9;">
+                <p>Карта з'явиться після першого візиту</p>
+            </div>
         {% endif %}
     </div>
 
-</body>
-</html>
+    <div class="profile-history-section">
+        <h2 class="section-title">Історія:</h2>
+        
+        <div class="history-scroll-container">
+            {% if records %}
+                {% for record in records %}
+                <div class="info-card history-item">
+                    <div class="history-number">№{{ forloop.counter }}</div>
+                    
+                    <div class="history-content">
+                        <div class="history-col">
+                            <p class="history-label">Причина візиту:</p>
+                            <p class="history-value">{{ record.get_visit_reason_display }}</p>
+                            
+                            <p class="history-label mt-10">Дата візиту:</p>
+                            <p class="history-value">{{ record.visit_date|date:"d.m.Y H:i"|default:"Очікує підтвердження" }}</p>
+                        </div>
+                        
+                        <div class="history-col">
+                            <p class="history-label">Адреса поліклініки:</p>
+                            <p class="history-value">{{ record.clinic_address.address }}</p>
+                            
+                            <p class="history-label mt-10">Статус:</p>
+                            <p class="history-value status-{% if record.status == 'completed' %}green{% else %}black{% endif %}">
+                                {{ record.get_status_display }}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            {% else %}
+                <div class="empty-history">
+                    <p>Історії немає.</p>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+</div>
+{% endblock %}

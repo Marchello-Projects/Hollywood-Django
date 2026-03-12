@@ -35,7 +35,6 @@ def validate_ukrainian_full_name(full_name):
         
     return full_name
 
-
 class BookingForm(forms.ModelForm):
     class Meta:
         model = PatientRecord
@@ -43,7 +42,6 @@ class BookingForm(forms.ModelForm):
             'full_name', 
             'phone', 
             'email', 
-            'is_adult', 
             'visit_reason', 
             'clinic_address'
         ]
@@ -65,7 +63,6 @@ class BookingForm(forms.ModelForm):
 
     def clean_full_name(self):
         return validate_ukrainian_full_name(self.cleaned_data.get('full_name'))
-
 
 class RegistrationForm(forms.ModelForm):
     password = forms.CharField(
@@ -120,10 +117,10 @@ class RegistrationForm(forms.ModelForm):
     def save(self, commit=True):
         user = super().save(commit=False)
         user.set_password(self.cleaned_data["password"])
+            
         if commit:
             user.save()
         return user
-
 
 class LoginForm(forms.Form):
     email = forms.EmailField(

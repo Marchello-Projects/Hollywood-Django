@@ -1,0 +1,52 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Особистий кабінет{% endblock %}</title>
+
+    <link rel="icon" type="image/png" href="{% static 'HollywoodFavicon/favicon-96x96.png' %}" sizes="96x96"/>
+    <link rel="icon" type="image/svg+xml" href="{% static 'HollywoodFavicon/favicon.svg' %}"/>
+    <link rel="shortcut icon" href="{% static 'HollywoodFavicon/favicon.ico' %}"/>
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'HollywoodFavicon/apple-touch-icon.png' %}"/>
+    <meta name="apple-mobile-web-app-title" content="Hollywood dentistry" />
+    <link rel="manifest" href="{% static 'HollywoodFavicon/site.webmanifest' %}"/>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="{% static 'css/reset.css' %}">
+    <link rel="stylesheet" href="{% static 'css/base_profile.css' %}">
+    {% block extra_css %}{% endblock %}
+</head>
+<body>
+    <header class="header">
+        <div class="header_logoBlock">
+            <img class="header_logoBlock_img1" src="{% static 'img/logoimg1.png' %}" alt="Logo1">
+            <img class="header_logoBlock_img2" src="{% static 'img/logoimg2.png' %}" alt="Logo2">
+        </div>
+        
+        <nav class="header_navigationBar">
+            <ul class="header_navigationBar_navigationElements_ul">
+                <li><a href="{% url 'patient_profile' %}" class="header_navigationBar_navigationElements_ul_li_a">Обліковий запис</a></li>
+                <li><a href="{% url 'book_appointment' %}" class="header_navigationBar_navigationElements_ul_li_a">Запис на прийом</a></li>
+            </ul>
+        </nav>
+
+        <a href="{% url 'logout' %}" class="header_logoutBtn" title="Вийти">
+            <svg width="40" height="37" viewBox="0 0 40 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M34.9998 18.5H21.6665" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M30 23.125L34.855 18.6341C34.935 18.5601 34.935 18.4399 34.855 18.3659L30 13.875" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M26.6667 7.70833V6.9375C26.6667 5.66034 25.5473 4.625 24.1667 4.625H8.33333C6.49238 4.625 5 6.00545 5 7.70833V29.2917C5 30.9946 6.49238 32.375 8.33333 32.375H24.1667C25.5473 32.375 26.6667 31.3396 26.6667 30.0625V29.2917" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </a>
+    </header>
+    
+    <main class="main_container">
+        {% block main_content %}{% endblock %}
+    </main>
+</body>
+</html>

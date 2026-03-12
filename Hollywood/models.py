@@ -1,5 +1,4 @@
 from django.contrib.auth.models import AbstractBaseUser, BaseUserManager, PermissionsMixin
-from django.core.exceptions import ValidationError
 from django.db import models
 from django.utils import timezone
 from django.utils.translation import gettext_lazy as _
@@ -20,19 +19,9 @@ class VisitReason(models.TextChoices):
     THERAPY_CHILD = "therapy_child", "🧸 Пломба/Лікування молочного зуба"
     SURGERY_CHILD = "surgery_child", "🦷 Видалення молочного зуба"
 
-    @classmethod
-    def adult_reasons(cls):
-        return [cls.HYGIENE_ADULT, cls.THERAPY_ADULT, cls.ORTHO_ADULT, cls.SURGERY_ADULT]
-
-    @classmethod
-    def child_reasons(cls):
-        return [cls.HYGIENE_CHILD, cls.THERAPY_CHILD, cls.SURGERY_CHILD]
-
-
 class ClientStatus(models.TextChoices):
     WAITING = "waiting", "В очікуванні"
     COMPLETED = "completed", "Консультацію проведено"
-
 
 class UserManager(BaseUserManager):
     def create_user(self, email, password=None, **extra_fields):
@@ -49,13 +38,11 @@ class UserManager(BaseUserManager):
         extra_fields.setdefault('is_superuser', True)
         return self.create_user(email, password, **extra_fields)
 
-
 class User(AbstractBaseUser, PermissionsMixin):
     email = models.EmailField(_("Електронна пошта"), unique=True)
     full_name = models.CharField(_("ПІБ"), max_length=255, blank=True)
     phone = models.CharField(_("Номер телефону"), max_length=20, blank=True)
     
-    is_active = models.BooleanField(default=True)
     is_staff = models.BooleanField(default=False)
     date_joined = models.DateTimeField(default=timezone.now)
 
@@ -67,9 +54,13 @@ class User(AbstractBaseUser, PermissionsMixin):
     def __str__(self):
         return self.email
 
-
 class ClinicAddress(models.Model):
-    address = models.CharField(_("Адреса"), max_length=255, unique=True)
+    CLINIC_CHOICES = [
+        ('Овідіополь, Портова 13', 'Овідіополь, Портова 13'),
+        ('Чорноморськ, проспект Миру 41', 'Чорноморськ, проспект Миру 41'),
+    ]
+    
+    address = models.CharField(_("Адреса"), max_length=255, choices=CLINIC_CHOICES, unique=True)
     
     class Meta:
         verbose_name = "Адреса клініки"
@@ -78,13 +69,11 @@ class ClinicAddress(models.Model):
     def __str__(self):
         return self.address
 
-
 class PatientRecord(models.Model):
     user = models.ForeignKey(User, on_delete=models.SET_NULL, null=True, blank=True, related_name="records")
     email = models.EmailField(_("Електронна пошта"))
     full_name = models.CharField(_("ПІБ"), max_length=100)
     phone = models.CharField(_("Номер телефону"), max_length=20)
-    is_adult = models.BooleanField(_("Дорослий"), default=True)
     
     visit_reason = models.CharField(
         _("Причина візиту"),
@@ -109,19 +98,6 @@ class PatientRecord(models.Model):
         verbose_name_plural = "Записи"
         indexes = [models.Index(fields=['email'])]
         ordering = ['-visit_date']
-
-    def clean(self):
-        super().clean()
-        
-        if self.is_adult and self.visit_reason in VisitReason.child_reasons():
-            raise ValidationError({
-                'visit_reason': "Дорослий не може обрати дитячу процедуру."
-            })
-            
-        if not self.is_adult and self.visit_reason in VisitReason.adult_reasons():
-            raise ValidationError({
-                'visit_reason': "Для дитини не можна обрати дорослу процедуру."
-            })
 
     def save(self, *args, **kwargs):
         self.full_clean()

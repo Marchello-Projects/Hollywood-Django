@@ -1,0 +1,233 @@
+.profile-layout {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    align-items: flex-start;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.profile-sidebar {
+    width: 450px;
+    flex-shrink: 0;
+}
+
+.profile-history-section {
+    flex-grow: 1;
+    height: calc(100vh - 150px);
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.section-title {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: #000;
+}
+
+.info-card {
+    border-radius: 8px;
+    border: 2px solid #000;
+    background: #FFF;
+    box-sizing: border-box;
+}
+
+.user-card {
+    padding: 25px 20px;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.user-info-top {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.user-avatar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 99px;
+    height: 114px;
+    flex-shrink: 0;
+}
+
+.user-details {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    padding-top: 5px;
+}
+
+.user-details p {
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.4;
+    color: #000;
+}
+
+.user-details strong {
+    font-weight: 700;
+    color: #000;
+}
+
+.user-actions {
+    display: flex;
+    gap: 15px;
+}
+
+.btn-outline, .btn-outline-danger {
+    padding: 10px 15px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+.btn-outline {
+    background: #ffffff;
+    border: 1px solid #000;
+    color: #000;
+}
+
+.btn-outline:hover {
+    background: #D0D0D0;
+}
+
+.btn-outline-danger {
+    background: transparent;
+    border: 1px solid #E63946;
+    color: #E63946;
+}
+
+.btn-outline-danger:hover {
+    background: #E63946;
+    color: #fff;
+}
+
+.clinic-address {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: #000;
+}
+
+.map-card {
+    height: 250px;
+    overflow: hidden; 
+}
+
+.history-scroll-container {
+    flex-grow: 1;
+    overflow-y: auto;
+    padding-right: 15px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.history-scroll-container::-webkit-scrollbar {
+    width: 6px;
+}
+
+.history-scroll-container::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+    border-radius: 10px;
+}
+
+.history-scroll-container::-webkit-scrollbar-thumb {
+    background: #ccc; 
+    border-radius: 10px;
+}
+
+.history-scroll-container::-webkit-scrollbar-thumb:hover {
+    background: #888; 
+}
+
+.history-item {
+    padding: 20px;
+    margin-bottom: 20px;
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
+.history-number {
+    font-weight: 800;
+    font-size: 16px;
+    margin-bottom: 15px;
+    color: #000;
+}
+
+.history-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    width: 100%;
+    font-size: 16px;
+}
+
+.history-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.history-label {
+    font-weight: 700;
+    margin-bottom: 2px;
+    color: #000;
+}
+
+.history-value {
+    font-weight: 400;
+    margin-top: 0;
+    margin-bottom: 0;
+    color: #000;
+}
+
+.mt-10 {
+    margin-top: 15px;
+}
+
+.status-green {
+    color: #2E8B57;
+    font-weight: 700;
+}
+
+.status-black {
+    color: #000;
+    font-weight: 700;
+}
+
+.empty-history {
+    text-align: center;
+    padding: 40px;
+    font-size: 16px;
+    color: #666;
+    border: 2px dashed #ccc;
+    border-radius: 8px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+ul.errorlist {
+    padding-left: 0;
+    margin: 0;
+    list-style: none;
+}
+
+ul.errorlist li {
+    list-style-type: none;
+    color: #ff4d4f;
+    font-size: 13px;
+    margin-top: 5px;
+}

@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import authenticate, login, logout
+from django.db.models import Count
 from .forms import BookingForm, RegistrationForm, LoginForm
 from .models import PatientRecord
 
@@ -22,7 +23,6 @@ def register_view(request):
         form = RegistrationForm()
         
     return render(request, 'Hollywood/register.html', {'form': form})
-
 
 def login_view(request):
     if request.user.is_authenticated:
@@ -45,11 +45,9 @@ def login_view(request):
         
     return render(request, 'Hollywood/login.html', {'form': form})
 
-
 def logout_view(request):
     logout(request)
     return redirect('login')
-
 
 def book_appointment(request):
     if request.method == 'POST':
@@ -60,7 +58,7 @@ def book_appointment(request):
                 record.user = request.user
             record.save()
             messages.success(request, 'Ваш запис успішно створено! Очікуйте на дзвінок.')
-            return redirect('book_appointment') 
+            return redirect('patient_profile') 
     else:
         initial_data = {}
         if request.user.is_authenticated:
@@ -74,12 +72,31 @@ def book_appointment(request):
     context = {'form': form}
     return render(request, 'Hollywood/booking.html', context)
 
-
 @login_required(login_url='/login/')
 def patient_profile(request):
     records = PatientRecord.objects.filter(user=request.user).select_related('clinic_address')
+    
+    favorite_clinic = None
+    if records.exists():
+        fav_clinic_data = records.values('clinic_address__address').annotate(count=Count('clinic_address')).order_by('-count').first()
+        if fav_clinic_data:
+            favorite_clinic = fav_clinic_data['clinic_address__address']
+
     context = {
         'records': records,
-        'user_info': request.user
+        'user_info': request.user,
+        'favorite_clinic': favorite_clinic
     }
     return render(request, 'Hollywood/profile.html', context)
+
+def quick_book(request):
+    if request.method == 'POST':
+        form = BookingForm(request.POST)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Ваш запис успішно створено! Очікуйте на дзвінок.')
+            return redirect('quick_book')
+    else:
+        form = BookingForm()
+        
+    return render(request, 'Hollywood/quick_booking.html', {'form': form})

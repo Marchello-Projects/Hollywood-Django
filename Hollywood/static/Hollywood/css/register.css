@@ -1,11 +1,10 @@
-/* register.css */
 .blockCenter {
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
     width: 412px;
-    height: 640px; 
+    height: 600px; 
     background: rgba(0, 0, 0, 0.50);
     filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25)); 
     border-radius: 10px;
@@ -127,5 +126,4 @@
     padding-left: 0;   
     margin: 0;          
     color: #ff4d4f;   
-    
 }

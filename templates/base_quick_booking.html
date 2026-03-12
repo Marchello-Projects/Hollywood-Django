@@ -1,0 +1,37 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Запис на прийом{% endblock %}</title>
+
+    <link rel="icon" type="image/png" href="{% static 'HollywoodFavicon/favicon-96x96.png' %}" sizes="96x96"/>
+    <link rel="icon" type="image/svg+xml" href="{% static 'HollywoodFavicon/favicon.svg' %}"/>
+    <link rel="shortcut icon" href="{% static 'HollywoodFavicon/favicon.ico' %}"/>
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'HollywoodFavicon/apple-touch-icon.png' %}"/>
+    <meta name="apple-mobile-web-app-title" content="Hollywood dentistry" />
+    <link rel="manifest" href="{% static 'HollywoodFavicon/site.webmanifest' %}"/>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="{% static 'css/reset.css' %}">
+    <link rel="stylesheet" href="{% static 'css/base_profile.css' %}">
+    {% block extra_css %}{% endblock %}
+</head>
+<body>
+    <header class="header">
+        <div class="header_logoBlock">
+            <img class="header_logoBlock_img1" src="{% static 'img/logoimg1.png' %}" alt="Logo1">
+            <img class="header_logoBlock_img2" src="{% static 'img/logoimg2.png' %}" alt="Logo2">
+        </div>
+    </header>
+    
+    <main class="main_container">
+        {% block main_content %}{% endblock %}
+    </main>
+</body>
+</html>
