@@ -1,6 +1,6 @@
 ![banner](./static/img/Group%2088.png)
 
->[!INFO]
+> [!INFO]
 > This project was created as an experiment on the existing website: [https://hollywood.od.ua/](https://hollywood.od.ua/)
 
 ## Technology Stack:
@@ -72,8 +72,8 @@ DJANGO_SUPERUSER_PASSWORD=strongpassword_1234
 
 Initialize the database schema:
 
->[!NOTE]
->This step will also automatically create your superuser based on the credentials in your `.env` file
+> [!NOTE]
+> This step will also automatically create your superuser based on the credentials in your `.env` file
 
 ```bash
 python3 manage.py migrate
