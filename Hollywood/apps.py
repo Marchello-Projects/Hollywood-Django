@@ -1,13 +1,15 @@
 import os
+
 from django.apps import AppConfig
 from django.db.models.signals import post_migrate
 from dotenv import load_dotenv
 
 load_dotenv()
 
+
 class HollywoodConfig(AppConfig):
     default_auto_field = "django.db.models.BigAutoField"
-    name = "Hollywood"  
+    name = "Hollywood"
 
     def ready(self):
         post_migrate.connect(create_default_superuser, sender=self)
@@ -27,10 +29,7 @@ def create_default_superuser(sender, **kwargs):
     if not User.objects.filter(email=ADMIN_EMAIL).exists():
         print(f"Creating superuser: {ADMIN_EMAIL}...")
         try:
-            User.objects.create_superuser(
-                email=ADMIN_EMAIL, 
-                password=ADMIN_PASSWORD
-            )
+            User.objects.create_superuser(email=ADMIN_EMAIL, password=ADMIN_PASSWORD)
             print("Superuser created successfully!")
         except Exception as e:
             print(f"Error creating superuser: {e}")

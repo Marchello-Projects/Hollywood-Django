@@ -12,22 +12,23 @@ https://docs.djangoproject.com/en/6.0/ref/settings/
 
 import os
 from pathlib import Path
+
 from dotenv import load_dotenv
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-load_dotenv(BASE_DIR / '.env')
+load_dotenv(BASE_DIR / ".env")
 
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/6.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.getenv('SECRET_KEY')
+SECRET_KEY = os.getenv("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.getenv('DEBUG', 'False').lower() in ('true', '1', 't')
+DEBUG = os.getenv("DEBUG", "False").lower() in ("true", "1", "t")
 
 ALLOWED_HOSTS = []
 
@@ -41,21 +42,19 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-
     "Hollywood",
 ]
 
 UNFOLD = {
     "SITE_TITLE": "Hollywood Admin",
     "SITE_HEADER": "Hollywood Clinic",
-    
     "SIDEBAR": {
         "show_search": True,
-        "show_all_applications": False, 
+        "show_all_applications": False,
         "navigation": [
             {
                 "title": "Управління клінікою",
-                "separator": True, 
+                "separator": True,
                 "items": [
                     {
                         "title": "Реєстратура (Календар)",
@@ -115,7 +114,7 @@ ROOT_URLCONF = "Dental_Clinic_HOLLYWOOD.urls"
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [BASE_DIR / 'templates'],
+        "DIRS": [BASE_DIR / "templates"],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
@@ -167,11 +166,11 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/6.0/topics/i18n/
 
-LANGUAGE_CODE = 'uk'  
-TIME_ZONE = 'Europe/Kyiv'  
+LANGUAGE_CODE = "uk"
+TIME_ZONE = "Europe/Kyiv"
 
-USE_I18N = True  
-USE_TZ = True  
+USE_I18N = True
+USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/6.0/howto/static-files/
@@ -181,4 +180,4 @@ STATICFILES_DIRS = [
     BASE_DIR / "static",
 ]
 
-AUTH_USER_MODEL = 'Hollywood.User'
+AUTH_USER_MODEL = "Hollywood.User"
