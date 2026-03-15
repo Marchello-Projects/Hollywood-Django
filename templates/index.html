@@ -48,19 +48,25 @@
               </ul>
           </nav>
           <div class="header_authBlock">
-              {% if request.user.is_authenticated %}
-                  <a class="header_navigationBar_link" href="{% url 'patient_profile' %}">
-                      <button class="header_navigationBar_link_btn">Особистий кабінет</button>
-                  </a>
-              {% else %}
-                  <a class="header_navigationBar_link" href="{% url 'quick_book' %}">
-                      <button class="header_navigationBar_link_btn">Запис на консультацію</button>
-                  </a>
-                  <a class="header_navigationBar_link" href="{% url 'login' %}">
-                      <button class="header_navigationBar_link_btn">Увійти / Зареєструватися</button>
-                  </a>
-              {% endif %}
-          </div>
+            {% if request.user.is_authenticated %}
+                {% if request.user.is_staff %}
+                    <a class="header_navigationBar_link" href="{% url 'admin:index' %}">
+                        <button class="header_navigationBar_link_btn">Адмін панель</button>
+                    </a>
+                {% else %}
+                    <a class="header_navigationBar_link" href="{% url 'patient_profile' %}">
+                        <button class="header_navigationBar_link_btn">Особистий кабінет</button>
+                    </a>
+                {% endif %}
+            {% else %}
+                <a class="header_navigationBar_link" href="{% url 'quick_book' %}">
+                    <button class="header_navigationBar_link_btn">Запис на консультацію</button>
+                </a>
+                <a class="header_navigationBar_link" href="{% url 'login' %}">
+                    <button class="header_navigationBar_link_btn">Увійти / Зареєструватися</button>
+                </a>
+            {% endif %}
+        </div>
       </div>
       <div class="header_titleBlock">
           <p class="header_titleBlock_text">Стоматологічна клініка «HOLLYWOOD» Усі види стоматологічних послуг, від консультації до лікування зубів</p>

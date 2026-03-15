@@ -36,6 +36,8 @@ def register_view(request):
 
 def login_view(request):
     if request.user.is_authenticated:
+        if request.user.is_staff:
+            return redirect("admin:index")
         return redirect("patient_profile")
 
     if request.method == "POST":
@@ -47,6 +49,8 @@ def login_view(request):
 
             if user is not None:
                 login(request, user)
+                if user.is_staff:
+                    return redirect("admin:index")
                 return redirect("patient_profile")
             else:
                 form.add_error(None, "Невірна електронна пошта або пароль.")
