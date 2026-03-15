@@ -1,6 +1,6 @@
 ![banner](./static/img/Group%2088.png)
 
-> [!INFO]
+> [!NOTE]
 > This project was created as an experiment on the existing website: [https://hollywood.od.ua/](https://hollywood.od.ua/)
 
 ## Technology Stack:
