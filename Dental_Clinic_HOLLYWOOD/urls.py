@@ -20,6 +20,7 @@ from django.urls import path, include
 from Hollywood import views
 
 urlpatterns = [
+    path('admin/registry-calendar/', views.registry_calendar_view, name='registry_calendar'),
     path("admin/", admin.site.urls),
     path('', include('Hollywood.urls')),
 ]

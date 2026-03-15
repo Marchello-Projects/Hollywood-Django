@@ -33,8 +33,8 @@ ALLOWED_HOSTS = []
 
 
 # Application definition
-
 INSTALLED_APPS = [
+    "unfold",
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
@@ -44,6 +44,61 @@ INSTALLED_APPS = [
 
     "Hollywood",
 ]
+
+UNFOLD = {
+    "SITE_TITLE": "Hollywood Admin",
+    "SITE_HEADER": "Hollywood Clinic",
+    
+    "SIDEBAR": {
+        "show_search": True,
+        "show_all_applications": False, 
+        "navigation": [
+            {
+                "title": "Управління клінікою",
+                "separator": True, 
+                "items": [
+                    {
+                        "title": "Реєстратура (Календар)",
+                        "icon": "calendar_month",
+                        "link": "/admin/registry-calendar/",
+                    },
+                ],
+            },
+            {
+                "title": "База даних",
+                "separator": True,
+                "items": [
+                    {
+                        "title": "Записи (Пацієнти)",
+                        "icon": "clinical_notes",
+                        "link": "/admin/Hollywood/patientrecord/",
+                    },
+                    {
+                        "title": "Користувачі",
+                        "icon": "person",
+                        "link": "/admin/Hollywood/user/",
+                    },
+                    {
+                        "title": "Адреси клінік",
+                        "icon": "apartment",
+                        "link": "/admin/Hollywood/clinicaddress/",
+                    },
+                ],
+            },
+            {
+                "title": "Налаштування",
+                "separator": True,
+                "items": [
+                    {
+                        "title": "Групи доступу",
+                        "icon": "group",
+                        "link": "/admin/auth/group/",
+                    },
+                ],
+            },
+        ],
+    },
+}
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",

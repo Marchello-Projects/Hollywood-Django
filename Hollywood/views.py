@@ -1,10 +1,16 @@
 from django.shortcuts import render, redirect
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
-from django.contrib.auth import authenticate, login, logout
+from django.contrib.admin.views.decorators import staff_member_required
+from django.contrib.auth import authenticate, login, logout, get_user_model
 from django.db.models import Count
-from .forms import BookingForm, RegistrationForm, LoginForm
-from .models import PatientRecord
+from django.utils.timezone import now
+from datetime import datetime, timedelta
+from django.contrib import admin
+from .forms import BookingForm, RegistrationForm, LoginForm, EditProfileForm
+from .models import PatientRecord, ClinicAddress
+
+User = get_user_model()
 
 def home_page(request):
     return render(request, 'index.html')
@@ -82,10 +88,26 @@ def patient_profile(request):
         if fav_clinic_data:
             favorite_clinic = fav_clinic_data['clinic_address__address']
 
+    if request.method == 'POST':
+        if 'edit_profile' in request.POST:
+            form = EditProfileForm(request.POST, instance=request.user)
+            if form.is_valid():
+                form.save()
+                messages.success(request, 'Профіль успішно оновлено.')
+                return redirect('patient_profile')
+        elif 'delete_account' in request.POST:
+            user = request.user
+            logout(request)
+            user.delete()
+            return redirect('home')
+    else:
+        form = EditProfileForm(instance=request.user)
+
     context = {
         'records': records,
         'user_info': request.user,
-        'favorite_clinic': favorite_clinic
+        'favorite_clinic': favorite_clinic,
+        'form': form
     }
     return render(request, 'Hollywood/profile.html', context)
 
@@ -100,3 +122,41 @@ def quick_book(request):
         form = BookingForm()
         
     return render(request, 'Hollywood/quick_booking.html', {'form': form})
+
+@staff_member_required
+def registry_calendar_view(request):
+    clinics = ClinicAddress.objects.all()
+    
+    time_slots = []
+    start_time = datetime.strptime("08:00", "%H:%M")
+    end_time = datetime.strptime("20:00", "%H:%M")
+    
+    while start_time <= end_time:
+        time_slots.append(start_time.strftime("%H:%M"))
+        start_time += timedelta(minutes=30)
+        
+    date_str = request.GET.get('date')
+    if date_str:
+        try:
+            current_date = datetime.strptime(date_str, "%Y-%m-%d").date()
+        except ValueError:
+            current_date = now().date()
+    else:
+        current_date = now().date()
+        
+    prev_date = current_date - timedelta(days=1)
+    next_date = current_date + timedelta(days=1)
+        
+    records = PatientRecord.objects.filter(visit_date__date=current_date).select_related('clinic_address')
+    
+    context = admin.site.each_context(request)
+    context.update({
+        'clinics': clinics,
+        'time_slots': time_slots,
+        'records': records,
+        'current_date': current_date,
+        'prev_date': prev_date.strftime("%Y-%m-%d"),
+        'next_date': next_date.strftime("%Y-%m-%d"),
+    })
+    
+    return render(request, 'admin/registry_calendar.html', context)

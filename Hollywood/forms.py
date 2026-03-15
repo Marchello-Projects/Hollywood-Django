@@ -135,3 +135,27 @@ class LoginForm(forms.Form):
             'placeholder': 'Введіть пароль'
         })
     )
+
+class EditProfileForm(forms.ModelForm):
+    class Meta:
+        model = User
+        fields = ['full_name', 'phone']
+        labels = {
+            'full_name': 'ПІБ',
+            'phone': 'Номер телефону',
+        }
+        widgets = {
+            'phone': forms.TextInput(attrs={
+                'type': 'tel',
+                'placeholder': '+380XXXXXXXXX'
+            }),
+            'full_name': forms.TextInput(attrs={
+                'placeholder': 'Іванов Іван Іванович'
+            })
+        }
+
+    def clean_phone(self):
+        return validate_ukrainian_phone(self.cleaned_data.get('phone'))
+
+    def clean_full_name(self):
+        return validate_ukrainian_full_name(self.cleaned_data.get('full_name'))

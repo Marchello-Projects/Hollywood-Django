@@ -1,0 +1,101 @@
+{% extends "admin/base_site.html" %}
+{% load i18n unfold %}
+
+{% block title %} Реєстратура | {{ site_title|default:_('Django site admin') }} {% endblock %}
+
+{% block content %}
+<style>
+    .cal-wrapper { background-color: #ffffff; border-color: #e5e7eb; color: #111827; }
+    .cal-header { background-color: #f9fafb; border-color: #e5e7eb; color: #6b7280; }
+    .cal-cell { border-color: #e5e7eb; }
+    .cal-cell:hover { background-color: #f3f4f6; }
+    .cal-btn { background-color: #ffffff; border-color: #e5e7eb; color: #4b5563; }
+    .cal-btn:hover { background-color: #f9fafb; }
+    .patient-card { background-color: #eef2ff; border-color: #c7d2fe; }
+    .patient-text-main { color: #4f46e5; }
+    .patient-text-sub { color: #6366f1; }
+
+    html.dark .cal-wrapper { background-color: #111827; border-color: #374151; color: #f3f4f6; }
+    html.dark .cal-header { background-color: #1f2937; border-color: #374151; color: #9ca3af; }
+    html.dark .cal-cell { border-color: #374151; }
+    html.dark .cal-cell:hover { background-color: #1f2937; }
+    html.dark .cal-btn { background-color: #1f2937; border-color: #374151; color: #9ca3af; }
+    html.dark .cal-btn:hover { background-color: #374151; }
+    html.dark .patient-card { background-color: rgba(79, 70, 229, 0.2); border-color: rgba(79, 70, 229, 0.5); }
+    html.dark .patient-text-main { color: #818cf8; }
+    html.dark .patient-text-sub { color: #a5b4fc; }
+</style>
+
+<div class="p-4 md:p-6 rounded-lg shadow-sm border cal-wrapper">
+    <div class="flex flex-wrap justify-between items-center gap-4 mb-6">
+        <div class="flex items-center gap-4 flex-wrap">
+            <h1 class="text-2xl font-bold">Реєстратура</h1>
+            
+            <div class="flex items-center">
+                <a href="?date={{ prev_date }}" class="flex items-center justify-center px-3 py-2 border border-r-0 rounded-l-lg transition-colors cal-btn">
+                    <span class="material-symbols-outlined text-sm">chevron_left</span>
+                </a>
+                
+                <form method="GET" class="flex m-0">
+                    <input type="date" name="date" value="{{ current_date|date:'Y-m-d' }}" onchange="this.form.submit()" class="px-3 py-2 border-y text-sm font-medium outline-none cursor-pointer cal-btn [color-scheme:light] dark:[color-scheme:dark]">
+                </form>
+
+                <a href="?date={{ next_date }}" class="flex items-center justify-center px-3 py-2 border border-l-0 rounded-r-lg transition-colors cal-btn">
+                    <span class="material-symbols-outlined text-sm">chevron_right</span>
+                </a>
+            </div>
+            
+            <a href="/admin/registry-calendar/" class="px-3 py-2 text-sm font-medium border rounded-lg transition-colors cal-btn">
+                Сьогодні
+            </a>
+        </div>
+
+        <a href="/admin/Hollywood/patientrecord/add/" class="bg-primary-600 hover:bg-primary-700 text-white font-semibold py-2 px-4 rounded-lg transition-colors whitespace-nowrap">
+            + Додати пацієнта
+        </a>
+    </div>
+
+    <div class="overflow-x-auto rounded-lg border cal-cell">
+        <table class="w-full text-sm text-left" style="table-layout: fixed;">
+            <thead class="text-xs uppercase border-b cal-header">
+                <tr>
+                    <th scope="col" class="px-4 py-3 border-r cal-cell w-24 text-center">Час</th>
+                    {% for clinic in clinics %}
+                        <th scope="col" class="px-4 py-3 border-r cal-cell text-center">{{ clinic.address }}</th>
+                    {% endfor %}
+                </tr>
+            </thead>
+            <tbody>
+                {% for time in time_slots %}
+                {% if time|slice:"3:5" == "00" %}
+                <tr class="border-b cal-cell">
+                    <td class="px-4 py-2 border-r cal-cell font-medium text-center align-middle cal-header" style="height: 110px;">
+                        {{ time }}
+                    </td>
+                    {% for clinic in clinics %}
+                        <td class="border-r cal-cell p-1 align-top transition-colors group cursor-pointer" style="height: 110px;" onclick="window.location.href='/admin/Hollywood/patientrecord/add/'">
+                            <div class="flex flex-col gap-2 h-full overflow-y-auto pr-1">
+                                {% for record in records %}
+                                    {% if record.clinic_address.id == clinic.id and record.visit_date|date:'H' == time|slice:':2' %}
+                                        <a href="/admin/Hollywood/patientrecord/{{ record.id }}/change/" class="flex flex-col justify-center w-full min-h-[55px] border rounded px-3 py-2 text-xs overflow-hidden transition-shadow shadow-sm patient-card hover:shadow-md" onclick="event.stopPropagation();">
+                                            <div class="flex justify-between items-center mb-1">
+                                                <div class="font-bold truncate patient-text-main" style="max-width: 80%;">{{ record.full_name }}</div>
+                                                <div class="font-bold whitespace-nowrap patient-text-sub" style="font-size: 11px;">{{ record.visit_date|date:"H:i" }}</div>
+                                            </div>
+                                            <div class="font-medium patient-text-sub" style="font-size: 11px; white-space: normal; line-height: 1.2;">
+                                                • {{ record.get_visit_reason_display }}
+                                            </div>
+                                        </a>
+                                    {% endif %}
+                                {% endfor %}
+                            </div>
+                        </td>
+                    {% endfor %}
+                </tr>
+                {% endif %}
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endblock %}

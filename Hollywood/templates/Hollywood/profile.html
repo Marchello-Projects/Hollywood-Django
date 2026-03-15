@@ -24,8 +24,8 @@
                 </div>
             </div>
             <div class="user-actions">
-                <button class="btn-outline">Змінити дані</button>
-                <button class="btn-outline-danger">Видалити обліковий запис</button>
+                <button class="btn-outline" onclick="openModal('editModal')">Змінити дані</button>
+                <button class="btn-outline-danger" onclick="openModal('deleteModal')">Видалити обліковий запис</button>
             </div>
         </div>
 
@@ -86,4 +86,58 @@
         </div>
     </div>
 </div>
+
+<div id="editModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('editModal')">&times;</span>
+        <h2>Змінити дані</h2>
+        <form method="post">
+            {% csrf_token %}
+            <input type="hidden" name="edit_profile" value="1">
+            <div class="form-group">
+                <label for="{{ form.full_name.id_for_label }}">ПІБ</label>
+                {{ form.full_name }}
+                <span class="field-error">{{ form.full_name.errors }}</span>
+            </div>
+            <div class="form-group">
+                <label for="{{ form.phone.id_for_label }}">Номер телефону</label>
+                {{ form.phone }}
+                <span class="field-error">{{ form.phone.errors }}</span>
+            </div>
+            <button type="submit" class="btn-primary-dark">Зберегти</button>
+        </form>
+    </div>
+</div>
+
+<div id="deleteModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('deleteModal')">&times;</span>
+        <h2>Видалити обліковий запис?</h2>
+        <p>Ця дія є незворотною. Всі ваші дані будуть видалені.</p>
+        <form method="post">
+            {% csrf_token %}
+            <input type="hidden" name="delete_account" value="1">
+            <div class="modal-actions">
+                <button type="button" class="btn-outline" onclick="closeModal('deleteModal')">Скасувати</button>
+                <button type="submit" class="btn-outline-danger">Видалити</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script>
+    function openModal(id) {
+        document.getElementById(id).classList.add("show");
+    }
+
+    function closeModal(id) {
+        document.getElementById(id).classList.remove("show");
+    }
+
+    window.onclick = function(event) {
+        if (event.target.classList.contains("modal")) {
+            event.target.classList.remove("show");
+        }
+    }
+</script>
 {% endblock %}
