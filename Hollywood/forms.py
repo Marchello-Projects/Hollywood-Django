@@ -91,6 +91,22 @@ class RegistrationForm(forms.ModelForm):
     def clean_full_name(self):
         return validate_ukrainian_full_name(self.cleaned_data.get("full_name"))
 
+    def clean_password(self):
+        password = self.cleaned_data.get("password")
+        if password:
+            if len(password) < 8:
+                raise ValidationError("Пароль має містити щонайменше 8 символів.")
+            if password.isdigit():
+                raise ValidationError("Пароль не може складатися лише з цифр.")
+
+            common_passwords = ["12345678", "qwertyui", "password"]
+            if password.lower() in common_passwords:
+                raise ValidationError(
+                    "Цей пароль занадто простий. Придумайте складніший."
+                )
+
+        return password
+
     def clean(self):
         cleaned_data = super().clean()
         password = cleaned_data.get("password")
