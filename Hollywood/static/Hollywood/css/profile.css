@@ -350,3 +350,99 @@ ul.errorlist li {
     gap: 10px;
     justify-content: flex-end;
 }
+
+@media screen and (max-width: 1025px) and (min-width: 432px) {
+    .profile-layout {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .profile-sidebar {
+        width: 100%;
+    }
+
+    .profile-history-section {
+        width: 100%;
+        height: auto;
+    }
+
+    .history-scroll-container {
+        padding-right: 0;
+        overflow-y: visible;
+    }
+}
+
+@media screen and (max-width: 431px) and (min-width: 320px) {
+    .profile-layout {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .profile-sidebar {
+        width: 100%;
+    }
+
+    .profile-history-section {
+        width: 100%;
+        height: auto;
+    }
+
+    .history-scroll-container {
+        padding-right: 0;
+        overflow-y: visible;
+    }
+
+    .user-info-top {
+        gap: 15px;
+    }
+
+    .user-avatar {
+        width: 65px;
+        height: auto;
+    }
+
+    .user-avatar svg {
+        width: 65px;
+        height: auto;
+    }
+
+    .user-details p {
+        font-size: 14px;
+    }
+
+    .user-actions {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .btn-outline, .btn-outline-danger {
+        width: 100%;
+    }
+
+    .history-content {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .mt-10 {
+        margin-top: 5px;
+    }
+
+    .map-card {
+        height: 200px;
+    }
+
+    .modal-content {
+        padding: 20px;
+        width: 95%;
+    }
+
+    .modal-actions {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .modal-actions button {
+        width: 100%;
+    }
+}

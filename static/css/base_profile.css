@@ -14,11 +14,13 @@ body {
     position: relative;
     padding: 0 20px;
     box-sizing: border-box;
+    z-index: 1000;
 }
 
 .header_logoBlock {
     display: flex;
     align-items: center;
+    z-index: 1001; 
 }
 
 .header_logoBlock_img1 {
@@ -30,6 +32,23 @@ body {
     width: 157px;
     height: 26px;
     margin-left: 5px;
+}
+
+.header_mobileMenuBtn {
+    display: none;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 1001;
+}
+
+.mobile_only_li {
+    display: none;
+}
+
+.text-danger {
+    color: #E63946 !important;
 }
 
 .header_navigationBar {
@@ -51,15 +70,11 @@ body {
     text-decoration: none;
     font-size: 14px;
     font-weight: 600;
-    transition: all 0.6s ease;
+    transition: all 0.3s ease;
 }
 
-.header_navigationBar_navigationElements_ul_li_a.active {
-    font-weight: 900;
-}
-
+.header_navigationBar_navigationElements_ul_li_a.active,
 .header_navigationBar_navigationElements_ul_li_a:hover {
-    transition-duration: 0.6s;
     font-weight: 900;
 }
 
@@ -68,6 +83,7 @@ body {
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    z-index: 1001;
 }
 
 .header_logoutBtn svg {
@@ -82,4 +98,68 @@ body {
     max-width: 1200px;
     margin: 40px auto;
     padding: 0 20px;
+}
+
+@media screen and (max-width: 1025px) {
+    .header_navigationBar {
+        position: absolute;
+        top: 68px;
+        left: 0;
+        width: 100%;
+        background: black;
+        transform: translateY(-150%);
+        transition: transform 0.4s ease, opacity 0.4s ease;
+        z-index: 999;
+        padding: 30px 0;
+        opacity: 0;
+        visibility: hidden;
+        border-top: 1px solid #222;
+    }
+
+    .header_navigationBar.active {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
+    }
+
+    .header_navigationBar_navigationElements_ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+    }
+
+    .header_navigationBar_navigationElements_ul_li_a {
+        font-size: 18px;
+    }
+
+    .desktop_only {
+        display: none !important;
+    }
+
+    .mobile_only_li {
+        display: block;
+        margin-top: 10px;
+    }
+
+    .header_mobileMenuBtn {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 431px) {
+    .header_logoBlock_img1 {
+        width: 22px;
+        height: 30px;
+    }
+    
+    .header_logoBlock_img2 {
+        width: 130px;
+        height: 22px;
+    }
+
+    .header_mobileMenuBtn svg {
+        width: 35px;
+        height: 30px;
+    }
 }

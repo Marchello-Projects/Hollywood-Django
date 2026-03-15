@@ -29,14 +29,24 @@
             <img class="header_logoBlock_img2" src="{% static 'img/logoimg2.png' %}" alt="Logo2">
         </div>
         
-        <nav class="header_navigationBar">
+        <button class="header_mobileMenuBtn" id="mobileMenuBtn">
+            <svg width="45" height="40" viewBox="0 0 45 40" fill="none" xmlns="http://www.w3.org/2000/svg">  
+                <path d="M7.5 10H37.5M7.5 20H37.5M7.5 30H37.5" stroke="white" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </button>
+        
+        <nav class="header_navigationBar" id="navigationBar">
             <ul class="header_navigationBar_navigationElements_ul">
                 <li><a href="{% url 'patient_profile' %}" class="header_navigationBar_navigationElements_ul_li_a">Обліковий запис</a></li>
                 <li><a href="{% url 'book_appointment' %}" class="header_navigationBar_navigationElements_ul_li_a">Запис на прийом</a></li>
+                
+                <li class="mobile_only_li">
+                    <a href="{% url 'logout' %}" class="header_navigationBar_navigationElements_ul_li_a text-danger">Вийти</a>
+                </li>
             </ul>
         </nav>
 
-        <a href="{% url 'logout' %}" class="header_logoutBtn" title="Вийти">
+        <a href="{% url 'logout' %}" class="header_logoutBtn desktop_only" title="Вийти">
             <svg width="40" height="37" viewBox="0 0 40 37" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M34.9998 18.5H21.6665" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
               <path d="M30 23.125L34.855 18.6341C34.935 18.5601 34.935 18.4399 34.855 18.3659L30 13.875" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
@@ -48,5 +58,11 @@
     <main class="main_container">
         {% block main_content %}{% endblock %}
     </main>
+
+    <script>
+        document.getElementById('mobileMenuBtn').addEventListener('click', function() {
+            document.getElementById('navigationBar').classList.toggle('active');
+        });
+    </script>
 </body>
 </html>
